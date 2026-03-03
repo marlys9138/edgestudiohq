@@ -1,1 +1,166 @@
-{}
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Edge Studio",
+  "legalName": "Edge Studio",
+  "url": "https://edgestudiohq.com",
+  "logo": "https://edgestudiohq.com/images/logo.png",
+  "foundingDate": "2025",
+  "description": "Edge Studio is an AEO (Answer Engine Optimisation) agency and AI visibility tools company. We help ecommerce brands, DTC founders, service businesses, and natural health practitioners get recommended by AI tools like ChatGPT, Perplexity, and Google AI Overviews.",
+  "slogan": "AEO Agency for the AI Search Era",
+  "knowsAbout": [
+    "Answer Engine Optimisation",
+    "AEO",
+    "Generative Engine Optimisation",
+    "GEO",
+    "AI visibility",
+    "AI search",
+    "ChatGPT brand visibility",
+    "Perplexity optimisation",
+    "Google AI Overviews",
+    "structured data",
+    "schema markup",
+    "brand entity optimisation",
+    "Answer Hub development",
+    "AI visibility audits",
+    "content strategy",
+    "digital marketing"
+  ],
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Australia"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Global"
+    }
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "url": "https://edgestudiohq.com/contact",
+    "availableLanguage": "English"
+  },
+  "sameAs": [
+    "https://edgestudiohq.com",
+    "https://edgestudiohq.com.au"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Marina",
+    "jobTitle": "Founder",
+    "description": "Marina is the founder of Edge Studio. She has 10 plus years of experience in content strategy, digital marketing, and brand positioning, combined with deep expertise in AI visibility, automation, and structured data. She is also a qualified herbalist with specialist experience in the natural health and wellness industry.",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Edge Studio"
+    }
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Edge Studio Services and Products",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Found By AI",
+          "description": "An automated AI visibility audit tool. Found By AI runs 20 purchase-intent prompts across major AI platforms including ChatGPT, Perplexity, and Google AI Overviews. It scores brand visibility out of 20 and generates 6 content assets to improve AI visibility. Results are delivered by email in under 60 seconds. Works for both product brands and service businesses.",
+          "url": "https://edgestudiohq.com/found-by-ai",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Single Audit",
+              "price": "197",
+              "priceCurrency": "USD",
+              "description": "One-off AI visibility audit"
+            },
+            {
+              "@type": "Offer",
+              "name": "Monthly Monitoring",
+              "price": "49",
+              "priceCurrency": "USD",
+              "description": "Ongoing monthly AI visibility monitoring"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "AEO Agency Services",
+          "description": "Done-for-you Answer Engine Optimisation strategy and implementation. Services include AI visibility audits, AEO content strategy, Answer Hub development, schema and structured data implementation, brand entity optimisation, and monthly AEO monitoring and reporting.",
+          "url": "https://edgestudiohq.com/aeo-agency",
+          "serviceType": [
+            "AEO Strategy",
+            "AI Visibility Audits",
+            "Answer Hub Development",
+            "Structured Data Implementation",
+            "Brand Entity Optimisation",
+            "AEO Monitoring"
+          ]
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Sage",
+          "description": "A 24/7 AI-powered patient guidance chatbot for clinics and natural health practitioners. Currently in development.",
+          "url": "https://edgestudiohq.com"
+        }
+      }
+    ]
+  },
+  "audience": {
+    "@type": "Audience",
+    "audienceType": [
+      "Ecommerce brand owners",
+      "DTC founders",
+      "Direct-to-consumer brands",
+      "Natural health brands",
+      "Wellness brands",
+      "Service businesses",
+      "Australian practitioners",
+      "Clinics",
+      "Health and wellness practitioners",
+      "Digital marketers",
+      "Marketing agencies"
+    ]
+  },
+  "brand": {
+    "@type": "Brand",
+    "name": "Edge Studio",
+    "description": "Edge Studio is a specialist AEO agency and AI visibility tools company. The brand is known for the Found By AI audit tool and done-for-you AEO services for ecommerce and wellness brands.",
+    "url": "https://edgestudiohq.com"
+  },
+  "keywords": [
+    "AEO agency",
+    "answer engine optimisation",
+    "AI visibility audit",
+    "Found By AI",
+    "generative engine optimisation",
+    "GEO agency",
+    "ChatGPT brand visibility",
+    "Perplexity optimisation",
+    "AI search strategy",
+    "AEO Australia",
+    "AI visibility tools",
+    "get recommended by ChatGPT",
+    "brand visibility score",
+    "AEO for ecommerce",
+    "AEO for health brands"
+  ],
+  "mainEntityOfPage": "https://edgestudiohq.com",
+  "inLanguage": "en",
+  "isNotA": [
+    "SEO agency",
+    "social media agency",
+    "paid advertising agency",
+    "web design agency"
+  ],
+  "faqPage": "https://edgestudiohq.com/#faq",
+  "answerHub": "https://edgestudiohq.com/answer-hub",
+  "brandFacts": "https://edgestudiohq.com/brand-facts"
+}
