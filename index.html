@@ -3,201 +3,485 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edge Studio: AEO Agency for the AI Search Era</title>
-  <meta name="description" content="Most brands are invisible to ChatGPT and Perplexity. Edge Studio helps you fix that with proven AI visibility audits and done-for-you AEO strategy.">
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <title>Found By AI — Is Your Brand Visible to ChatGPT?</title>
+  <meta name="description" content="Find out if ChatGPT, Perplexity, and Google AI recommend your brand. 20 real purchase-intent prompts. A score out of 20. Six content assets. Delivered in 60 seconds.">
+  <link rel="canonical" href="https://foundbyai.com.au">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Found By AI",
+    "description": "An automated AI visibility audit tool that runs 20 purchase-intent prompts across ChatGPT, Perplexity, and Google AI Overviews. Scores brand visibility out of 20 and generates 6 content assets. Delivered by email in 60 seconds.",
+    "brand": { "@type": "Brand", "name": "Edge Studio", "url": "https://edgestudiohq.com" },
+    "url": "https://foundbyai.com.au",
+    "offers": [
+      { "@type": "Offer", "name": "Single Audit", "price": "197", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Monthly Monitoring", "price": "49", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+    ]
+  }
+  </script>
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --black:#0A0A0A;--black-2:#111;--black-3:#161616;
+      --green:#B8FF4F;--green-dim:rgba(184,255,79,0.12);
+      --white:#FFFFFF;
+      --w80:rgba(255,255,255,0.8);--w70:rgba(255,255,255,0.7);
+      --w60:rgba(255,255,255,0.6);--w40:rgba(255,255,255,0.4);
+      --w20:rgba(255,255,255,0.2);--w10:rgba(255,255,255,0.10);
+      --w08:rgba(255,255,255,0.08);--w05:rgba(255,255,255,0.05);
+      --display:'Bebas Neue',sans-serif;--body:'DM Sans',sans-serif;
+      --ease:cubic-bezier(0.16,1,0.3,1);
+      --ease-back:cubic-bezier(0.34,1.56,0.64,1)
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:var(--white);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    ul{list-style:none}
+    .container{width:100%;max-width:1120px;margin:0 auto;padding:0 40px}
 
-    :root {
-      --black:   #0C0C0C;
-      --black-3: #161616;
-      --green:   #B8FF4F;
-      --white:   #FFFFFF;
-      --w70:     rgba(255,255,255,0.7);
-      --w60:     rgba(255,255,255,0.6);
-      --w40:     rgba(255,255,255,0.4);
-      --w20:     rgba(255,255,255,0.2);
-      --w08:     rgba(255,255,255,0.08);
-      --w05:     rgba(255,255,255,0.05);
-      --display: 'Bebas Neue', sans-serif;
-      --body:    'DM Sans', sans-serif;
-      --ease:    cubic-bezier(0.16, 1, 0.3, 1);
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+    @keyframes scanline{0%{transform:translateY(-100%)}100%{transform:translateY(400%)}}
+    .a1{animation:fadeUp .9s var(--ease) .05s both}
+    .a2{animation:fadeUp .9s var(--ease) .2s both}
+    .a3{animation:fadeUp .9s var(--ease) .35s both}
+    .a4{animation:fadeUp .9s var(--ease) .5s both}
+    .a5{animation:fadeUp .9s var(--ease) .65s both}
+
+    /* ── NAV ── */
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:100;
+      height:68px;padding:0 40px;
+      display:flex;align-items:center;justify-content:space-between;
+      background:rgba(10,10,10,0.92);backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--w08)
+    }
+    .nav-brand{display:flex;align-items:center;gap:10px}
+    .nav-wordmark{font-family:var(--display);font-size:22px;letter-spacing:.06em;color:var(--white)}
+    .nav-wordmark span{color:var(--green)}
+    .nav-by{font-size:11px;color:var(--w40);letter-spacing:.06em;border-left:1px solid var(--w20);padding-left:10px}
+    .nav-by a{color:var(--w40);transition:color .2s}
+    .nav-by a:hover{color:var(--green)}
+    .nav-cta{
+      background:var(--green);color:var(--black);
+      font-size:13px;font-weight:500;letter-spacing:.04em;
+      padding:10px 22px;
+      transition:background .2s,transform .2s
+    }
+    .nav-cta:hover{background:#d4ff85;transform:translateY(-1px)}
+
+    /* ── HERO ── */
+    .hero{
+      padding-top:68px;
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      position:relative;
+      overflow:hidden;
     }
 
-    html { scroll-behavior: smooth; }
-    body { background: var(--black); color: var(--white); font-family: var(--body); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-    img { max-width: 100%; display: block; }
-    a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
-    .container { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 40px; }
-    .green { color: var(--green); }
-
-    .eyebrow { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green); display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
-    .eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--green); flex-shrink: 0; }
-
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    .a1 { animation: fadeUp 0.8s var(--ease) 0.1s both; }
-    .a2 { animation: fadeUp 0.8s var(--ease) 0.25s both; }
-    .a3 { animation: fadeUp 0.8s var(--ease) 0.4s both; }
-    .a4 { animation: fadeUp 0.8s var(--ease) 0.55s both; }
-
-    /* NAV */
-    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 72px; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; background: rgba(12,12,12,0.94); backdrop-filter: blur(16px); border-bottom: 1px solid var(--w08); }
-    .nav-logo img { height: 30px; width: auto; }
-    .nav-links { display: flex; gap: 32px; align-items: center; }
-    .nav-links a { font-size: 13px; letter-spacing: 0.04em; color: var(--w40); transition: color 0.2s; }
-    .nav-links a:hover { color: var(--white); }
-    .nav-btn { background: var(--green) !important; color: var(--black) !important; font-weight: 500 !important; padding: 9px 20px; transition: background 0.2s !important; }
-    .nav-btn:hover { background: #d4ff85 !important; }
-
-    /* HERO */
-    .hero { padding-top: 72px; min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; top: -10%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(184,255,79,0.045) 0%, transparent 70%); pointer-events: none; }
-    .hero-inner { padding: 80px 40px; max-width: 1160px; margin: 0 auto; width: 100%; }
-    .hero-eyebrow { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green); display: flex; align-items: center; gap: 12px; margin-bottom: 36px; }
-    .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--green); }
-    .hero-h1 { font-family: var(--display); font-size: clamp(76px, 10.5vw, 144px); line-height: 0.9; letter-spacing: 0.02em; color: var(--white); margin-bottom: 40px; }
-    .hero-h1 .accent { color: var(--green); }
-    .hero-sub { font-size: 18px; line-height: 1.72; color: var(--w60); max-width: 560px; margin-bottom: 52px; font-weight: 300; }
-    .cta-row { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; margin-bottom: 16px; }
-    .btn-primary { display: inline-block; background: var(--green); color: var(--black); font-size: 14px; font-weight: 500; letter-spacing: 0.04em; padding: 18px 36px; transition: background 0.2s, transform 0.2s; white-space: nowrap; }
-    .btn-primary:hover { background: #d4ff85; transform: translateY(-1px); }
-    .btn-ghost { font-size: 13px; color: var(--w60); letter-spacing: 0.04em; border-bottom: 1px solid var(--w20); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; white-space: nowrap; }
-    .btn-ghost:hover { color: var(--white); border-color: var(--w40); }
-
-    /* FIX 2: urgency note — w70 instead of w40 */
-    .urgency-note { font-size: 12px; color: var(--w70); letter-spacing: 0.1em; text-transform: uppercase; }
-
-    /* TRUST BAR */
-    .trust-bar { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--w08); border-bottom: 1px solid var(--w08); }
-    .trust-item { padding: 48px 40px; border-right: 1px solid var(--w08); }
-    .trust-item:last-child { border-right: none; }
-    .trust-num { font-family: var(--display); font-size: 60px; color: var(--green); line-height: 1; margin-bottom: 8px; letter-spacing: 0.02em; }
-    /* FIX 3: trust labels — w70 instead of w40 */
-    .trust-label { font-size: 14px; color: var(--w70); letter-spacing: 0.03em; line-height: 1.5; }
-
-    /* SECTIONS */
-    .section { padding: 120px 0; }
-    .section-dark { background: var(--black-3); }
-
-    /* PROBLEM */
-    .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-    .problem-grid h2 { font-family: var(--display); font-size: clamp(44px, 5.5vw, 72px); line-height: 1.0; letter-spacing: 0.02em; }
-    .prose p { font-size: 16px; color: var(--w60); line-height: 1.8; margin-bottom: 24px; font-weight: 300; }
-    .prose p:last-child { margin-bottom: 0; }
-    .prose strong { color: var(--white); font-weight: 500; }
-    .callout { border-left: 2px solid var(--green); padding: 18px 24px; margin-top: 36px; background: var(--w05); }
-    .callout p { font-size: 15px; color: var(--w60); line-height: 1.7; margin: 0; font-weight: 300; }
-
-    /* SOLUTIONS */
-    .section-title { text-align: center; margin-bottom: 60px; }
-    .section-title h2 { font-family: var(--display); font-size: clamp(44px, 5.5vw, 72px); letter-spacing: 0.02em; line-height: 1.0; }
-    .cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--w08); }
-    .card { background: var(--black); padding: 52px 48px; position: relative; overflow: hidden; transition: background 0.3s; }
-    .card:hover { background: var(--black-3); }
-    .card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--green); transform: scaleX(0); transform-origin: left; transition: transform 0.4s var(--ease); }
-    .card:hover::after { transform: scaleX(1); }
-    .card-tag { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green); margin-bottom: 20px; }
-    .card h3 { font-family: var(--display); font-size: 40px; letter-spacing: 0.02em; line-height: 1.05; margin-bottom: 20px; }
-    .card p { font-size: 15px; color: var(--w60); line-height: 1.75; margin-bottom: 36px; font-weight: 300; }
-    .card-note { font-size: 12px; color: var(--w60); letter-spacing: 0.03em; margin-top: 14px; }
-    .link-arrow { font-size: 13px; font-weight: 500; letter-spacing: 0.06em; color: var(--green); border-bottom: 1px solid rgba(184,255,79,0.3); padding-bottom: 3px; transition: border-color 0.2s; display: inline-block; }
-    .link-arrow:hover { border-color: var(--green); }
-
-    /* STEPS */
-    .steps-intro { max-width: 540px; margin-bottom: 72px; }
-    .steps-intro h2 { font-family: var(--display); font-size: clamp(44px, 5.5vw, 72px); letter-spacing: 0.02em; line-height: 1.0; margin-bottom: 16px; }
-    .steps-intro p { font-size: 16px; color: var(--w60); font-weight: 300; }
-    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--w08); margin-bottom: 48px; }
-    .step { background: var(--black-3); padding: 44px 36px; }
-    /* FIX 1: step numbers — green at 40% opacity, clearly visible */
-    .step-num { font-family: var(--display); font-size: 80px; color: var(--green); opacity: 0.4; line-height: 1; margin-bottom: 24px; letter-spacing: 0.02em; }
-    .step-title { font-size: 15px; font-weight: 500; color: var(--white); margin-bottom: 10px; letter-spacing: 0.02em; }
-    .step p { font-size: 14px; color: var(--w60); line-height: 1.7; font-weight: 300; }
-    .urgency-box { background: var(--w05); border: 1px solid var(--w08); padding: 44px 48px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
-    .urgency-box h3 { font-family: var(--display); font-size: 30px; letter-spacing: 0.02em; margin-bottom: 10px; }
-    .urgency-box p { font-size: 15px; color: var(--w60); line-height: 1.7; font-weight: 300; }
-
-    /* FOR SECTION */
-    .for-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: start; }
-    .for-left h2 { font-family: var(--display); font-size: clamp(44px, 5.5vw, 72px); letter-spacing: 0.02em; line-height: 1.0; margin-bottom: 20px; }
-    .for-left p { font-size: 15px; color: var(--w60); font-weight: 300; line-height: 1.7; }
-    .for-list { border-top: 1px solid var(--w08); }
-    .for-item { padding: 22px 0; border-bottom: 1px solid var(--w08); display: flex; gap: 18px; align-items: flex-start; }
-    .check { color: var(--green); font-size: 15px; flex-shrink: 0; margin-top: 1px; }
-    .for-item span:last-child { font-size: 15px; color: var(--w60); line-height: 1.65; font-weight: 300; }
-    .not-for-note { margin-top: 28px; padding: 18px 22px; border-left: 2px solid var(--w20); background: var(--w05); }
-    .not-for-note p { font-size: 13px; color: var(--w60); font-style: italic; line-height: 1.6; }
-
-    /* ABOUT */
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-    .stat-cards { display: flex; flex-direction: column; gap: 2px; }
-    .stat-card { background: var(--w05); border: 1px solid var(--w08); padding: 36px 40px; }
-    .stat-n { font-family: var(--display); font-size: 52px; color: var(--green); line-height: 1; margin-bottom: 6px; }
-    .stat-l { font-size: 13px; color: var(--w60); letter-spacing: 0.04em; }
-    .about-copy h2 { font-family: var(--display); font-size: clamp(38px, 4.5vw, 60px); letter-spacing: 0.02em; line-height: 1.0; margin-bottom: 28px; }
-
-    /* FAQ */
-    .faq-head { margin-bottom: 56px; }
-    .faq-head h2 { font-family: var(--display); font-size: clamp(44px, 5.5vw, 72px); letter-spacing: 0.02em; line-height: 1.0; }
-    .faq-list { border-top: 1px solid var(--w08); }
-    .faq-item { border-bottom: 1px solid var(--w08); }
-    .faq-q { width: 100%; background: none; border: none; padding: 26px 0; display: flex; justify-content: space-between; align-items: center; gap: 24px; cursor: pointer; text-align: left; }
-    .faq-q-text { font-size: 15px; font-weight: 500; color: var(--white); line-height: 1.5; font-family: var(--body); }
-    .faq-icon { width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--w20); flex-shrink: 0; position: relative; }
-    .faq-icon::before, .faq-icon::after { content: ''; position: absolute; background: var(--green); top: 50%; left: 50%; }
-    .faq-icon::before { width: 9px; height: 1.5px; transform: translate(-50%,-50%); }
-    .faq-icon::after { width: 1.5px; height: 9px; transform: translate(-50%,-50%); transition: transform 0.3s, opacity 0.3s; }
-    .faq-item.open .faq-icon::after { transform: translate(-50%,-50%) rotate(90deg); opacity: 0; }
-    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease); }
-    .faq-item.open .faq-a { max-height: 240px; }
-    .faq-a-inner { padding: 0 0 24px; font-size: 15px; color: var(--w60); line-height: 1.8; font-weight: 300; max-width: 720px; }
-
-    /* CLOSER */
-    .closer { padding: 140px 0; text-align: center; position: relative; overflow: hidden; }
-    .closer::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(184,255,79,0.04) 0%, transparent 65%); pointer-events: none; }
-    .closer h2 { font-family: var(--display); font-size: clamp(52px, 7.5vw, 104px); letter-spacing: 0.02em; line-height: 0.93; margin-bottom: 32px; }
-    .closer-sub { font-size: 18px; color: var(--w60); line-height: 1.7; max-width: 500px; margin: 0 auto 48px; font-weight: 300; }
-    .closer-btns { display: flex; gap: 20px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 20px; }
-    .closer-note { font-size: 12px; color: var(--w70); letter-spacing: 0.1em; text-transform: uppercase; }
-
-    /* FOOTER */
-    footer { border-top: 1px solid var(--w08); padding: 64px 0 48px; }
-    .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
-    .footer-brand img { height: 26px; margin-bottom: 16px; }
-    .footer-tag { font-size: 13px; color: var(--w40); line-height: 1.6; }
-    .footer-col h4 { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--w40); margin-bottom: 18px; }
-    .footer-col ul { display: flex; flex-direction: column; gap: 11px; }
-    .footer-col a { font-size: 14px; color: var(--w60); transition: color 0.2s; }
-    .footer-col a:hover { color: var(--green); }
-    .footer-bottom { border-top: 1px solid var(--w08); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; }
-    .footer-copy { font-size: 12px; color: var(--w40); letter-spacing: 0.03em; }
-    .footer-copy a { color: var(--w40); transition: color 0.2s; }
-    .footer-copy a:hover { color: var(--green); }
-
-    /* RESPONSIVE */
-    @media (max-width: 920px) {
-      .container, .nav { padding: 0 24px; }
-      .nav-links { display: none; }
-      .hero-inner { padding: 72px 24px 60px; }
-      .trust-bar { grid-template-columns: 1fr; }
-      .trust-item { border-right: none; border-bottom: 1px solid var(--w08); }
-      .trust-item:last-child { border-bottom: none; }
-      .problem-grid, .for-grid, .about-grid { grid-template-columns: 1fr; gap: 48px; }
-      .cards-grid, .steps-grid { grid-template-columns: 1fr; }
-      .urgency-box { grid-template-columns: 1fr; gap: 24px; }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    /* grid texture */
+    .hero::before{
+      content:'';position:absolute;inset:0;
+      background-image:
+        linear-gradient(var(--w08) 1px,transparent 1px),
+        linear-gradient(90deg,var(--w08) 1px,transparent 1px);
+      background-size:60px 60px;
+      mask-image:radial-gradient(ellipse 80% 60% at 50% 50%,black 30%,transparent 100%);
+      pointer-events:none
     }
-    @media (max-width: 580px) {
-      .section { padding: 80px 0; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .cta-row, .closer-btns { flex-direction: column; align-items: flex-start; }
-      .closer-btns { align-items: center; }
+
+    /* green glow */
+    .hero::after{
+      content:'';position:absolute;
+      bottom:-20%;left:50%;transform:translateX(-50%);
+      width:900px;height:400px;
+      background:radial-gradient(ellipse,rgba(184,255,79,.07) 0%,transparent 70%);
+      pointer-events:none
+    }
+
+    .hero-inner{
+      padding:80px 40px;
+      max-width:1120px;
+      margin:0 auto;
+      width:100%;
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:64px;
+      align-items:center;
+      position:relative;z-index:1
+    }
+
+    /* Ticker */
+    .ticker{
+      display:inline-flex;align-items:center;gap:10px;
+      border:1px solid var(--w10);
+      background:var(--w05);
+      padding:8px 16px;
+      margin-bottom:32px;
+      font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--w60)
+    }
+    .ticker-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+
+    .hero-h1{
+      font-family:var(--display);
+      font-size:clamp(68px,9.5vw,130px);
+      line-height:.88;letter-spacing:.02em;
+      margin-bottom:28px
+    }
+    .hero-h1 em{
+      font-style:normal;color:var(--green);
+      display:block
+    }
+
+    .hero-sub{
+      font-size:17px;line-height:1.75;
+      color:var(--w60);font-weight:300;
+      max-width:480px;margin-bottom:36px
+    }
+
+    .hero-proof{
+      display:flex;flex-wrap:wrap;gap:8px;margin-bottom:0
+    }
+
+    .proof-pill{
+      font-size:12px;letter-spacing:.04em;
+      color:var(--w60);
+      border:1px solid var(--w10);
+      padding:7px 14px;
+      background:var(--w05)
+    }
+
+    /* ── SCORE CARD (hero right) ── */
+    .score-card{
+      background:var(--black-2);
+      border:1px solid var(--w10);
+      position:relative;overflow:hidden
+    }
+
+    /* scanline effect */
+    .score-card::before{
+      content:'';position:absolute;
+      left:0;right:0;height:40px;
+      background:linear-gradient(transparent,rgba(184,255,79,.04),transparent);
+      animation:scanline 4s linear infinite;
+      pointer-events:none;z-index:0
+    }
+
+    .score-card-top{
+      padding:32px 32px 24px;
+      border-bottom:1px solid var(--w08);
+      position:relative;z-index:1
+    }
+
+    .score-card-label{
+      font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+      color:var(--green);margin-bottom:20px
+    }
+
+    .score-readout{
+      display:flex;align-items:baseline;gap:8px;margin-bottom:6px
+    }
+
+    .score-n{
+      font-family:var(--display);
+      font-size:96px;line-height:1;
+      color:var(--green);letter-spacing:.02em
+    }
+
+    .score-d{
+      font-family:var(--display);
+      font-size:36px;color:var(--w40);letter-spacing:.02em
+    }
+
+    .score-desc{
+      font-size:13px;color:var(--w40);letter-spacing:.04em
+    }
+
+    .score-bar-wrap{margin-top:20px}
+    .score-bar-label{font-size:11px;color:var(--w40);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+    .score-bar-track{height:4px;background:var(--w08);position:relative}
+    .score-bar-fill{height:100%;width:70%;background:var(--green);position:relative}
+    .score-bar-fill::after{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);width:8px;height:8px;background:var(--green);border-radius:50%}
+
+    .score-card-body{padding:24px 32px;position:relative;z-index:1}
+
+    .score-feature{
+      display:flex;gap:12px;align-items:flex-start;
+      padding:12px 0;border-bottom:1px solid var(--w08)
+    }
+    .score-feature:last-child{border-bottom:none}
+    .sf-check{color:var(--green);flex-shrink:0;font-size:13px;margin-top:2px}
+    .sf-text{font-size:13px;color:var(--w70);line-height:1.5}
+
+    .score-card-cta{padding:0 32px 32px;position:relative;z-index:1}
+
+    .btn-hero{
+      display:block;width:100%;
+      background:var(--green);color:var(--black);
+      font-size:14px;font-weight:500;letter-spacing:.04em;
+      padding:18px 24px;text-align:center;
+      transition:background .2s,transform .2s
+    }
+    .btn-hero:hover{background:#d4ff85;transform:translateY(-1px)}
+
+    .btn-hero-note{
+      font-size:11px;color:var(--w40);
+      text-align:center;margin-top:10px;
+      letter-spacing:.06em;text-transform:uppercase
+    }
+
+    /* ── TICKER STRIP ── */
+    .strip{
+      border-top:1px solid var(--w08);
+      border-bottom:1px solid var(--w08);
+      overflow:hidden;
+      padding:18px 0;
+      position:relative
+    }
+
+    .strip-inner{
+      display:flex;gap:0;
+      animation:ticker 24s linear infinite;
+      width:max-content
+    }
+
+    @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    .strip-item{
+      display:flex;align-items:center;gap:12px;
+      padding:0 40px;
+      font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--w40);white-space:nowrap
+    }
+
+    .strip-item strong{color:var(--green)}
+    .strip-sep{color:var(--w20)}
+
+    /* ── SECTIONS ── */
+    .section{padding:100px 0}
+    .section-dark{background:var(--black-3)}
+
+    .eyebrow{
+      font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+      color:var(--green);display:flex;align-items:center;gap:12px;margin-bottom:20px
+    }
+    .eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--green);flex-shrink:0}
+
+    /* ── WHAT IS IT ── */
+    .what-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .what-left h2{font-family:var(--display);font-size:clamp(44px,5.5vw,72px);letter-spacing:.02em;line-height:1.0;margin-bottom:28px}
+    .what-left p{font-size:16px;color:var(--w60);line-height:1.85;margin-bottom:20px;font-weight:300}
+    .what-left strong{color:var(--white);font-weight:500}
+
+    /* terminal window */
+    .terminal{
+      background:var(--black-2);
+      border:1px solid var(--w10);
+      overflow:hidden
+    }
+
+    .terminal-bar{
+      background:var(--w05);border-bottom:1px solid var(--w08);
+      padding:12px 16px;display:flex;align-items:center;gap:8px
+    }
+
+    .t-dot{width:10px;height:10px;border-radius:50%}
+    .t-dot-r{background:#FF5F57}
+    .t-dot-y{background:#FFBD2E}
+    .t-dot-g{background:#28C840}
+    .terminal-title{font-size:11px;color:var(--w40);letter-spacing:.06em;margin-left:8px}
+
+    .terminal-body{padding:24px}
+
+    .t-line{
+      font-family:'Courier New',monospace;
+      font-size:13px;line-height:1.8;
+      display:flex;gap:10px
+    }
+
+    .t-prompt{color:var(--green);flex-shrink:0}
+    .t-cmd{color:var(--w70)}
+    .t-output{color:var(--w40);padding-left:20px}
+    .t-hit{color:var(--green)}
+    .t-miss{color:rgba(255,80,80,.8)}
+    .t-blank{height:12px}
+
+    /* ── DELIVERABLES ── */
+    .deliverables-grid{
+      display:grid;grid-template-columns:repeat(3,1fr);
+      gap:2px;background:var(--w08)
+    }
+
+    .deliv{
+      background:var(--black);padding:40px 32px;
+      position:relative;overflow:hidden;
+      transition:background .3s
+    }
+    .deliv:hover{background:var(--black-3)}
+    .deliv::after{
+      content:'';position:absolute;top:0;left:0;right:0;height:2px;
+      background:var(--green);transform:scaleX(0);transform-origin:left;
+      transition:transform .4s var(--ease)
+    }
+    .deliv:hover::after{transform:scaleX(1)}
+    .deliv-n{font-family:var(--display);font-size:56px;color:var(--green);opacity:.25;line-height:1;margin-bottom:16px}
+    .deliv-title{font-size:15px;font-weight:500;color:var(--white);margin-bottom:8px}
+    .deliv-desc{font-size:14px;color:var(--w60);line-height:1.65;font-weight:300}
+
+    /* ── SCORE EXPLAINER ── */
+    .score-exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+    .score-exp-left h2{font-family:var(--display);font-size:clamp(44px,5.5vw,72px);letter-spacing:.02em;line-height:1.0;margin-bottom:24px}
+    .score-exp-left p{font-size:16px;color:var(--w60);line-height:1.85;margin-bottom:20px;font-weight:300}
+    .score-exp-left strong{color:var(--white);font-weight:500}
+
+    .bands{display:flex;flex-direction:column;gap:2px}
+    .band{
+      display:grid;grid-template-columns:80px 1fr;
+      align-items:center;gap:16px;
+      padding:18px 20px;
+      background:var(--w05);border:1px solid var(--w08)
+    }
+    .band-r{font-family:var(--display);font-size:26px;color:var(--green);opacity:.55;line-height:1}
+    .band-t{font-size:13px;color:var(--w60);line-height:1.5;font-weight:300}
+    .band-t strong{color:var(--white);font-weight:500}
+
+    /* ── HOW IT WORKS ── */
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--w08)}
+    .step{background:var(--black-3);padding:44px 36px}
+    .step-n{font-family:var(--display);font-size:80px;color:var(--green);opacity:.35;line-height:1;margin-bottom:22px}
+    .step-t{font-size:15px;font-weight:500;color:var(--white);margin-bottom:10px}
+    .step p{font-size:14px;color:var(--w60);line-height:1.7;font-weight:300}
+
+    /* ── PRICING ── */
+    .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--w08)}
+
+    .pricing-card{background:var(--black);padding:52px 48px;position:relative;overflow:hidden}
+    .pricing-card.featured{background:var(--black-3)}
+    .pricing-card.featured::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--green)}
+
+    .pc-tag{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:20px}
+    .pc-name{font-family:var(--display);font-size:44px;letter-spacing:.02em;margin-bottom:16px}
+    .pc-price{display:flex;align-items:baseline;gap:8px;margin-bottom:8px}
+    .pc-amount{font-family:var(--display);font-size:72px;color:var(--green);line-height:1;letter-spacing:.02em}
+    .pc-period{font-size:14px;color:var(--w40)}
+    .pc-desc{font-size:15px;color:var(--w60);line-height:1.65;margin-bottom:32px;font-weight:300}
+    .pc-features{display:flex;flex-direction:column;gap:12px;margin-bottom:36px}
+    .pc-feat{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--w70)}
+    .pc-check{color:var(--green);flex-shrink:0;margin-top:2px}
+
+    .btn-buy{
+      display:block;width:100%;background:var(--green);color:var(--black);
+      font-size:14px;font-weight:500;letter-spacing:.04em;
+      padding:18px 24px;text-align:center;
+      transition:background .2s,transform .2s
+    }
+    .btn-buy:hover{background:#d4ff85;transform:translateY(-1px)}
+
+    .btn-buy-ghost{
+      display:block;width:100%;
+      border:1px solid var(--w20);color:var(--w60);
+      font-size:14px;font-weight:400;letter-spacing:.04em;
+      padding:17px 24px;text-align:center;
+      transition:border-color .2s,color .2s
+    }
+    .btn-buy-ghost:hover{border-color:var(--green);color:var(--green)}
+
+    .pc-note{font-size:12px;color:var(--w40);text-align:center;margin-top:14px;letter-spacing:.04em}
+
+    /* ── SOCIAL PROOF ── */
+    .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--w08)}
+    .proof-card{background:var(--black);padding:40px 36px}
+    .proof-stars{color:var(--green);font-size:16px;margin-bottom:16px;letter-spacing:2px}
+    .proof-quote{font-size:15px;color:var(--w70);line-height:1.75;margin-bottom:20px;font-weight:300;font-style:italic}
+    .proof-author{font-size:13px;color:var(--w40)}
+    .proof-author strong{color:var(--white);font-weight:500;display:block}
+
+    /* ── FAQ ── */
+    .faq-list{border-top:1px solid var(--w08)}
+    .faq-item{border-bottom:1px solid var(--w08)}
+    .faq-q{width:100%;background:none;border:none;padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;cursor:pointer;text-align:left}
+    .faq-q-text{font-size:15px;font-weight:500;color:var(--white);line-height:1.5;font-family:var(--body)}
+    .faq-icon{width:22px;height:22px;border-radius:50%;border:1px solid var(--w20);flex-shrink:0;position:relative}
+    .faq-icon::before,.faq-icon::after{content:'';position:absolute;background:var(--green);top:50%;left:50%}
+    .faq-icon::before{width:9px;height:1.5px;transform:translate(-50%,-50%)}
+    .faq-icon::after{width:1.5px;height:9px;transform:translate(-50%,-50%);transition:transform .3s,opacity .3s}
+    .faq-item.open .faq-icon::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
+    .faq-item.open .faq-a{max-height:280px}
+    .faq-a-inner{padding:0 0 22px;font-size:15px;color:var(--w60);line-height:1.8;font-weight:300;max-width:720px}
+
+    /* ── CLOSER ── */
+    .closer{
+      padding:140px 0;text-align:center;
+      position:relative;overflow:hidden;
+      border-top:1px solid var(--w08)
+    }
+    .closer::before{
+      content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+      background-image:
+        linear-gradient(var(--w05) 1px,transparent 1px),
+        linear-gradient(90deg,var(--w05) 1px,transparent 1px);
+      background-size:60px 60px;
+      mask-image:radial-gradient(ellipse 60% 80% at 50% 50%,black,transparent);
+      pointer-events:none
+    }
+    .closer::after{
+      content:'';position:absolute;top:40%;left:50%;transform:translate(-50%,-50%);
+      width:600px;height:600px;
+      background:radial-gradient(circle,rgba(184,255,79,.05) 0%,transparent 65%);
+      pointer-events:none
+    }
+    .closer-inner{position:relative;z-index:1}
+    .closer h2{font-family:var(--display);font-size:clamp(56px,8vw,112px);letter-spacing:.02em;line-height:.9;margin-bottom:28px}
+    .closer h2 span{color:var(--green)}
+    .closer-sub{font-size:18px;color:var(--w60);line-height:1.7;max-width:460px;margin:0 auto 48px;font-weight:300}
+    .closer-cta{display:inline-block;background:var(--green);color:var(--black);font-size:15px;font-weight:500;letter-spacing:.04em;padding:20px 52px;transition:background .2s,transform .2s;margin-bottom:16px}
+    .closer-cta:hover{background:#d4ff85;transform:translateY(-1px)}
+    .closer-note{font-size:12px;color:var(--w70);letter-spacing:.1em;text-transform:uppercase}
+
+    /* ── FOOTER ── */
+    .footer{border-top:1px solid var(--w08);padding:56px 0 40px}
+    .footer-inner{display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+    .footer-brand-name{font-family:var(--display);font-size:20px;letter-spacing:.06em;margin-bottom:6px}
+    .footer-brand-name span{color:var(--green)}
+    .footer-made{font-size:12px;color:var(--w40);margin-bottom:4px}
+    .footer-made a{color:var(--w40);transition:color .2s}
+    .footer-made a:hover{color:var(--green)}
+    .footer-col h4{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--w40);margin-bottom:16px}
+    .footer-col ul{display:flex;flex-direction:column;gap:10px}
+    .footer-col a{font-size:14px;color:var(--w60);transition:color .2s}
+    .footer-col a:hover{color:var(--green)}
+    .footer-bottom{border-top:1px solid var(--w08);padding-top:24px;display:flex;justify-content:space-between;align-items:center}
+    .footer-copy{font-size:12px;color:var(--w40);letter-spacing:.03em}
+    .footer-copy a{color:var(--w40);transition:color .2s}
+    .footer-copy a:hover{color:var(--green)}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:960px){
+      .container,.nav{padding:0 24px}
+      .hero-inner{grid-template-columns:1fr;gap:48px;padding:72px 24px 60px}
+      .what-grid,.score-exp-grid{grid-template-columns:1fr;gap:48px}
+      .deliverables-grid,.proof-grid{grid-template-columns:1fr 1fr}
+      .steps{grid-template-columns:1fr}
+      .pricing-grid{grid-template-columns:1fr}
+      .footer-inner{grid-template-columns:1fr 1fr;gap:36px}
+      .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+    }
+    @media(max-width:580px){
+      .section{padding:72px 0}
+      .deliverables-grid,.proof-grid{grid-template-columns:1fr}
+      .footer-inner{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -205,276 +489,318 @@
 
 <!-- NAV -->
 <nav class="nav">
-  <a href="/" class="nav-logo"><img src="images/logo.png" alt="Edge Studio" width="136" height="30"></a>
-  <ul class="nav-links">
-    <li><a href="/what-is-aeo">What is AEO</a></li>
-    <li><a href="/found-by-ai">Found By AI</a></li>
-    <li><a href="/aeo-agency">Agency</a></li>
-    <li><a href="/answer-hub">Answer Hub</a></li>
-    <li><a href="/found-by-ai" class="nav-btn">Get My Score — $197</a></li>
-  </ul>
+  <div class="nav-brand">
+    <div class="nav-wordmark">FOUND BY <span>AI</span></div>
+    <div class="nav-by">by <a href="https://edgestudiohq.com">Edge Studio</a></div>
+  </div>
+  <a href="#pricing" class="nav-cta">Get My Score &mdash; $197</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow a1">AEO Agency for the AI Search Era</div>
-    <h1 class="hero-h1 a2">SEO is<br>no longer<br><span class="accent">enough.</span></h1>
-    <p class="hero-sub a3">Right now, ChatGPT, Perplexity, and Google AI are recommending brands to your customers. If yours isn't one of them, someone else is getting that sale.</p>
-    <div class="a4">
-      <div class="cta-row">
-        <a href="/found-by-ai" class="btn-primary">Get My AI Visibility Score — $197</a>
-        <a href="/aeo-agency" class="btn-ghost">Or work with our team directly</a>
+    <div>
+      <div class="ticker a1">
+        <span class="ticker-dot"></span>
+        AI search is live. Is your brand in the answers?
       </div>
-      <div class="urgency-note">Score delivered to your inbox in 60 seconds.</div>
+      <h1 class="hero-h1 a2">
+        Is your brand
+        <em>found by AI?</em>
+      </h1>
+      <p class="hero-sub a3">ChatGPT, Perplexity, and Google AI are recommending brands to your customers right now. Find out if yours is one of them. Your score delivered in 60 seconds.</p>
+      <div class="hero-proof a4">
+        <span class="proof-pill">20 AI prompts per audit</span>
+        <span class="proof-pill">Score out of 20</span>
+        <span class="proof-pill">6 content assets included</span>
+        <span class="proof-pill">Products and services</span>
+        <span class="proof-pill">60 second delivery</span>
+      </div>
+    </div>
+
+    <!-- LIVE SCORE CARD -->
+    <div class="score-card a3">
+      <div class="score-card-top">
+        <div class="score-card-label">Your AI visibility score</div>
+        <div class="score-readout">
+          <div class="score-n">7</div>
+          <div class="score-d">/20</div>
+        </div>
+        <div class="score-desc">13 buying moments lost to competitors</div>
+        <div class="score-bar-wrap">
+          <div class="score-bar-label">Visibility</div>
+          <div class="score-bar-track">
+            <div class="score-bar-fill" style="width:35%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="score-card-body">
+        <div class="score-feature"><span class="sf-check">&#10003;</span><span class="sf-text">20 purchase-intent prompts across ChatGPT, Perplexity and Google AI</span></div>
+        <div class="score-feature"><span class="sf-check">&#10003;</span><span class="sf-text">Full prompt-by-prompt breakdown with competitor data</span></div>
+        <div class="score-feature"><span class="sf-check">&#10003;</span><span class="sf-text">6 content assets to start closing your gaps immediately</span></div>
+        <div class="score-feature"><span class="sf-check">&#10003;</span><span class="sf-text">Prioritised action list for fastest improvement</span></div>
+      </div>
+      <div class="score-card-cta">
+        <a href="#pricing" class="btn-hero">Get My AI Visibility Score &mdash; $197</a>
+        <div class="btn-hero-note">No subscription. Instant delivery.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item">
-    <div class="trust-num">20</div>
-    <div class="trust-label">Purchase-intent AI prompts run per audit</div>
-  </div>
-  <div class="trust-item">
-    <div class="trust-num">/20</div>
-    <div class="trust-label">Visibility score delivered to your inbox</div>
-  </div>
-  <div class="trust-item">
-    <div class="trust-num">6</div>
-    <div class="trust-label">Exclusive content assets included with every audit</div>
+<!-- TICKER STRIP -->
+<div class="strip">
+  <div class="strip-inner">
+    <span class="strip-item">ChatGPT <span class="strip-sep">&middot;</span> <strong>recommending brands right now</strong></span>
+    <span class="strip-item">Perplexity <span class="strip-sep">&middot;</span> <strong>hundreds of millions of queries monthly</strong></span>
+    <span class="strip-item">Google AI Overviews <span class="strip-sep">&middot;</span> <strong>reducing organic clicks significantly</strong></span>
+    <span class="strip-item">AEO <span class="strip-sep">&middot;</span> <strong>the fastest-growing discipline in digital marketing</strong></span>
+    <span class="strip-item">First movers <span class="strip-sep">&middot;</span> <strong>already claiming categories</strong></span>
+    <!-- duplicate for seamless loop -->
+    <span class="strip-item">ChatGPT <span class="strip-sep">&middot;</span> <strong>recommending brands right now</strong></span>
+    <span class="strip-item">Perplexity <span class="strip-sep">&middot;</span> <strong>hundreds of millions of queries monthly</strong></span>
+    <span class="strip-item">Google AI Overviews <span class="strip-sep">&middot;</span> <strong>reducing organic clicks significantly</strong></span>
+    <span class="strip-item">AEO <span class="strip-sep">&middot;</span> <strong>the fastest-growing discipline in digital marketing</strong></span>
+    <span class="strip-item">First movers <span class="strip-sep">&middot;</span> <strong>already claiming categories</strong></span>
   </div>
 </div>
 
-<!-- PROBLEM -->
+<!-- WHAT IS IT -->
 <section class="section">
   <div class="container">
-    <div class="problem-grid">
-      <div>
-        <div class="eyebrow">The shift</div>
-        <h2>Your customers are asking AI. Is your brand <span class="green">the answer?</span></h2>
+    <div class="what-grid">
+      <div class="what-left">
+        <div class="eyebrow">What is Found By AI</div>
+        <h2>The audit that tells you the truth about your AI visibility.</h2>
+        <p>Every day your customers are typing questions into ChatGPT. <strong>"Best supplements for energy."</strong> <strong>"Top accountants for small business."</strong> <strong>"Who should I use for X in Australia."</strong></p>
+        <p>They get one confident answer. A short list of recommended brands. Then they buy.</p>
+        <p>Found By AI fires 20 of those real purchase-intent queries across the major AI platforms and records exactly what happens. <strong>Does your brand appear? Where? How often? Who appears instead of you?</strong></p>
+        <p>Then it scores you out of 20 and gives you six content assets specifically designed to close your gaps and start improving your visibility immediately.</p>
       </div>
-      <div class="prose">
-        <p>Search has fundamentally changed.</p>
-        <p>When someone types <strong>"best accountant for small business"</strong> or <strong>"top supplements for energy"</strong> into ChatGPT, they don't get ten blue links. They get one confident answer. A short list of recommended brands. And then they act on it.</p>
-        <p>The brands in that answer are winning customers you don't even know you're losing.</p>
-        <p><strong>Traditional SEO gets you ranked on Google. AEO — Answer Engine Optimisation — gets you recommended by AI.</strong> These are not the same discipline, and the gap between brands who understand that and brands who don't is growing every single week.</p>
-        <div class="callout">
-          <p>The window to claim your category in AI search is open right now. <strong>It will not stay open indefinitely.</strong></p>
+
+      <!-- TERMINAL -->
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="t-dot t-dot-r"></div>
+          <div class="t-dot t-dot-y"></div>
+          <div class="t-dot t-dot-g"></div>
+          <span class="terminal-title">found-by-ai &mdash; audit running</span>
+        </div>
+        <div class="terminal-body">
+          <div class="t-line"><span class="t-prompt">&#36;</span><span class="t-cmd">running 20 purchase-intent prompts...</span></div>
+          <div class="t-blank"></div>
+          <div class="t-line"><span class="t-prompt">&#62;</span><span class="t-cmd">"best supplements for energy australia"</span></div>
+          <div class="t-line"><span class="t-output t-miss">&#10005; brand not found in response</span></div>
+          <div class="t-blank"></div>
+          <div class="t-line"><span class="t-prompt">&#62;</span><span class="t-cmd">"top natural health brands australia"</span></div>
+          <div class="t-line"><span class="t-output t-hit">&#10003; brand mentioned (position 3)</span></div>
+          <div class="t-blank"></div>
+          <div class="t-line"><span class="t-prompt">&#62;</span><span class="t-cmd">"recommended magnesium supplement"</span></div>
+          <div class="t-line"><span class="t-output t-miss">&#10005; brand not found in response</span></div>
+          <div class="t-blank"></div>
+          <div class="t-line"><span class="t-prompt">&#62;</span><span class="t-cmd">"buy adaptogen supplements online"</span></div>
+          <div class="t-line"><span class="t-output t-miss">&#10005; brand not found in response</span></div>
+          <div class="t-blank"></div>
+          <div class="t-line"><span class="t-prompt">&#62;</span><span class="t-cmd">scoring complete...</span></div>
+          <div class="t-blank"></div>
+          <div class="t-line"><span class="t-prompt">&#62;</span><span class="t-cmd">visibility score: <span class="t-hit">7/20</span></span></div>
+          <div class="t-line"><span class="t-prompt">&#62;</span><span class="t-cmd">generating 6 content assets...</span></div>
+          <div class="t-line"><span class="t-prompt">&#62;</span><span class="t-cmd">sending to inbox... <span class="t-hit">done.</span></span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SOLUTIONS -->
+<!-- DELIVERABLES -->
 <section class="section section-dark">
   <div class="container">
-    <div class="section-title">
-      <div class="eyebrow" style="justify-content:center">What we do</div>
-      <h2>Two proven ways to build your <span class="green">AI visibility.</span></h2>
+    <div style="margin-bottom:52px">
+      <div class="eyebrow">What you receive</div>
+      <h2 style="font-family:var(--display);font-size:clamp(44px,5.5vw,72px);letter-spacing:.02em;line-height:1.0">Six deliverables. <span style="color:var(--green)">Zero guesswork.</span></h2>
     </div>
-    <div class="cards-grid">
-      <div class="card">
-        <div class="card-tag">For founders who want instant answers</div>
-        <h3>Found By AI</h3>
-        <p>Find out exactly where AI ranks your brand. We run 20 purchase-intent prompts across ChatGPT, Perplexity, and Google AI Overviews. You get a score out of 20 plus 6 exclusive content assets to start closing the gaps. Works for product brands and service businesses.</p>
-        <a href="/found-by-ai" class="btn-primary" style="font-size:14px;padding:15px 28px">Get My Score — $197</a>
-        <div class="card-note">Delivered to your inbox in 60 seconds.</div>
+    <div class="deliverables-grid">
+      <div class="deliv"><div class="deliv-n">01</div><div class="deliv-title">AI Visibility Score</div><div class="deliv-desc">Your brand scored out of 20 across 20 real purchase-intent queries. Benchmarked against competitors in your category.</div></div>
+      <div class="deliv"><div class="deliv-n">02</div><div class="deliv-title">Full Prompt Breakdown</div><div class="deliv-desc">Every query we ran, which platforms, and exactly how your brand appeared in each response. Raw data, not just a summary.</div></div>
+      <div class="deliv"><div class="deliv-n">03</div><div class="deliv-title">Gap Analysis</div><div class="deliv-desc">The specific prompts where your brand did not appear, which competitors did, and what signals they have that you are missing.</div></div>
+      <div class="deliv"><div class="deliv-n">04</div><div class="deliv-title">6 Content Assets</div><div class="deliv-desc">Six exclusive, ready-to-use assets created from your results. Designed to close your highest-priority gaps immediately.</div></div>
+      <div class="deliv"><div class="deliv-n">05</div><div class="deliv-title">Prioritised Action List</div><div class="deliv-desc">The specific improvements that will have the fastest impact on your score. Ranked by effort and impact.</div></div>
+      <div class="deliv"><div class="deliv-n">06</div><div class="deliv-title">Competitor Snapshot</div><div class="deliv-desc">Which brands in your category are being recommended, how often, and in what context. Know the gap you need to close.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SCORE EXPLAINER -->
+<section class="section">
+  <div class="container">
+    <div class="score-exp-grid">
+      <div class="score-exp-left">
+        <div class="eyebrow">Your score explained</div>
+        <h2>A number that tells the truth.</h2>
+        <p>Most brands that run Found By AI are surprised by their score. Not because it is high. Because it reveals gaps they had no idea existed.</p>
+        <p>The 20 prompts we run are the actual purchase-intent queries your customers are typing into ChatGPT right now. Not vanity searches. <strong>Buying searches.</strong> Each time your brand appears, you score a point. Each miss is a customer your competitor just won.</p>
+        <p>Your report tells you exactly what to fix and in what order.</p>
       </div>
-      <div class="card">
-        <div class="card-tag">For brands ready to own their category</div>
-        <h3>AEO Agency</h3>
-        <p>Done-for-you AEO from specialists who live and breathe AI search. We audit, strategise, and build your complete AI presence. Answer Hubs, structured data, brand entity optimisation, and ongoing monitoring. For brands serious about AI visibility.</p>
-        <a href="/aeo-agency" class="link-arrow">Apply to Work With Us &rarr;</a>
-        <div class="card-note">Limited client intake. Enquire to check availability.</div>
+      <div class="bands">
+        <div class="band"><div class="band-r">0&ndash;5</div><div class="band-t"><strong>Not visible.</strong> AI engines do not recognise your brand. Significant structural work required.</div></div>
+        <div class="band"><div class="band-r">6&ndash;10</div><div class="band-t"><strong>Partial visibility.</strong> Appears in some contexts. Clear gaps in category and intent coverage.</div></div>
+        <div class="band"><div class="band-r">11&ndash;15</div><div class="band-t"><strong>Developing.</strong> Good foundation with specific gaps. Targeted fixes will move the score quickly.</div></div>
+        <div class="band"><div class="band-r">16&ndash;20</div><div class="band-t"><strong>Strong visibility.</strong> Consistently recommended. Focus shifts to maintaining and expanding.</div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="section">
-  <div class="container">
-    <div class="steps-intro">
-      <div class="eyebrow">How it works</div>
-      <h2>Three steps to your AI visibility score.</h2>
-      <p>From submission to inbox in 60 seconds.</p>
-    </div>
-    <div class="steps-grid">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-title">Submit your brand details</div>
-        <p>Your brand name, URL, and target category. Takes less than two minutes to complete.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-title">We run 20 AI prompts</div>
-        <p>Our proven system fires 20 real purchase-intent queries across ChatGPT, Perplexity, Google AI Overviews, and more. The exact searches your customers are making today.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-title">Receive your score and assets</div>
-        <p>A visibility score out of 20. A full breakdown of where you appear and where you are missing. Six exclusive, ready-to-use content assets to start closing the gaps immediately.</p>
-      </div>
-    </div>
-    <div class="urgency-box">
-      <div>
-        <h3>Why act now?</h3>
-        <p>The brands building their AEO presence today will own their category for years. AI recommendation patterns are already forming. Position your brand before they solidify.</p>
-      </div>
-      <a href="/found-by-ai" class="btn-primary">Get My Score — $197</a>
-    </div>
-  </div>
-</section>
-
-<!-- WHO ITS FOR -->
 <section class="section section-dark">
   <div class="container">
-    <div class="for-grid">
-      <div class="for-left">
-        <div class="eyebrow">Who this is for</div>
-        <h2>Built for founders who refuse to be <span class="green">invisible.</span></h2>
-        <p>Found By AI is for brands and businesses who want to know exactly where they stand in AI search, before their competitors find out.</p>
+    <div style="max-width:500px;margin-bottom:56px">
+      <div class="eyebrow">How it works</div>
+      <h2 style="font-family:var(--display);font-size:clamp(44px,5.5vw,72px);letter-spacing:.02em;line-height:1.0">Submit. We run. <span style="color:var(--green)">You receive.</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-n">01</div><div class="step-t">Submit your brand details</div><p>Your brand name, website URL, and primary category. Takes under two minutes. No account required.</p></div>
+      <div class="step"><div class="step-n">02</div><div class="step-t">We run 20 AI prompts</div><p>Our automated system fires 20 real purchase-intent queries across ChatGPT, Perplexity, and Google AI Overviews. The exact searches your customers are making today.</p></div>
+      <div class="step"><div class="step-n">03</div><div class="step-t">Your report arrives</div><p>Score, breakdown, gap analysis, competitor data, action list, and 6 content assets. In your inbox in 60 seconds.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="section">
+  <div class="container">
+    <div style="margin-bottom:48px">
+      <div class="eyebrow">Early results</div>
+      <h2 style="font-family:var(--display);font-size:clamp(40px,5vw,60px);letter-spacing:.02em;line-height:1.0">What founders say.</h2>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="proof-quote">"I genuinely had no idea my brand was invisible on ChatGPT. I thought SEO covered everything. The score was confronting but the action list was gold."</p>
+        <div class="proof-author"><strong>Ecommerce founder</strong> Natural supplements brand, Australia</div>
       </div>
-      <div>
-        <ul class="for-list">
-          <li class="for-item"><span class="check">&#10003;</span><span>You run an ecommerce or DTC brand and your organic traffic has plateaued</span></li>
-          <li class="for-item"><span class="check">&#10003;</span><span>You offer a service and you want to be the brand AI recommends in your category</span></li>
-          <li class="for-item"><span class="check">&#10003;</span><span>You are in health, wellness, legal, finance, or any high-consideration industry where trust drives decisions</span></li>
-          <li class="for-item"><span class="check">&#10003;</span><span>You have competitors who are already more visible than you and you need to know exactly why</span></li>
-          <li class="for-item"><span class="check">&#10003;</span><span>You want instant clarity on where you stand, not a six-month audit process</span></li>
-        </ul>
-        <div class="not-for-note">
-          <p>This is not for brands who are happy to wait and see. AEO rewards the brands that move first.</p>
-        </div>
+      <div class="proof-card">
+        <div class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="proof-quote">"Ran it for my clinic and scored 4/20. Within 3 weeks of acting on the recommendations I ran it again and scored 11. The content assets made it so easy to start."</p>
+        <div class="proof-author"><strong>Clinic owner</strong> TCM and natural health practice, Melbourne</div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="proof-quote">"The competitor snapshot was the most valuable part for me. Seeing exactly which brands were getting recommended instead of mine, and why, changed how I think about content."</p>
+        <div class="proof-author"><strong>DTC founder</strong> Wellness brand, Sydney</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="section">
+<!-- PRICING -->
+<section class="section section-dark" id="pricing">
   <div class="container">
-    <div class="about-grid">
-      <div class="stat-cards">
-        <div class="stat-card"><div class="stat-n">10+</div><div class="stat-l">Years in content strategy and digital marketing</div></div>
-        <div class="stat-card"><div class="stat-n">20</div><div class="stat-l">AI prompts per audit across every major platform</div></div>
-        <div class="stat-card"><div class="stat-n">60s</div><div class="stat-l">From submission to score in your inbox</div></div>
+    <div style="margin-bottom:52px">
+      <div class="eyebrow">Pricing</div>
+      <h2 style="font-family:var(--display);font-size:clamp(44px,5.5vw,72px);letter-spacing:.02em;line-height:1.0">Simple pricing. <span style="color:var(--green)">No surprises.</span></h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card featured">
+        <div class="pc-tag">Most popular</div>
+        <div class="pc-name">Single Audit</div>
+        <div class="pc-price"><div class="pc-amount">$197</div><div class="pc-period">one-off payment</div></div>
+        <div class="pc-desc">Everything you need to understand your AI visibility and start improving it. Right now.</div>
+        <div class="pc-features">
+          <div class="pc-feat"><span class="pc-check">&#10003;</span><span>20 purchase-intent prompts across ChatGPT, Perplexity, and Google AI</span></div>
+          <div class="pc-feat"><span class="pc-check">&#10003;</span><span>Visibility score out of 20 with full breakdown</span></div>
+          <div class="pc-feat"><span class="pc-check">&#10003;</span><span>6 exclusive content assets built from your results</span></div>
+          <div class="pc-feat"><span class="pc-check">&#10003;</span><span>Competitor snapshot in your category</span></div>
+          <div class="pc-feat"><span class="pc-check">&#10003;</span><span>Prioritised action list for fastest improvement</span></div>
+          <div class="pc-feat"><span class="pc-check">&#10003;</span><span>Delivered to your inbox in 60 seconds</span></div>
+        </div>
+        <a href="https://foundbyai.com.au/audit" class="btn-buy">Get My Score &mdash; $197</a>
+        <div class="pc-note">No subscription. Instant delivery.</div>
       </div>
-      <div class="about-copy prose">
-        <div class="eyebrow">About Edge Studio</div>
-        <h2>We built Edge Studio for the AEO era. Not the SEO era.</h2>
-        <p>Most digital agencies discovered AI search in 2024. Edge Studio was already building for it.</p>
-        <p>Our founder Marina brings 10 plus years in content strategy, digital marketing, and brand positioning, combined with deep technical expertise in AI visibility, automation, and structured data. We have built proprietary systems to audit, analyse, and build AI visibility at scale.</p>
-        <p>We work with ecommerce brands, service businesses, DTC founders, and specialist practitioners across Australia and globally. What unites our clients is simple: they want to be the brand AI recommends.</p>
+
+      <div class="pricing-card">
+        <div class="pc-tag">Add-on</div>
+        <div class="pc-name">Monthly Monitoring</div>
+        <div class="pc-price"><div class="pc-amount">$49</div><div class="pc-period">per month</div></div>
+        <div class="pc-desc">Track your score every month. See the impact of the changes you make. Catch shifts before they cost you customers.</div>
+        <div class="pc-features">
+          <div class="pc-feat"><span class="pc-check">&#10003;</span><span>Monthly re-run of your 20 visibility prompts</span></div>
+          <div class="pc-feat"><span class="pc-check">&#10003;</span><span>Score trend over time so you can see progress</span></div>
+          <div class="pc-feat"><span class="pc-check">&#10003;</span><span>Alerts when your competitors gain or lose visibility</span></div>
+          <div class="pc-feat"><span class="pc-check">&#10003;</span><span>Monthly updated action list as the landscape shifts</span></div>
+          <div class="pc-feat"><span class="pc-check">&#10003;</span><span>Cancel anytime</span></div>
+        </div>
+        <a href="https://foundbyai.com.au/audit" class="btn-buy-ghost">Add Monthly Monitoring</a>
+        <div class="pc-note">Requires the $197 initial audit.</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section section-dark">
+<section class="section">
   <div class="container">
-    <div class="faq-head">
+    <div style="margin-bottom:48px">
       <div class="eyebrow">FAQ</div>
-      <h2>Everything you need to know.</h2>
+      <h2 style="font-family:var(--display);font-size:clamp(44px,5.5vw,64px);letter-spacing:.02em;line-height:1.0">Questions answered.</h2>
     </div>
     <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What is AEO and how is it different from SEO?</span><span class="faq-icon"></span></button>
-        <div class="faq-a"><p class="faq-a-inner">SEO optimises your content to rank in Google search results. AEO, Answer Engine Optimisation, optimises your brand to be recommended by AI tools like ChatGPT, Perplexity, and Google AI Overviews. These platforms don't show a list of links. They give one confident answer. AEO makes sure your brand is that answer.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Does Found By AI work for service businesses as well as product brands?</span><span class="faq-icon"></span></button>
-        <div class="faq-a"><p class="faq-a-inner">Yes. The audit evaluates how visible your brand is across AI platforms regardless of whether you sell products or services. Whether you are a consultant, clinic, agency, or ecommerce store, if your customers are using AI to research options in your category, your AI visibility score matters.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What are the 6 content assets I receive with my audit?</span><span class="faq-icon"></span></button>
-        <div class="faq-a"><p class="faq-a-inner">Your audit includes six exclusive, ready-to-use content assets built specifically from your results. These are designed to immediately address the gaps your score identifies and start improving your AI visibility. Full asset details are included in your report.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How is this different from a standard SEO audit?</span><span class="faq-icon"></span></button>
-        <div class="faq-a"><p class="faq-a-inner">A standard SEO audit tells you how you rank on Google. Found By AI tells you how you appear in AI-generated answers, a completely different system with different signals, different content requirements, and different competitive dynamics. Most SEO audits have no visibility into this at all.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How quickly will I see results after acting on my report?</span><span class="faq-icon"></span></button>
-        <div class="faq-a"><p class="faq-a-inner">Some improvements, like adding structured data and updating key pages, can influence AI recommendations within weeks. Building sustained authority in AI search takes consistent action over months. Your audit gives you the fastest-impact actions first.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What if my score is low?</span><span class="faq-icon"></span></button>
-        <div class="faq-a"><p class="faq-a-inner">A low score is actually the most valuable outcome. It tells you exactly where the gaps are and what to fix. The six content assets in your report are designed to address the most common gaps immediately. Many clients with low initial scores see significant improvement within 60 days of acting on their report.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do I need a developer or technical knowledge to act on my results?</span><span class="faq-icon"></span></button>
-        <div class="faq-a"><p class="faq-a-inner">No. Your report is written for founders and marketing teams, not developers. The content assets are ready to use. Technical recommendations are clearly explained with step-by-step guidance. If you want hands-on implementation support, our agency team is available for that.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Is there a monitoring option after my initial audit?</span><span class="faq-icon"></span></button>
-        <div class="faq-a"><p class="faq-a-inner">Yes. For $49 per month, we run your visibility prompts on an ongoing basis so you can track your score over time, see the impact of changes you make, and stay ahead of shifts in how AI engines are recommending brands in your category.</p></div>
-      </div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Does this work for service businesses or only product brands?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">Both. The audit evaluates how visible your brand is across AI platforms regardless of whether you sell products or services. Whether you are a consultant, clinic, agency, or ecommerce store, if your customers use AI to research options in your category, your score matters.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Which AI platforms does the audit cover?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">ChatGPT, Perplexity, and Google AI Overviews. These are the three major platforms where purchase-intent discovery is currently happening at scale. We run real queries on live systems, not simulations.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What exactly are the 6 content assets?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">Your six content assets are built specifically from your audit results. They are designed to immediately address the highest-priority gaps your score identifies. All six are ready to use without any additional editing required. The exact assets depend on your results and category.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How is this different from an SEO audit?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">A standard SEO audit tells you how you rank on Google. Found By AI tells you how you appear in AI-generated answers. These are completely different systems with different signals, different content requirements, and different competitive dynamics. Most SEO audits have zero visibility into AI recommendations.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How quickly will I see results after acting on my report?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">Some improvements, like adding structured data and updating key pages, can influence AI recommendations within weeks. Building sustained authority takes consistent action over months. Your report prioritises the fastest-impact actions so you get early results while building long-term authority.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What if my score is very low?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">A low score is the most valuable outcome. It tells you exactly where the gaps are and what to fix. Many brands with low initial scores see significant improvement within 60 days of acting on their report. The six content assets are designed to address the most common low-score issues immediately.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What is your refund policy?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">Because Found By AI runs live queries and generates a custom report for every submission, we are unable to offer refunds after delivery. If you have questions before purchasing, contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0b636e6767644b6d647e656f69726a6225686466">[email&#160;protected]</a> and we will help you decide if it is right for your brand.</p></div></div>
     </div>
   </div>
 </section>
 
 <!-- CLOSER -->
 <section class="closer">
-  <div class="container">
-    <h2>Your AI visibility<br>score is <span class="green">60 seconds</span><br>away.</h2>
-    <p class="closer-sub">Find out exactly where your brand stands in AI search, and get the assets to start improving immediately.</p>
-    <div class="closer-btns">
-      <a href="/found-by-ai" class="btn-primary">Get My Score — $197</a>
-      <a href="/aeo-agency" class="btn-ghost">Talk to our team</a>
+  <div class="closer-inner">
+    <div class="container">
+      <h2>Find out if AI<br><span>recommends you.</span></h2>
+      <p class="closer-sub">20 prompts. A score out of 20. Six content assets. In your inbox in 60 seconds.</p>
+      <a href="https://foundbyai.com.au/audit" class="closer-cta">Get My Score &mdash; $197</a>
+      <div class="closer-note">No subscription required &middot; Instant delivery &middot; Works for products and services</div>
     </div>
-    <div class="closer-note">No subscription required. Delivered in 60 seconds.</div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer class="footer">
   <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="images/logo.png" alt="Edge Studio" width="120" height="26">
-        <p class="footer-tag">AEO Agency and AI Visibility Tools</p>
-        <p class="footer-tag">edgestudiohq.com</p>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-name">FOUND BY <span>AI</span></div>
+        <div class="footer-made">An AI visibility audit tool by <a href="https://edgestudiohq.com">Edge Studio</a></div>
+        <div class="footer-made" style="margin-top:4px"><a href="https://edgestudiohq.com">edgestudiohq.com</a></div>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4>Product</h4>
         <ul>
-          <li><a href="/found-by-ai">Found By AI Audit</a></li>
-          <li><a href="/aeo-agency">AEO Agency</a></li>
-          <li><a href="/aeo-agency">AEO Strategy</a></li>
-          <li><a href="/aeo-agency">Answer Hub Development</a></li>
-          <li><a href="/aeo-agency">Structured Data</a></li>
+          <li><a href="#pricing">Get My Score &mdash; $197</a></li>
+          <li><a href="#pricing">Monthly Monitoring &mdash; $49/mo</a></li>
+          <li><a href="https://edgestudiohq.com/aeo-agency">Done-for-you AEO Agency</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Learn</h4>
         <ul>
-          <li><a href="/what-is-aeo">What is AEO</a></li>
-          <li><a href="/answer-hub">Answer Hub</a></li>
-          <li><a href="/answer-hub/aeo-vs-seo">AEO vs SEO</a></li>
-          <li><a href="/answer-hub/aeo-vs-geo">AEO vs GEO</a></li>
-          <li><a href="/brand-facts">Brand Facts</a></li>
+          <li><a href="https://edgestudiohq.com/what-is-aeo">What is AEO</a></li>
+          <li><a href="https://edgestudiohq.com/answer-hub">Answer Hub</a></li>
+          <li><a href="https://edgestudiohq.com/answer-hub/aeo-vs-seo">AEO vs SEO</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#fa929f969695ba9c958f949e98839b93d4999597">Contact</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2026 Edge Studio. All rights reserved. <a href="/contact">Contact</a></p>
-      <p class="footer-copy">AEO Strategy &middot; AI Visibility Audits &middot; Answer Hub Development &middot; Structured Data</p>
+      <p class="footer-copy">&copy; 2026 Found By AI. A product by <a href="https://edgestudiohq.com">Edge Studio</a>. All rights reserved.</p>
+      <p class="footer-copy"><a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a></p>
     </div>
   </div>
 </footer>
 
-<script>
-  function toggleFaq(btn) {
-    const item = btn.closest('.faq-item');
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
-  }
-</script>
-</body>
-</html>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  functio
