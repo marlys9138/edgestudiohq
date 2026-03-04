@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AEO Agency — Get Your Brand Recommended By AI | Edge Studio</title>
+  <meta name="description" content="Edge Studio is a dedicated AEO agency. We build the content, structure, and authority signals that make AI engines like ChatGPT, Perplexity, and Google AI recommend your brand.">
+  <link rel="canonical" href="https://edgestudiohq.com/aeo-agency">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"AEO Agency Services","description":"Edge Studio provides done-for-you Answer Engine Optimisation services including AEO strategy, Answer Hub development, structured data implementation, and AI visibility audits for brands that want to be recommended by ChatGPT, Perplexity, and Google AI.","provider":{"@type":"Organization","name":"Edge Studio","url":"https://edgestudiohq.com"},"serviceType":"Answer Engine Optimisation"}</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --black:#0C0C0C;--black-2:#111;--black-3:#161616;
+      --green:#B8FF4F;--white:#FFFFFF;
+      --w70:rgba(255,255,255,0.7);--w60:rgba(255,255,255,0.6);
+      --w40:rgba(255,255,255,0.4);--w20:rgba(255,255,255,0.2);
+      --w08:rgba(255,255,255,0.08);--w05:rgba(255,255,255,0.05);
+      --display:'Bebas Neue',sans-serif;--body:'DM Sans',sans-serif;
+      --ease:cubic-bezier(0.16,1,0.3,1)
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:var(--white);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    ul{list-style:none}
+    .container{width:100%;max-width:1160px;margin:0 auto;padding:0 40px}
+    .green{color:var(--green)}
+    .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:12px;margin-bottom:24px}
+    .eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--green);flex-shrink:0}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .a1{animation:fadeUp .8s var(--ease) .1s both}
+    .a2{animation:fadeUp .8s var(--ease) .25s both}
+    .a3{animation:fadeUp .8s var(--ease) .4s both}
+    .a4{animation:fadeUp .8s var(--ease) .55s both}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;height:72px;padding:0 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(12,12,12,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--w08)}
+    .nav-logo img{height:56px;width:auto}
+    .nav-links{display:flex;gap:32px;align-items:center}
+    .nav-links a{font-size:13px;letter-spacing:.04em;color:var(--w40);transition:color .2s}
+    .nav-links a:hover{color:var(--white)}
+    .nav-links a.active{color:var(--green)}
+    .nav-btn{background:var(--green)!important;color:var(--black)!important;font-weight:500!important;padding:9px 20px;transition:background .2s!important}
+    .nav-btn:hover{background:#d4ff85!important}
+    .hero{padding-top:72px;min-height:90vh;display:flex;align-items:center;border-bottom:1px solid var(--w08);position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--w05) 1px,transparent 1px),linear-gradient(90deg,var(--w05) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 70% 60% at 60% 50%,black 20%,transparent 100%);pointer-events:none}
+    .hero::after{content:'';position:absolute;right:-10%;top:10%;width:700px;height:700px;background:radial-gradient(circle,rgba(184,255,79,.05) 0%,transparent 65%);pointer-events:none}
+    .hero-inner{padding:80px 40px;max-width:1160px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center;position:relative;z-index:1}
+    .hero-h1{font-family:var(--display);font-size:clamp(60px,8vw,110px);line-height:.9;letter-spacing:.02em;margin-bottom:32px}
+    .hero-h1 .accent{color:var(--green)}
+    .hero-sub{font-size:18px;line-height:1.75;color:var(--w60);font-weight:300;max-width:520px;margin-bottom:40px}
+    .hero-sub strong{color:var(--white);font-weight:500}
+    .hero-btns{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+    .btn-primary{display:inline-block;background:var(--green);color:var(--black);font-size:14px;font-weight:500;letter-spacing:.04em;padding:16px 32px;transition:background .2s,transform .2s;white-space:nowrap}
+    .btn-primary:hover{background:#d4ff85;transform:translateY(-1px)}
+    .btn-ghost{font-size:13px;color:var(--w60);letter-spacing:.04em;border-bottom:1px solid var(--w20);padding-bottom:2px;transition:color .2s,border-color .2s;white-space:nowrap}
+    .btn-ghost:hover{color:var(--white);border-color:var(--w40)}
+    .stat-stack{display:flex;flex-direction:column;gap:2px}
+    .stat-card{background:var(--black-2);border:1px solid var(--w08);padding:32px 36px}
+    .stat-card.featured{border-left:3px solid var(--green)}
+    .stat-n{font-family:var(--display);font-size:72px;color:var(--green);line-height:1;letter-spacing:.02em;margin-bottom:4px}
+    .stat-label{font-size:14px;color:var(--w60);font-weight:300;line-height:1.5}
+    .stat-label strong{color:var(--white);font-weight:500}
+    .trust-bar{border-top:1px solid var(--w08);border-bottom:1px solid var(--w08);padding:28px 0}
+    .trust-inner{display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap}
+    .trust-item{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--w60)}
+    .trust-dot{width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0}
+    .section{padding:100px 0}
+    .section-dark{background:var(--black-3)}
+    .section-head{margin-bottom:56px}
+    .section-head h2{font-family:var(--display);font-size:clamp(42px,5.5vw,72px);letter-spacing:.02em;line-height:1.0}
+    .section-head p{font-size:16px;color:var(--w60);margin-top:16px;font-weight:300;max-width:560px;line-height:1.75}
+    .who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--w08)}
+    .who-card{background:var(--black);padding:44px 36px;transition:background .3s;position:relative;overflow:hidden}
+    .who-card:hover{background:var(--black-3)}
+    .who-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+    .who-card:hover::after{transform:scaleX(1)}
+    .who-title{font-family:var(--display);font-size:32px;letter-spacing:.02em;margin-bottom:12px;line-height:1.0}
+    .who-desc{font-size:14px;color:var(--w60);line-height:1.7;font-weight:300}
+    .who-desc strong{color:var(--white);font-weight:500}
+    .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--w08)}
+    .service-card{background:var(--black-3);padding:52px 48px;position:relative;overflow:hidden}
+    .service-card.primary{background:var(--black-2)}
+    .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+    .service-card:hover::before{transform:scaleX(1)}
+    .service-tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:20px}
+    .service-name{font-family:var(--display);font-size:clamp(30px,3.5vw,44px);letter-spacing:.02em;line-height:1.0;margin-bottom:20px}
+    .service-desc{font-size:15px;color:var(--w60);line-height:1.8;margin-bottom:28px;font-weight:300}
+    .service-desc strong{color:var(--white);font-weight:500}
+    .service-includes{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
+    .si-item{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--w70)}
+    .si-check{color:var(--green);flex-shrink:0;margin-top:2px}
+    .service-link{font-size:13px;color:var(--green);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid rgba(184,255,79,.3);padding-bottom:2px;transition:border-color .2s;display:inline-block}
+    .service-link:hover{border-color:var(--green)}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--w08)}
+    .process-step{background:var(--black);padding:44px 36px}
+    .ps-num{font-family:var(--display);font-size:56px;color:var(--green);opacity:.3;line-height:1;margin-bottom:16px}
+    .ps-title{font-size:15px;font-weight:500;color:var(--white);margin-bottom:8px}
+    .ps-desc{font-size:14px;color:var(--w60);line-height:1.65;font-weight:300}
+    .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .why-left h2{font-family:var(--display);font-size:clamp(42px,5.5vw,72px);letter-spacing:.02em;line-height:1.0;margin-bottom:28px}
+    .why-left p{font-size:16px;color:var(--w60);line-height:1.85;margin-bottom:20px;font-weight:300}
+    .why-left strong{color:var(--white);font-weight:500}
+    .why-points{display:flex;flex-direction:column;gap:2px}
+    .why-point{display:flex;gap:20px;align-items:flex-start;padding:20px 24px;background:var(--w05);border:1px solid var(--w08)}
+    .wp-icon{color:var(--green);font-size:16px;flex-shrink:0;margin-top:3px}
+    .wp-content h4{font-size:14px;font-weight:500;color:var(--white);margin-bottom:4px}
+    .wp-content p{font-size:14px;color:var(--w60);line-height:1.6;margin:0;font-weight:300}
+    .not-seo{background:var(--black-2);border:1px solid var(--w08);border-left:3px solid var(--green);padding:52px 56px;display:grid;grid-template-columns:1fr 1fr;gap:60px}
+    .not-seo h2{font-family:var(--display);font-size:clamp(36px,4vw,52px);letter-spacing:.02em;line-height:1.0;margin-bottom:20px}
+    .not-seo p{font-size:15px;color:var(--w60);line-height:1.8;font-weight:300}
+    .not-seo strong{color:var(--white);font-weight:500}
+    .not-seo-right{display:flex;flex-direction:column;gap:2px}
+    .not-seo-item{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--w08)}
+    .not-seo-item:first-child{border-top:1px solid var(--w08)}
+    .nsi-col{padding:14px 16px;font-size:13px;line-height:1.5}
+    .nsi-col:first-child{color:var(--w40);border-right:1px solid var(--w08)}
+    .nsi-col:last-child{color:var(--w70);font-weight:300}
+    .nsi-col strong{color:var(--green);font-weight:500}
+    .contact-wrap{display:grid;grid-template-columns:1fr 480px;gap:80px;align-items:start}
+    .contact-left h2{font-family:var(--display);font-size:clamp(42px,5.5vw,72px);letter-spacing:.02em;line-height:1.0;margin-bottom:24px}
+    .contact-left p{font-size:16px;color:var(--w60);line-height:1.85;margin-bottom:20px;font-weight:300}
+    .contact-left strong{color:var(--white);font-weight:500}
+    .contact-details{display:flex;flex-direction:column;gap:0;margin-top:32px}
+    .contact-detail{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--w08)}
+    .contact-detail:first-child{border-top:1px solid var(--w08)}
+    .cd-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--w40);min-width:80px;padding-top:2px}
+    .cd-value{font-size:14px;color:var(--w70)}
+    .cd-value a{color:var(--green);transition:color .2s}
+    .cd-value a:hover{color:#d4ff85}
+    .contact-form{background:var(--w05);border:1px solid var(--w08);padding:44px}
+    .form-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--w40);display:block;margin-bottom:8px}
+    .form-group{margin-bottom:20px}
+    .form-input,.form-select,.form-textarea{width:100%;background:var(--black);border:1px solid var(--w20);color:var(--white);font-family:var(--body);font-size:14px;padding:14px 16px;outline:none;transition:border-color .2s;-webkit-appearance:none}
+    .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--green)}
+    .form-input::placeholder,.form-textarea::placeholder{color:var(--w40)}
+    .form-textarea{resize:vertical;min-height:120px;line-height:1.6}
+    .form-select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.4)' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px}
+    .form-select option{background:var(--black-3)}
+    .btn-submit{width:100%;background:var(--green);color:var(--black);font-size:14px;font-weight:500;letter-spacing:.04em;padding:18px 24px;border:none;cursor:pointer;font-family:var(--body);transition:background .2s,transform .2s}
+    .btn-submit:hover{background:#d4ff85;transform:translateY(-1px)}
+    .form-note{font-size:12px;color:var(--w40);text-align:center;margin-top:12px;letter-spacing:.04em}
+    .faq-list{border-top:1px solid var(--w08)}
+    .faq-item{border-bottom:1px solid var(--w08)}
+    .faq-q{width:100%;background:none;border:none;padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;cursor:pointer;text-align:left}
+    .faq-q-text{font-size:15px;font-weight:500;color:var(--white);line-height:1.5;font-family:var(--body)}
+    .faq-icon{width:22px;height:22px;border-radius:50%;border:1px solid var(--w20);flex-shrink:0;position:relative}
+    .faq-icon::before,.faq-icon::after{content:'';position:absolute;background:var(--green);top:50%;left:50%}
+    .faq-icon::before{width:9px;height:1.5px;transform:translate(-50%,-50%)}
+    .faq-icon::after{width:1.5px;height:9px;transform:translate(-50%,-50%);transition:transform .3s,opacity .3s}
+    .faq-item.open .faq-icon::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
+    .faq-item.open .faq-a{max-height:300px}
+    .faq-a-inner{padding:0 0 22px;font-size:15px;color:var(--w60);line-height:1.8;font-weight:300;max-width:720px}
+    footer{border-top:1px solid var(--w08);padding:64px 0 48px}
+    .footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:60px;margin-bottom:60px}
+    .footer-brand img{height:44px;margin-bottom:16px}
+    .footer-tag{font-size:13px;color:var(--w40);line-height:1.6}
+    .footer-col h4{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--w40);margin-bottom:18px}
+    .footer-col ul{display:flex;flex-direction:column;gap:11px}
+    .footer-col a{font-size:14px;color:var(--w60);transition:color .2s}
+    .footer-col a:hover{color:var(--green)}
+    .footer-bottom{border-top:1px solid var(--w08);padding-top:28px;display:flex;justify-content:space-between;align-items:center}
+    .footer-copy{font-size:12px;color:var(--w40);letter-spacing:.03em}
+    .footer-copy a{color:var(--w40);transition:color .2s}
+    .footer-copy a:hover{color:var(--green)}
+    @media(max-width:960px){
+      .container,.nav{padding:0 24px}
+      .hero-inner{grid-template-columns:1fr;gap:48px;padding:72px 24px 60px}
+      .who-grid{grid-template-columns:1fr}
+      .services-grid{grid-template-columns:1fr}
+      .process-grid{grid-template-columns:1fr 1fr}
+      .why-grid{grid-template-columns:1fr;gap:48px}
+      .not-seo{grid-template-columns:1fr;gap:36px;padding:36px 32px}
+      .contact-wrap{grid-template-columns:1fr;gap:48px}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+      .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+    }
+    @media(max-width:580px){
+      .section{padding:72px 0}
+      .process-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
+      .hero-btns{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Edge Studio" width="252" height="56"></a>
+  <ul class="nav-links">
+    <li><a href="/what-is-aeo">What is AEO</a></li>
+    <li><a href="https://foundbyai.com.au">Found By AI</a></li>
+    <li><a href="/aeo-agency" class="active">Agency</a></li>
+    <li><a href="/answer-hub">Answer Hub</a></li>
+    <li><a href="#contact" class="nav-btn">Work with us</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow a1">AEO Agency</div>
+      <h1 class="hero-h1 a2">Right now, AI is<br><span class="accent">choosing your competitors.</span></h1>
+      <p class="hero-sub a3">ChatGPT, Perplexity, and Google AI are recommending brands to your customers every day. <strong>One of those brands should be yours.</strong> We build the content, structure, and authority that make that happen.</p>
+      <div class="hero-btns a4">
+        <a href="#contact" class="btn-primary">Start a conversation</a>
+        <a href="#services" class="btn-ghost">See what we do &darr;</a>
+      </div>
+    </div>
+    <div class="stat-stack">
+      <div class="stat-card featured">
+        <div class="stat-n">3</div>
+        <div class="stat-label">AI platforms deciding which brands get recommended <strong>to your customers right now</strong></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-n">90</div>
+        <div class="stat-label">Days to <strong>measurable improvement</strong> in your AI visibility score</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-n">20</div>
+        <div class="stat-label">Purchase-intent prompts in every <strong>AI visibility audit</strong> we run</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-inner">
+      <div class="trust-item"><span class="trust-dot"></span>AEO Strategy</div>
+      <div class="trust-item"><span class="trust-dot"></span>Answer Hub Development</div>
+      <div class="trust-item"><span class="trust-dot"></span>Structured Data and Schema</div>
+      <div class="trust-item"><span class="trust-dot"></span>Brand Entity Optimisation</div>
+      <div class="trust-item"><span class="trust-dot"></span>AI Visibility Audits</div>
+      <div class="trust-item"><span class="trust-dot"></span>Monthly Monitoring</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHO FOR -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Who we work with</div>
+      <h2>The question is not whether AI search affects your brand. <span class="green">It already does.</span></h2>
+      <p>The only question is whether your brand is in the answer — or someone else's is.</p>
+    </div>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-title">You have a great brand.</div>
+        <div class="who-desc">Your product is good. Your reviews are strong. Your SEO is decent. But when your customer asks ChatGPT what to buy in your category, <strong>your name does not come up.</strong> A competitor with inferior products does. That is an AEO problem. We fix it.</div>
+      </div>
+      <div class="who-card">
+        <div class="who-title">You are hard to find by AI.</div>
+        <div class="who-desc">You know your brand should be recommended. The signals that make AI engines confident enough to cite you — structured data, citable content, brand entity clarity — <strong>are either missing or misaligned.</strong> We build them systematically.</div>
+      </div>
+      <div class="who-card">
+        <div class="who-title">You want to move first.</div>
+        <div class="who-desc">In most categories, <strong>nobody has claimed the AI recommendation yet.</strong> The brands that act now will own their category in AI search the way early SEO movers dominated Google. The window is open. It will not stay that way.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section-dark" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">What we do</div>
+      <h2>We do not offer a dozen services. <span class="green">We do one thing.</span></h2>
+      <p>AEO. Done properly. Across four specific disciplines that compound on each other when applied together.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card primary">
+        <div class="service-tag">Most popular</div>
+        <div class="service-name">AEO Strategy and Implementation</div>
+        <div class="service-desc">Most brands do not have an AEO problem. They have an AEO <strong>absence</strong> problem. Nothing is wrong — nothing has been built. This programme starts from scratch, establishes your baseline score, and systematically closes every gap between where you are and where you need to be.</div>
+        <div class="service-includes">
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Full AI visibility audit with scored baseline across all major platforms</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>AEO strategy with prioritised 90-day action plan</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Complete structured data and schema implementation</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Brand entity optimisation across all digital touchpoints</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Answer Hub build — minimum 10 citable answer pages</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Monthly visibility reporting with score tracking</span></div>
+        </div>
+        <a href="#contact" class="service-link">Enquire about this service &rarr;</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-tag">Content</div>
+        <div class="service-name">Answer Hub Development</div>
+        <div class="service-desc">AI engines do not recommend brands they cannot verify. Your Answer Hub is the body of evidence that proves your expertise. We research exactly what your customers are asking AI in your category, then build the structured content library that makes you the obvious authority to cite.</div>
+        <div class="service-includes">
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Research of top purchase-intent AI queries in your category</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Answer Hub architecture and content structure</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Answer-first content written to be cited, not just read</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>FAQ schema markup on every page</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Internal linking for compounding topical authority</span></div>
+        </div>
+        <a href="#contact" class="service-link">Enquire about this service &rarr;</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-tag">Technical</div>
+        <div class="service-name">Structured Data and Schema</div>
+        <div class="service-desc">AI engines cannot recommend what they cannot read. Structured data is the layer that makes your brand identity, products, and expertise legible to machines. Most brands have none of it. We implement the full stack — and validate it against the platforms that matter.</div>
+        <div class="service-includes">
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Organisation, Product, and Service schema implementation</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>FAQ schema on all relevant pages</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>brand-facts.json file creation and deployment</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Brand entity consistency audit across all platforms</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Validation and testing across ChatGPT, Perplexity, and Google AI</span></div>
+        </div>
+        <a href="#contact" class="service-link">Enquire about this service &rarr;</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-tag">Ongoing</div>
+        <div class="service-name">Monthly AEO Retainer</div>
+        <div class="service-desc">Your competitors are not standing still. New AI platforms emerge. Recommendation patterns shift. Brands that built strong visibility six months ago are now being overtaken by faster movers. This retainer keeps you ahead of the category every single month.</div>
+        <div class="service-includes">
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Monthly AI visibility audit and score tracking</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Two new Answer Hub pages per month</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Competitor monitoring — know when they gain or lose ground</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Structured data updates as your offering evolves</span></div>
+          <div class="si-item"><span class="si-check">&#10003;</span><span>Monthly strategy call and plain-language reporting</span></div>
+        </div>
+        <a href="#contact" class="service-link">Enquire about this service &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">How we work</div>
+      <h2>We measure first. <span class="green">Then we build.</span></h2>
+      <p>Every engagement starts with a scored baseline. That number is your starting point. Everything we do is designed to move it.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="ps-num">01</div>
+        <div class="ps-title">Visibility audit</div>
+        <div class="ps-desc">We run 20 purchase-intent prompts across ChatGPT, Perplexity, and Google AI. You get a score out of 20 and know exactly where your brand stands before a single dollar is spent on strategy.</div>
+      </div>
+      <div class="process-step">
+        <div class="ps-num">02</div>
+        <div class="ps-title">Strategy session</div>
+        <div class="ps-desc">We review your results together. We identify the highest-value gaps in your category — not generic AEO advice, but the specific opportunities that exist for your brand right now.</div>
+      </div>
+      <div class="process-step">
+        <div class="ps-num">03</div>
+        <div class="ps-title">Build and implement</div>
+        <div class="ps-desc">We execute against the plan. Structured data, Answer Hub content, brand entity work, and authority signals. Delivered in a sequence designed to produce early results while building long-term authority.</div>
+      </div>
+      <div class="process-step">
+        <div class="ps-num">04</div>
+        <div class="ps-title">Score, report, repeat</div>
+        <div class="ps-desc">Every month your prompts run again. Your score either goes up or we explain why and what changes. No vanity metrics. No activity reports. Just your number, your trajectory, and what we are doing about it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY EDGE STUDIO -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-left">
+        <div class="eyebrow">Why Edge Studio</div>
+        <h2>We did not add AEO to a service list. We built a company around it.</h2>
+        <p>When we could not find a rigorous way to measure AI visibility for our own clients, we built one. That tool — Found By AI — now scores hundreds of brands across 20 purchase-intent prompts and delivers results in 60 seconds.</p>
+        <p>We run our own AEO programme using every method we apply for clients. We publish our own visibility score monthly. If it does not work on us, it does not go near your brand.</p>
+        <p><strong>AEO is the only thing we do.</strong> That is not a limitation. It is the point.</p>
+      </div>
+      <div class="why-points">
+        <div class="why-point"><span class="wp-icon">&#9650;</span><div class="wp-content"><h4>Specialists, not generalists</h4><p>We do not offer SEO, paid media, or social. Every hour of work on your account is spent on AI visibility. Specialisation produces better results faster.</p></div></div>
+        <div class="why-point"><span class="wp-icon">&#9650;</span><div class="wp-content"><h4>We built the measurement tool</h4><p>Most agencies cannot tell you your AI visibility score. We can tell you in 60 seconds — because we built the tool that measures it.</p></div></div>
+        <div class="why-point"><span class="wp-icon">&#9650;</span><div class="wp-content"><h4>You always know your number</h4><p>Every engagement has a scored baseline from day one. Progress is measured against that number every month. There is nowhere to hide and no reason to.</p></div></div>
+        <div class="why-point"><span class="wp-icon">&#9650;</span><div class="wp-content"><h4>Strategy built for your category</h4><p>We research the specific queries your customers are making in your market. Your strategy is not a template. It is built for your competitive landscape.</p></div></div>
+        <div class="why-point"><span class="wp-icon">&#9650;</span><div class="wp-content"><h4>We move fast on purpose</h4><p>Category leaders in AI search are being decided right now. The cost of moving slowly is not abstract. It is your competitors being recommended instead of you.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOT SEO -->
+<section class="section">
+  <div class="container">
+    <div class="not-seo">
+      <div>
+        <h2>We are not an SEO agency.</h2>
+        <p>SEO earns you a position in a list. AEO earns you the recommendation. They are different systems, different signals, and different strategies. Most agencies that claim to offer both have built a specialism in neither.</p>
+        <p style="margin-top:16px">If you need SEO, we will point you to people who are exceptional at it. If you need your brand to be the one ChatGPT recommends when your customer asks what to buy, <strong>that is our job</strong>.</p>
+      </div>
+      <div class="not-seo-right">
+        <div class="not-seo-item"><div class="nsi-col">SEO goal</div><div class="nsi-col">A <strong>link</strong> in a list of results</div></div>
+        <div class="not-seo-item"><div class="nsi-col">AEO goal</div><div class="nsi-col">The <strong>recommendation</strong> in the answer</div></div>
+        <div class="not-seo-item"><div class="nsi-col">SEO signal</div><div class="nsi-col">Backlinks, page speed, keyword density</div></div>
+        <div class="not-seo-item"><div class="nsi-col">AEO signal</div><div class="nsi-col">Schema, entity clarity, citable content</div></div>
+        <div class="not-seo-item"><div class="nsi-col">SEO metric</div><div class="nsi-col">Rankings and click-through rate</div></div>
+        <div class="not-seo-item"><div class="nsi-col">AEO metric</div><div class="nsi-col"><strong>Visibility score</strong> out of 20</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">FAQ</div>
+      <h2>Questions about working with us.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What kinds of brands do you work with?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">Any brand whose customers use AI to research, compare, or decide what to buy. Products, services, SaaS, professional firms — the category does not matter. What matters is whether AI-driven discovery is relevant to how your customers find you. If it is, and most brands it already is, AEO is relevant.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How long before we see results?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">Structured data improvements can influence AI recommendations within weeks. Meaningful, sustained improvement in your visibility score typically takes 60 to 90 days of consistent work. We measure from day one so you always know exactly where you stand and where you are heading.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do I need good SEO before starting AEO?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">No. AEO and SEO share some technical foundations but operate independently. A brand with average SEO can build strong AI visibility. The signals AI engines use to evaluate brands are different from the signals Google uses to rank pages.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does it cost?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">Pricing depends on your category, competitive landscape, and how much needs to be built versus refined. We do not publish rates because the right scope varies significantly between brands. Get in touch and we will give you a clear, specific number quickly — no lengthy discovery process required.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you work globally?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">Yes. AI search is a global channel. We work with brands regardless of where they are based.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-left">
+        <div class="eyebrow">Get in touch</div>
+        <h2>Your competitors are not waiting.</h2>
+        <p>Send us your brand name and what you sell. We will come back within one business day with a clear view of where your AI visibility currently stands, what the opportunity looks like in your category, and exactly what it would cost to close the gap.</p>
+        <p>No obligations. No lengthy onboarding questionnaire. Just a direct conversation about whether we can help — and by how much.</p>
+        <div class="contact-details">
+          <div class="contact-detail"><span class="cd-label">Email</span><span class="cd-value"><a href="/cdn-cgi/l/email-protection#3d55585151527d58595a584e4948595452554c135e5250"><span class="__cf_email__" data-cfemail="244c4148484b6441404341575051404d4b4c550a474b49">[email&#160;protected]</span></a></span></div>
+          <div class="contact-detail"><span class="cd-label">Response</span><span class="cd-value">Within one business day</span></div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form action="https://formspree.io/f/xkovdpge" method="POST" id="agency-form">
+        <div class="form-group"><label class="form-label">Your name</label><input type="text" name="name" class="form-input" placeholder="First and last name" required></div>
+        <div class="form-group"><label class="form-label">Business email</label><input type="email" name="email" class="form-input" placeholder="you@yourbusiness.com" required></div>
+        <div class="form-group"><label class="form-label">Brand or business name</label><input type="text" name="brand" class="form-input" placeholder="Your brand name"></div>
+        <div class="form-group"><label class="form-label">What do you sell</label>
+          <select name="category" class="form-select">
+            <option value="" disabled selected>Select your category</option>
+            <option>Ecommerce or DTC brand</option>
+            <option>Service business or agency</option>
+            <option>SaaS or tech product</option>
+            <option>Professional services</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label">Anything else we should know</label><textarea name="message" class="form-textarea" placeholder="Your website URL, where you are currently with SEO or AEO, what prompted you to reach out now..."></textarea></div>
+        <button type="submit" class="btn-submit" id="agency-submit-btn">Send enquiry</button>
+        <div class="form-note">We respond within one business day.</div>
+        </form>
+        <div id="agency-form-success" style="display:none;padding:32px;text-align:center">
+          <div style="font-family:var(--display);font-size:32px;color:var(--green);margin-bottom:12px">Enquiry sent.</div>
+          <div style="font-size:15px;color:var(--w60);font-weight:300">We will be in touch within one business day.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="/images/logo.png" alt="Edge Studio" width="203" height="44"><p class="footer-tag">AEO Agency and AI Visibility Tools</p><p class="footer-tag">edgestudiohq.com</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="https://foundbyai.com.au">Found By AI Audit</a></li><li><a href="/aeo-agency">AEO Agency</a></li><li><a href="/aeo-agency">AEO Strategy</a></li><li><a href="/aeo-agency">Answer Hub Development</a></li><li><a href="/aeo-agency">Structured Data</a></li></ul></div>
+      <div class="footer-col"><h4>Learn</h4><ul><li><a href="/what-is-aeo">What is AEO</a></li><li><a href="/answer-hub">Answer Hub</a></li><li><a href="/answer-hub/aeo-vs-seo">AEO vs SEO</a></li><li><a href="/answer-hub/aeo-vs-geo">AEO vs GEO</a></li><li><a href="/brand-facts.json">Brand Facts</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Edge Studio. All rights reserved. <a href="/cdn-cgi/l/email-protection#731b161f1f1c3316171416000706171a1c1b025d101c1e">Contact</a></p>
+      <p class="footer-copy">AEO Strategy &middot; AI Visibility Audits &middot; Answer Hub Development &middot; Structured Data</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn){const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));if(!isOpen)item.classList.add('open')}
+  const agencyForm = document.getElementById('agency-form');
+  const agencyBtn = document.getElementById('agency-submit-btn');
+  const agencySuccess = document.getElementById('agency-form-success');
+  if(agencyForm){
+    agencyForm.addEventListener('submit', async function(e){
+      e.preventDefault();
+      agencyBtn.textContent = 'Sending...';
+      agencyBtn.disabled = true;
+      const response = await fetch(agencyForm.action, {
+        method: 'POST',
+        body: new FormData(agencyForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if(response.ok){
+        agencyForm.style.display = 'none';
+        agencySuccess.style.display = 'block';
+      } else {
+        agencyBtn.textContent = 'Something went wrong. Email us directly.';
+        agencyBtn.disabled = false;
+      }
+    });
+  }
+</script>
+</body>
+</html>
