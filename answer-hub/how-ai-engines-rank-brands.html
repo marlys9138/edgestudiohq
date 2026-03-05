@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How AI Engines Rank Brands — The 6 Signals | Edge Studio Answer Hub</title>
+  <meta name="description" content="ChatGPT, Perplexity, and Google AI use six specific signals to decide which brands to recommend. Here is exactly what they are and how to build them.">
+  <link rel="canonical" href="https://edgestudiohq.com/answer-hub/how-ai-engines-rank-brands">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How AI Engines Rank Brands: The 6 Signals That Determine Who Gets Recommended","description":"ChatGPT, Perplexity, and Google AI use six key signals to decide which brands to recommend: structured data, brand entity clarity, citable content, topical authority, third-party mentions, and content accessibility.","author":{"@type":"Organization","name":"Edge Studio","url":"https://edgestudiohq.com"},"publisher":{"@type":"Organization","name":"Edge Studio"},"mainEntityOfPage":"https://edgestudiohq.com/answer-hub/how-ai-engines-rank-brands","dateModified":"2026-03-01"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do AI engines decide which brands to recommend?","acceptedAnswer":{"@type":"Answer","text":"AI engines like ChatGPT and Perplexity recommend brands based on six key signals: structured data and schema markup, brand entity clarity and consistency, citable answer-first content, demonstrated topical authority, third-party mentions and citations, and technical content accessibility."}},{"@type":"Question","name":"What is the most important signal for AI visibility?","acceptedAnswer":{"@type":"Answer","text":"Structured data and schema markup is the single highest-leverage signal. It makes your brand identity, products, and expertise machine-readable. Without it, AI engines must infer what your brand is from unstructured content, which reduces their confidence and therefore their willingness to recommend you."}},{"@type":"Question","name":"Does SEO authority help with AI recommendations?","acceptedAnswer":{"@type":"Answer","text":"Partially. Strong domain authority and quality backlinks signal credibility that AI engines consider. But SEO authority alone does not produce AI recommendations. The specific AEO signals — structured data, entity clarity, and answer-first content — must also be present."}},{"@type":"Question","name":"How long does it take to improve AI visibility?","acceptedAnswer":{"@type":"Answer","text":"Technical improvements like structured data can influence AI recommendations within weeks. Meaningful, sustained improvement in overall visibility score typically takes 60 to 90 days of consistent implementation across all six signals."}}]}</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--black:#0C0C0C;--black-2:#111;--black-3:#161616;--green:#B8FF4F;--white:#FFFFFF;--w70:rgba(255,255,255,0.7);--w60:rgba(255,255,255,0.6);--w40:rgba(255,255,255,0.4);--w20:rgba(255,255,255,0.2);--w08:rgba(255,255,255,0.08);--w05:rgba(255,255,255,0.05);--display:'Bebas Neue',sans-serif;--body:'DM Sans',sans-serif;--ease:cubic-bezier(0.16,1,0.3,1)}
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:var(--white);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    ul{list-style:none}
+    .container{width:100%;max-width:1160px;margin:0 auto;padding:0 40px}
+    .green{color:var(--green)}
+    .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:12px;margin-bottom:24px}
+    .eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--green);flex-shrink:0}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .a1{animation:fadeUp .8s var(--ease) .1s both}.a2{animation:fadeUp .8s var(--ease) .25s both}.a3{animation:fadeUp .8s var(--ease) .4s both}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;height:72px;padding:0 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(12,12,12,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--w08)}
+    .nav-logo img{height:56px;width:auto}
+    .nav-links{display:flex;gap:32px;align-items:center}
+    .nav-links a{font-size:13px;letter-spacing:.04em;color:var(--w40);transition:color .2s}
+    .nav-links a:hover{color:var(--white)}
+    .nav-links a.active{color:var(--green)}
+    .nav-btn{background:var(--green)!important;color:var(--black)!important;font-weight:500!important;padding:9px 20px;transition:background .2s!important}
+    .nav-btn:hover{background:#d4ff85!important}
+    .page-hero{padding-top:72px;border-bottom:1px solid var(--w08)}
+    .page-hero-inner{padding:80px 40px 72px;max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 360px;gap:80px;align-items:start}
+    .page-h1{font-family:var(--display);font-size:clamp(52px,6.5vw,90px);line-height:.92;letter-spacing:.02em;margin-bottom:32px}
+    .page-h1 .accent{color:var(--green)}
+    .answer-block{background:var(--w05);border:1px solid var(--w08);border-left:3px solid var(--green);padding:28px 32px;margin-bottom:28px}
+    .answer-block-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+    .answer-block p{font-size:17px;line-height:1.7;color:var(--w70);font-weight:300}
+    .answer-block strong{color:var(--white);font-weight:500}
+    .page-hero-meta{font-size:13px;color:var(--w40);display:flex;gap:20px;flex-wrap:wrap}
+    .toc{background:var(--w05);border:1px solid var(--w08);padding:28px;position:sticky;top:88px}
+    .toc-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--w40);margin-bottom:14px}
+    .toc-list{display:flex;flex-direction:column;gap:2px}
+    .toc-list a{font-size:13px;color:var(--w60);padding:8px 10px;border-left:2px solid transparent;transition:color .2s,border-color .2s;line-height:1.4}
+    .toc-list a:hover{color:var(--green);border-left-color:var(--green)}
+    .article-wrap{padding:80px 0 100px}
+    .article-inner{max-width:1160px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr 360px;gap:80px;align-items:start}
+    .article-body{min-width:0}
+    .article-sidebar{position:sticky;top:88px;display:flex;flex-direction:column;gap:2px}
+    .article-section{margin-bottom:68px;scroll-margin-top:96px}
+    .article-section:last-child{margin-bottom:0}
+    .section-h2{font-family:var(--display);font-size:clamp(36px,4vw,52px);letter-spacing:.02em;line-height:1.0;margin-bottom:24px}
+    .article-body p{font-size:16px;color:var(--w60);line-height:1.85;margin-bottom:20px;font-weight:300}
+    .article-body p:last-child{margin-bottom:0}
+    .article-body strong{color:var(--white);font-weight:500}
+    .article-body a{color:var(--green);border-bottom:1px solid rgba(184,255,79,.3);transition:border-color .2s}
+    .article-body a:hover{border-color:var(--green)}
+    .signal-stack{display:flex;flex-direction:column;gap:2px;margin:28px 0}
+    .signal-card{background:var(--black-2);border:1px solid var(--w08);padding:36px 40px;display:grid;grid-template-columns:80px 1fr;gap:32px;align-items:start}
+    .signal-num{font-family:var(--display);font-size:64px;color:var(--green);opacity:.25;line-height:1}
+    .signal-body h3{font-size:17px;font-weight:500;color:var(--white);margin-bottom:10px}
+    .signal-body p{font-size:15px;color:var(--w60);line-height:1.75;margin-bottom:12px;font-weight:300}
+    .signal-body p:last-child{margin-bottom:0}
+    .signal-body strong{color:var(--white);font-weight:500}
+    .signal-tag{display:inline-block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px;margin-bottom:14px}
+    .signal-tag.high{background:rgba(184,255,79,.1);color:var(--green)}
+    .signal-tag.medium{background:rgba(255,255,255,.05);color:var(--w40)}
+    .callout{border-left:2px solid var(--green);padding:18px 24px;margin:28px 0;background:var(--w05)}
+    .callout p{font-size:15px;color:var(--w60);line-height:1.7;margin:0;font-weight:300}
+    .callout strong{color:var(--white)}
+    .callout-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+    .checklist{display:flex;flex-direction:column;gap:0;margin:20px 0}
+    .checklist-item{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--w08);font-size:15px;color:var(--w60);font-weight:300;line-height:1.5}
+    .checklist-item:first-child{border-top:1px solid var(--w08)}
+    .checklist-check{color:var(--green);flex-shrink:0;margin-top:2px;font-size:13px}
+    .sidebar-card{background:var(--w05);border:1px solid var(--w08);padding:28px}
+    .sidebar-card-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+    .sidebar-card h3{font-family:var(--display);font-size:28px;letter-spacing:.02em;margin-bottom:12px}
+    .sidebar-card p{font-size:14px;color:var(--w60);line-height:1.65;margin-bottom:20px;font-weight:300}
+    .sidebar-links{display:flex;flex-direction:column}
+    .sidebar-link{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--w08);font-size:14px;color:var(--w60);transition:color .2s}
+    .sidebar-link:first-child{border-top:1px solid var(--w08)}
+    .sidebar-link:hover{color:var(--green)}
+    .btn-primary{display:inline-block;background:var(--green);color:var(--black);font-size:14px;font-weight:500;letter-spacing:.04em;padding:14px 24px;transition:background .2s,transform .2s}
+    .btn-primary:hover{background:#d4ff85;transform:translateY(-1px)}
+    .faq-list{border-top:1px solid var(--w08);margin-top:24px}
+    .faq-item{border-bottom:1px solid var(--w08)}
+    .faq-q{width:100%;background:none;border:none;padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;cursor:pointer;text-align:left}
+    .faq-q-text{font-size:15px;font-weight:500;color:var(--white);line-height:1.5;font-family:var(--body)}
+    .faq-icon{width:22px;height:22px;border-radius:50%;border:1px solid var(--w20);flex-shrink:0;position:relative}
+    .faq-icon::before,.faq-icon::after{content:'';position:absolute;background:var(--green);top:50%;left:50%}
+    .faq-icon::before{width:9px;height:1.5px;transform:translate(-50%,-50%)}
+    .faq-icon::after{width:1.5px;height:9px;transform:translate(-50%,-50%);transition:transform .3s,opacity .3s}
+    .faq-item.open .faq-icon::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
+    .faq-item.open .faq-a{max-height:300px}
+    .faq-a-inner{padding:0 0 20px;font-size:15px;color:var(--w60);line-height:1.8;font-weight:300}
+    .cta-strip{background:var(--black-3);border-top:1px solid var(--w08);border-bottom:1px solid var(--w08);padding:80px 0;text-align:center}
+    .cta-strip h2{font-family:var(--display);font-size:clamp(40px,5vw,68px);letter-spacing:.02em;line-height:1.0;margin-bottom:20px}
+    .cta-strip p{font-size:17px;color:var(--w60);line-height:1.7;max-width:480px;margin:0 auto 36px;font-weight:300}
+    .cta-btns{display:flex;gap:20px;justify-content:center;align-items:center;flex-wrap:wrap}
+    .btn-ghost{font-size:13px;color:var(--w60);letter-spacing:.04em;border-bottom:1px solid var(--w20);padding-bottom:2px;transition:color .2s,border-color .2s}
+    .btn-ghost:hover{color:var(--white);border-color:var(--w40)}
+    .related{padding:80px 0}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--w08)}
+    .related-card{background:var(--black);padding:36px 32px;transition:background .2s;display:block}
+    .related-card:hover{background:var(--black-3)}
+    .related-tag{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+    .related-card h3{font-family:var(--display);font-size:26px;letter-spacing:.02em;margin-bottom:10px;line-height:1.1}
+    .related-card p{font-size:14px;color:var(--w60);line-height:1.6;font-weight:300}
+    footer{border-top:1px solid var(--w08);padding:64px 0 48px}
+    .footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:60px;margin-bottom:60px}
+    .footer-brand img{height:44px;margin-bottom:16px}
+    .footer-tag{font-size:13px;color:var(--w40);line-height:1.6}
+    .footer-col h4{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--w40);margin-bottom:18px}
+    .footer-col ul{display:flex;flex-direction:column;gap:11px}
+    .footer-col a{font-size:14px;color:var(--w60);transition:color .2s}
+    .footer-col a:hover{color:var(--green)}
+    .footer-bottom{border-top:1px solid var(--w08);padding-top:28px;display:flex;justify-content:space-between;align-items:center}
+    .footer-copy{font-size:12px;color:var(--w40);letter-spacing:.03em}
+    .footer-copy a{color:var(--w40);transition:color .2s}
+    .footer-copy a:hover{color:var(--green)}
+    @media(max-width:960px){
+      .page-hero-inner,.article-inner{grid-template-columns:1fr;gap:48px}
+      .toc,.article-sidebar{position:static}
+      .page-hero-inner .toc{display:none}
+      .container,.nav{padding:0 24px}
+      .page-hero-inner{padding:72px 24px 56px}
+      .article-wrap{padding:56px 0 80px}
+      .article-inner{padding:0 24px}
+      .signal-card{grid-template-columns:1fr}
+      .signal-num{font-size:40px}
+      .related-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+      .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+    }
+    @media(max-width:580px){.footer-grid{grid-template-columns:1fr}.cta-btns{flex-direction:column}}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Edge Studio" width="252" height="56"></a>
+  <ul class="nav-links">
+    <li><a href="/what-is-aeo">What is AEO</a></li>
+    <li><a href="https://foundbyai.com.au">Found By AI</a></li>
+    <li><a href="/aeo-agency">Agency</a></li>
+    <li><a href="/answer-hub" class="active">Answer Hub</a></li>
+    <li><a href="https://foundbyai.com.au" class="nav-btn">Get My Score &mdash; $197</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <div class="eyebrow a1">Answer Hub &mdash; Fundamentals</div>
+      <h1 class="page-h1 a2">How AI engines <span class="accent">rank brands.</span></h1>
+      <div class="answer-block a3">
+        <div class="answer-block-label">Direct answer</div>
+        <p>ChatGPT, Perplexity, and Google AI recommend brands based on six signals: <strong>structured data, brand entity clarity, citable content, topical authority, third-party mentions, and technical accessibility.</strong> Most brands are missing at least four of them.</p>
+      </div>
+      <div class="page-hero-meta"><span>By Edge Studio</span><span>Updated March 2026</span><span>7 min read</span></div>
+    </div>
+    <nav class="toc">
+      <div class="toc-label">On this page</div>
+      <div class="toc-list">
+        <a href="#how-ai-decides">How AI decides</a>
+        <a href="#six-signals">The six signals</a>
+        <a href="#what-most-brands-miss">What most brands miss</a>
+        <a href="#audit-your-signals">Audit your signals</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <div class="article-inner">
+    <article class="article-body">
+
+      <section class="article-section" id="how-ai-decides">
+        <h2 class="section-h2">How AI decides who to recommend</h2>
+        <p>When someone asks ChatGPT which brand to buy, which service to use, or which company to trust, they expect a confident answer. That answer has to come from somewhere.</p>
+        <p>AI engines are not looking at a list of websites and picking the highest-ranked one. They are synthesising information from training data, real-time retrieval, and structured signals to form a judgment about which brand is most credible, most relevant, and most clearly identifiable in the context of the query.</p>
+        <p><strong>The brands that get recommended are the brands that give AI engines the most reason to be confident.</strong> Confidence comes from clarity — clarity about what the brand is, what it offers, what it knows, and that others recognise it as an authority.</p>
+        <p>That confidence is built through six specific signals. Most brands have invested in none of them deliberately.</p>
+      </section>
+
+      <section class="article-section" id="six-signals">
+        <h2 class="section-h2">The six signals</h2>
+
+        <div class="signal-stack">
+          <div class="signal-card">
+            <div class="signal-num">01</div>
+            <div class="signal-body">
+              <span class="signal-tag high">Highest leverage</span>
+              <h3>Structured data and schema markup</h3>
+              <p>Structured data is the machine-readable layer of your website. It uses standardised vocabulary — most commonly Schema.org — to tell AI engines exactly what your brand is, what your products or services are, where you operate, and what you are known for.</p>
+              <p>Without structured data, AI engines must infer this information from unstructured content. Inference introduces uncertainty. <strong>Uncertainty reduces the likelihood of a confident recommendation.</strong></p>
+              <p>The highest-impact schema types for AEO are Organisation, Product, Service, and FAQ. A brand-facts.json file — a machine-readable summary of your brand identity hosted at your domain root — is an additional AEO-specific signal that few brands have implemented.</p>
+            </div>
+          </div>
+
+          <div class="signal-card">
+            <div class="signal-num">02</div>
+            <div class="signal-body">
+              <span class="signal-tag high">Highest leverage</span>
+              <h3>Brand entity clarity and consistency</h3>
+              <p>In AI search, your brand is an entity — a discrete, identifiable object in the AI's understanding of the world. For AI engines to confidently recommend you, they need to have a clear, consistent picture of what that entity is.</p>
+              <p>That means your brand name, description, category, URL, and key attributes need to be described <strong>consistently across every platform where your brand has a presence</strong> — your website, social profiles, directory listings, press coverage, and third-party reviews.</p>
+              <p>Inconsistency is a confidence problem. If your brand is described differently across sources, AI engines cannot build a coherent entity model — and without a coherent entity model, they will default to a competitor they can describe with more certainty.</p>
+            </div>
+          </div>
+
+          <div class="signal-card">
+            <div class="signal-num">03</div>
+            <div class="signal-body">
+              <span class="signal-tag high">High leverage</span>
+              <h3>Citable, answer-first content</h3>
+              <p>AI engines source their answers from content. But not all content is equally citable. Content that gets cited is content that clearly and directly answers a specific question — content structured to be extracted, quoted, and referenced without requiring the reader to interpret or summarise it first.</p>
+              <p>This is answer-first content: content where the answer appears immediately at the top, before context, caveats, or background. Content with clear headings that signal what question each section addresses. Content with FAQ sections using proper schema markup.</p>
+              <p><strong>Most brand content is written to engage human readers and rank in Google.</strong> That content is often too narrative, too promotional, and too vague for AI engines to confidently cite. Answer-first content is different in structure, tone, and intent — and it is the content that gets referenced.</p>
+            </div>
+          </div>
+
+          <div class="signal-card">
+            <div class="signal-num">04</div>
+            <div class="signal-body">
+              <span class="signal-tag high">High leverage</span>
+              <h3>Topical authority</h3>
+              <p>A single page that answers one question does not make an authority. AI engines recognise topical authority through breadth and depth of coverage — a brand that has published comprehensive, structured answers across the full range of questions in its category.</p>
+              <p>This is the function of an Answer Hub: a structured library of citable content that covers every significant question a customer in your category might ask. The brands that have built this are treated by AI engines as the go-to reference for their topic. <strong>The brands that have not are treated as peripheral sources at best.</strong></p>
+              <p>Topical authority is the signal that takes the most time to build — and is therefore the most valuable competitive moat once established.</p>
+            </div>
+          </div>
+
+          <div class="signal-card">
+            <div class="signal-num">05</div>
+            <div class="signal-body">
+              <span class="signal-tag medium">Medium leverage</span>
+              <h3>Third-party mentions and citations</h3>
+              <p>AI engines weight information from independent third parties more heavily than information sourced directly from a brand's own website. When journalists, reviewers, industry publications, and customers describe your brand — and describe it consistently — that signals external validation.</p>
+              <p>This does not mean you need a traditional PR programme. It means your brand needs to be <strong>present, consistent, and positively described in sources outside your direct control</strong>: press coverage, review platforms, industry directories, and mentions in relevant community spaces.</p>
+              <p>The quality and relevance of third-party sources matters more than volume. One citation from a credible industry publication outweighs dozens of directory listings.</p>
+            </div>
+          </div>
+
+          <div class="signal-card">
+            <div class="signal-num">06</div>
+            <div class="signal-body">
+              <span class="signal-tag medium">Foundational</span>
+              <h3>Technical content accessibility</h3>
+              <p>AI engines cannot cite content they cannot read. This sounds obvious but it catches many brands out. Content locked behind login walls, rendered exclusively in JavaScript without server-side fallback, buried in PDFs, or blocked by robots.txt rules is invisible to AI crawlers.</p>
+              <p>Technical accessibility for AEO means ensuring your key content — especially your Answer Hub pages and product or service descriptions — is accessible to web crawlers, loads without JavaScript dependency, and is not inadvertently blocked by crawl rules.</p>
+              <p>This is the foundational signal. <strong>Without technical accessibility, none of the other five signals can be read.</strong> For most brands this is a maintenance issue rather than a major gap, but it should be the first thing checked in any AEO audit.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="article-section" id="what-most-brands-miss">
+        <h2 class="section-h2">What most brands are missing</h2>
+        <p>In practice, when we audit brands against these six signals, the pattern is consistent. Technical accessibility is usually adequate. Third-party mentions are often present but inconsistent. Everything else — structured data, entity clarity, citable content, and topical authority — is typically either absent or insufficiently developed to drive confident AI recommendations.</p>
+        <div class="callout">
+          <div class="callout-label">The most common finding</div>
+          <p>Strong content, weak signals. Most brands have written a lot. Very little of it is structured for AI citability. <strong>The content exists but the machine-readable layer does not.</strong> That is an AEO problem — and it is fixable.</p>
+        </div>
+        <p>The implication is that most brands are one to three months of focused work away from meaningfully improving their AI visibility. The signals are known. The methods are established. The gap between most brands and strong AI visibility is not capability — it is awareness and execution.</p>
+      </section>
+
+      <section class="article-section" id="audit-your-signals">
+        <h2 class="section-h2">Audit your signals</h2>
+        <p>Before building anything, establish your baseline. Run 20 purchase-intent prompts across ChatGPT, Perplexity, and Google AI and record whether your brand appears. That is your current visibility score — the number that everything else is designed to move.</p>
+        <p>Then audit each signal systematically:</p>
+        <div class="checklist">
+          <div class="checklist-item"><span class="checklist-check">&#10003;</span><span><strong>Structured data:</strong> Is Organisation schema present on your homepage? Product or Service schema on key pages? FAQ schema on all answer content?</span></div>
+          <div class="checklist-item"><span class="checklist-check">&#10003;</span><span><strong>Entity clarity:</strong> Is your brand name, description, and category described identically across your website, social profiles, and major directory listings?</span></div>
+          <div class="checklist-item"><span class="checklist-check">&#10003;</span><span><strong>Citable content:</strong> Does your website have answer-first content pages that directly address the questions your customers are asking AI?</span></div>
+          <div class="checklist-item"><span class="checklist-check">&#10003;</span><span><strong>Topical authority:</strong> Do you have a structured library of content covering the full range of questions in your category?</span></div>
+          <div class="checklist-item"><span class="checklist-check">&#10003;</span><span><strong>Third-party mentions:</strong> Is your brand described consistently in press, reviews, and industry publications? Are any of those sources credible in your category?</span></div>
+          <div class="checklist-item"><span class="checklist-check">&#10003;</span><span><strong>Technical accessibility:</strong> Can AI crawlers access your key content pages without JavaScript dependency or crawl restrictions?</span></div>
+        </div>
+        <p>The <a href="https://foundbyai.com.au">Found By AI audit</a> runs this scoring automatically across 20 purchase-intent prompts and delivers a prioritised gap analysis with six content assets in 60 seconds. It is the fastest way to establish your baseline before beginning AEO work.</p>
+      </section>
+
+      <section class="article-section" id="faq">
+        <h2 class="section-h2">Frequently asked questions</h2>
+        <div class="faq-list">
+          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How do AI engines decide which brands to recommend?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">AI engines recommend brands based on six key signals: structured data and schema markup, brand entity clarity and consistency, citable answer-first content, demonstrated topical authority, third-party mentions and citations, and technical content accessibility.</p></div></div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What is the most important signal for AI visibility?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">Structured data is the single highest-leverage signal. It makes your brand identity, products, and expertise machine-readable. Without it, AI engines must infer what your brand is from unstructured content, which reduces their confidence and therefore their willingness to recommend you.</p></div></div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Does SEO authority help with AI recommendations?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">Partially. Strong domain authority and quality backlinks signal credibility that AI engines consider. But SEO authority alone does not produce AI recommendations. The specific AEO signals — structured data, entity clarity, and answer-first content — must also be present.</p></div></div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How long does it take to improve AI visibility?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">Technical improvements like structured data can influence AI recommendations within weeks. Meaningful, sustained improvement in overall visibility score typically takes 60 to 90 days of consistent implementation across all six signals.</p></div></div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do all AI engines use the same signals?</span><span class="faq-icon"></span></button><div class="faq-a"><p class="faq-a-inner">The six signals apply across ChatGPT, Perplexity, and Google AI Overviews, though the relative weighting differs between platforms. Structured data and entity clarity matter on all three. Topical authority is particularly important for Perplexity, which relies heavily on real-time retrieval. Google AI Overviews weight existing search authority more heavily than the other two.</p></div></div>
+        </div>
+      </section>
+
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-card-label">See where you stand</div>
+        <h3>Run your AI visibility audit</h3>
+        <p>Find out how your brand scores across 20 real purchase-intent prompts. In 60 seconds.</p>
+        <a href="https://foundbyai.com.au" class="btn-primary">Get My Score &mdash; $197</a>
+      </div>
+      <div class="sidebar-card" style="margin-top:2px">
+        <div class="sidebar-card-label">Related reading</div>
+        <div class="sidebar-links">
+          <a href="/what-is-aeo" class="sidebar-link"><span>What is AEO</span><span>&rarr;</span></a>
+          <a href="/answer-hub/aeo-vs-seo" class="sidebar-link"><span>AEO vs SEO</span><span>&rarr;</span></a>
+          <a href="/answer-hub/aeo-vs-geo" class="sidebar-link"><span>AEO vs GEO vs AIO</span><span>&rarr;</span></a>
+          <a href="/answer-hub" class="sidebar-link"><span>Full Answer Hub</span><span>&rarr;</span></a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<section class="cta-strip">
+  <div class="container">
+    <h2>Find out which signals you are missing.</h2>
+    <p>The Found By AI audit scores your brand across 20 purchase-intent prompts and delivers a prioritised gap analysis in 60 seconds.</p>
+    <div class="cta-btns">
+      <a href="https://foundbyai.com.au" class="btn-primary">Get My Score &mdash; $197</a>
+      <a href="/aeo-agency" class="btn-ghost">Work with our team</a>
+    </div>
+  </div>
+</section>
+
+<section class="related">
+  <div class="container">
+    <div class="related-grid">
+      <a href="/what-is-aeo" class="related-card"><div class="related-tag">Foundation</div><h3>What is AEO</h3><p>The complete guide to Answer Engine Optimisation — what it is, how it works, and how to start.</p></a>
+      <a href="/answer-hub/aeo-vs-seo" class="related-card"><div class="related-tag">Fundamentals</div><h3>AEO vs SEO</h3><p>How optimising for AI answers differs from optimising for search rankings, and why you need both.</p></a>
+      <a href="/answer-hub/aeo-vs-geo" class="related-card"><div class="related-tag">Fundamentals</div><h3>AEO vs GEO vs AIO</h3><p>The industry uses several terms. Here is what each one means and which to use.</p></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="/images/logo.png" alt="Edge Studio" width="203" height="44"><p class="footer-tag">AEO Agency and AI Visibility Tools</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="https://foundbyai.com.au">Found By AI Audit</a></li><li><a href="/aeo-agency">AEO Agency</a></li><li><a href="/aeo-agency">Answer Hub Development</a></li></ul></div>
+      <div class="footer-col"><h4>Answer Hub</h4><ul><li><a href="/what-is-aeo">What is AEO</a></li><li><a href="/answer-hub/aeo-vs-seo">AEO vs SEO</a></li><li><a href="/answer-hub/aeo-vs-geo">AEO vs GEO vs AIO</a></li><li><a href="/answer-hub/how-ai-engines-rank-brands">How AI engines rank brands</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Edge Studio. All rights reserved.</p>
+      <p class="footer-copy"><a href="/answer-hub">Answer Hub</a> &middot; <a href="/aeo-agency">Agency</a> &middot; <a href="/contact">Contact</a></p>
+    </div>
+  </div>
+</footer>
+<script>function toggleFaq(btn){const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));if(!isOpen)item.classList.add('open')}</script>
+</body>
+</html>
