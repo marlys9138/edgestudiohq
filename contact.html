@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Edge Studio — AEO Agency</title>
+  <meta name="description" content="Get in touch with Edge Studio. Talk to us about your AI visibility, AEO strategy, or Found By AI. We respond within one business day.">
+  <link rel="canonical" href="https://edgestudiohq.com/contact">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --ink:#0d1208;--ink-deep:#111509;--ink-surface:#161d0f;--ink-raised:#1c2614;
+      --border:#283318;--border-soft:#344420;
+      --growth:#a3c43a;--growth-pale:#d4e890;
+      --cream:#ece7d4;--cream-soft:#b4af98;--muted:#6a7a4e;--faint:#3a4428;
+      --display:'Fraunces',serif;--body:'DM Sans',sans-serif;--mono:'IBM Plex Mono',monospace;
+      --ease:cubic-bezier(0.16,1,0.3,1)
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--ink);color:var(--cream);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:128px}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    ul{list-style:none}
+    .container{width:100%;max-width:1160px;margin:0 auto;padding:0 40px}
+    .growth{color:var(--growth)}
+    .eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--growth);display:flex;align-items:center;gap:14px;margin-bottom:24px}
+    .eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--growth);flex-shrink:0}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    .a1{animation:fadeUp .9s var(--ease) .1s both}
+    .a2{animation:fadeUp .9s var(--ease) .25s both}
+    .a3{animation:fadeUp .9s var(--ease) .4s both}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;padding:0 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(13,18,8,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .nav-logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+    .nav-mark{width:14px;height:32px;color:var(--growth);flex-shrink:0}
+    .nav-wordmark{font-family:var(--display);font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cream);line-height:1}
+    .nav-links{display:flex;gap:28px;align-items:center}
+    .nav-links a{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+    .nav-links a:hover{color:var(--cream)}
+    .nav-links a.active{color:var(--growth)}
+    .nav-btn{background:var(--growth)!important;color:var(--ink)!important;font-weight:500!important;padding:9px 18px!important;transition:background .2s!important;letter-spacing:.08em!important}
+    .nav-btn:hover{background:var(--growth-pale)!important;color:var(--ink)!important}
+
+    /* PAGE */
+    .page-wrap{padding-top:68px;min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
+    .page-wrap::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(163,196,58,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(163,196,58,.04) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 60% 70% at 30% 50%,black 20%,transparent 100%);pointer-events:none}
+    .page-inner{padding:80px 40px;max-width:1160px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 480px;gap:80px;align-items:start;position:relative;z-index:1}
+
+    /* LEFT */
+    .contact-left h1{font-family:var(--display);font-size:clamp(52px,7vw,92px);font-weight:300;letter-spacing:-.02em;line-height:.92;margin-bottom:28px}
+    .contact-left h1 .accent{color:var(--growth);font-style:italic}
+    .contact-left p{font-size:16px;color:var(--cream-soft);line-height:1.85;margin-bottom:20px;font-weight:300}
+    .contact-left strong{color:var(--cream);font-weight:500}
+
+    .contact-options{display:flex;flex-direction:column;gap:0;margin-top:40px}
+    .contact-option{display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--border)}
+    .contact-option:first-child{border-top:1px solid var(--border)}
+    .co-icon{width:40px;height:40px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--growth);font-family:var(--mono);font-size:16px}
+    .co-content h4{font-size:13px;font-weight:500;color:var(--cream);margin-bottom:3px}
+    .co-content p{font-size:13px;color:var(--cream-soft);font-weight:300;line-height:1.6}
+    .co-content a{color:var(--growth);transition:color .2s}
+    .co-content a:hover{color:var(--growth-pale)}
+
+    /* FORM PANEL */
+    .contact-form{background:rgba(163,196,58,.03);border:1px solid var(--border);padding:44px;position:sticky;top:84px}
+    .form-title{font-family:var(--display);font-size:30px;font-weight:600;letter-spacing:-.01em;margin-bottom:6px;color:var(--cream)}
+    .form-subtitle{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted);margin-bottom:32px}
+    .form-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px}
+    .form-group{margin-bottom:20px}
+    .form-input,.form-select,.form-textarea{width:100%;background:var(--ink);border:1px solid var(--border-soft);color:var(--cream);font-family:var(--body);font-size:14px;padding:14px 16px;outline:none;transition:border-color .2s;-webkit-appearance:none}
+    .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--growth)}
+    .form-input::placeholder,.form-textarea::placeholder{color:var(--muted)}
+    .form-textarea{resize:vertical;min-height:120px;line-height:1.6}
+    .form-select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236a7a4e' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px}
+    .form-select option{background:var(--ink-surface)}
+    .btn-submit{width:100%;background:var(--growth);color:var(--ink);font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:18px 24px;border:none;cursor:pointer;transition:background .2s,transform .2s}
+    .btn-submit:hover{background:var(--growth-pale);transform:translateY(-1px)}
+    .form-note{font-family:var(--mono);font-size:10px;color:var(--muted);text-align:center;margin-top:12px;letter-spacing:.08em}
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--border);padding:48px 0 36px;background:var(--ink-deep)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .footer-copy{font-family:var(--mono);font-size:10px;color:var(--faint);letter-spacing:.08em}
+    .footer-copy a{color:var(--faint);transition:color .2s}
+    .footer-copy a:hover{color:var(--growth)}
+    .footer-sig{font-family:var(--mono);font-size:10px;color:var(--faint);letter-spacing:.1em}
+
+    @media(max-width:960px){
+      .container,.nav{padding:0 24px}
+      .nav-links{display:none}
+      .page-inner{grid-template-columns:1fr;gap:48px;padding:72px 24px 60px}
+      .contact-form{position:static}
+    }
+    @media(max-width:580px){
+      .footer-bottom{flex-direction:column;text-align:center}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">
+    <svg class="nav-mark" viewBox="0 0 40 90" fill="none"><ellipse cx="20" cy="9" rx="7" ry="5.5" fill="currentColor"/><path d="M17.5,13.5 C16,26 13,44 15.5,60 C17,70 18,78 20,88 C22,78 23,70 24.5,60 C27,44 24,26 22.5,13.5 Z" fill="currentColor"/></svg>
+    <span class="nav-wordmark">Edge Studio</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/what-is-aeo">What is AEO</a></li>
+    <li><a href="https://foundbyai.com.au">Found By AI</a></li>
+    <li><a href="/aeo-agency">Agency</a></li>
+    <li><a href="/answer-hub">Answer Hub</a></li>
+    <li><a href="https://foundbyai.com.au" class="nav-btn">Get My Score $197</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <div class="page-inner">
+    <div class="contact-left">
+      <div class="eyebrow a1">Contact</div>
+      <h1 class="a2">Let's talk about <span class="accent">your brand.</span></h1>
+      <p class="a3">Tell us your brand name, what you sell, and where you are trying to go. We will come back within one business day with a clear view of what your AI visibility looks like right now and what it would take to improve it.</p>
+      <p>No lengthy intake forms. No holding pattern. Just a direct conversation about whether we can help.</p>
+
+      <div class="contact-options">
+        <div class="contact-option">
+          <div class="co-icon">&#9993;</div>
+          <div class="co-content">
+            <h4>Email us directly</h4>
+            <p><a href="mailto:hello@edgestudiohq.com">hello@edgestudiohq.com</a></p>
+          </div>
+        </div>
+        <div class="contact-option">
+          <div class="co-icon">&#9654;</div>
+          <div class="co-content">
+            <h4>Run your audit first</h4>
+            <p>Not ready for a conversation? <a href="https://foundbyai.com.au">Run the Found By AI audit</a> and see your visibility score before we speak.</p>
+          </div>
+        </div>
+        <div class="contact-option">
+          <div class="co-icon">&#9679;</div>
+          <div class="co-content">
+            <h4>Response time</h4>
+            <p>Within one business day. Always.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form a3">
+      <div class="form-title">Get in touch</div>
+      <div class="form-subtitle">We respond within one business day.</div>
+      <form action="https://formspree.io/f/xkovdpge" method="POST" id="contact-form">
+        <div class="form-group"><label class="form-label">Your name</label><input type="text" name="name" class="form-input" placeholder="First and last name" required></div>
+        <div class="form-group"><label class="form-label">Business email</label><input type="email" name="email" class="form-input" placeholder="you@yourbusiness.com" required></div>
+        <div class="form-group"><label class="form-label">Brand or business name</label><input type="text" name="brand" class="form-input" placeholder="Your brand name and website URL"></div>
+        <div class="form-group"><label class="form-label">What are you reaching out about</label>
+          <select name="topic" class="form-select">
+            <option value="" disabled selected>Select a topic</option>
+            <option>AEO agency services</option>
+            <option>Found By AI audit</option>
+            <option>General AEO question</option>
+            <option>Press or partnership</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label">Your message</label><textarea name="message" class="form-textarea" placeholder="Tell us what you are working on and what you are trying to achieve..."></textarea></div>
+        <button type="submit" class="btn-submit" id="submit-btn">Send message</button>
+        <div class="form-note">We respond within one business day.</div>
+      </form>
+      <div id="form-success" style="display:none;padding:32px;text-align:center">
+        <div style="font-family:var(--display);font-size:32px;font-weight:600;color:var(--growth);margin-bottom:12px;letter-spacing:-.01em">Message sent.</div>
+        <div style="font-size:15px;color:var(--cream-soft);font-weight:300">We will be in touch within one business day.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Edge Studio. <a href="/">edgestudiohq.com</a></p>
+      <p class="footer-sig">☉ ♏ · ↑ ♐ · ☽ ♈ · Built ahead of the brief.</p>
+      <p class="footer-copy"><a href="/what-is-aeo">What is AEO</a> &middot; <a href="/aeo-agency">Agency</a> &middot; <a href="/answer-hub">Answer Hub</a> &middot; <a href="https://foundbyai.com.au">Found By AI</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const form=document.getElementById('contact-form');
+  const btn=document.getElementById('submit-btn');
+  const success=document.getElementById('form-success');
+  form.addEventListener('submit',async function(e){
+    e.preventDefault();
+    btn.textContent='Sending...';
+    btn.disabled=true;
+    const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+    if(response.ok){form.style.display='none';success.style.display='block'}
+    else{btn.textContent='Something went wrong. Email us directly.';btn.disabled=false}
+  });
+</script>
+</body>
+</html>
