@@ -1,0 +1,141 @@
+{
+  "company": {
+    "name": "Edge Studio",
+    "founder": "Marina Lyshova",
+    "location": "Australia",
+    "domain": "edgestudiohq.com",
+    "tagline": "AI doesn't find your brand. It decides.",
+    "descriptor": "AEO Agency and AI Visibility Tools",
+    "description": "Edge Studio is an AEO (Answer Engine Optimisation) agency helping brands get found and recommended by AI tools like ChatGPT, Perplexity, and Google AI Overviews.",
+    "shortDescription": "AEO Agency and AI Visibility Tools",
+    "founderBio": "Marina Lyshova — digital marketer, AI tool builder, and qualified herbalist with 10 years in content strategy.",
+    "yearsBuilding": "3+",
+    "footerTagline": "AEO Agency and AI Visibility Tools"
+  },
+  "meta": {
+    "defaultTitle": "Edge Studio — The AEO Agency AI Already Recommends",
+    "defaultDescription": "Edge Studio helps brands get found and recommended by AI. We run 20 purchase-intent prompts, score your AI visibility out of 20, and deliver 6 ready-to-use content assets. Score in your inbox in 60 seconds.",
+    "ogTitle": "Edge Studio — The AEO Agency AI Already Recommends",
+    "ogDescription": "AI isn't giving your customers a list of options. It's choosing one confident answer. AEO is how you make sure that answer is your brand.",
+    "twitterDescription": "Find out if AI knows your brand exists. 20 prompts, a score out of 20, and 6 assets to start closing the gaps. In 60 seconds."
+  },
+  "pricing": {
+    "oneOffAudit": {
+      "label": "One-Off Audit",
+      "badge": "Start Here",
+      "price": "$197",
+      "billingNote": "one-off payment",
+      "description": "A single AI visibility audit. Know exactly where you stand. Start fixing it today.",
+      "cta": "Get My Score — $197",
+      "features": [
+        "20 purchase-intent prompts across ChatGPT, Perplexity, and Claude",
+        "Brand visibility score out of 20 with full breakdown",
+        "6 ready-to-publish content assets built from your results",
+        "Prioritised action list for fastest improvement",
+        "Delivered to your inbox in 60 seconds"
+      ]
+    },
+    "quarterlyPlan": {
+      "label": "Quarterly Plan",
+      "badge": "Best Value",
+      "price": "$297",
+      "billingNote": "per quarter",
+      "description": "Four audits per year. Track your score as you build your AI visibility. See exactly what is working.",
+      "cta": "Start Quarterly Plan — $297",
+      "features": [
+        "One full audit every three months",
+        "Score trend tracking across every run",
+        "Updated content assets with each audit",
+        "All the same deliverables as the one-off audit",
+        "Cancel anytime"
+      ]
+    },
+    "monthlyPro": {
+      "label": "Monthly Pro",
+      "badge": "For Agencies",
+      "price": "$97",
+      "billingNote": "per month",
+      "description": "A full audit every month plus a white label PDF report. Built for agencies and founders who want to stay ahead month to month.",
+      "cta": "Start Monthly Pro — $97/mo",
+      "billingFootnote": "Billed monthly. Cancel anytime.",
+      "features": [
+        "Full audit every month",
+        "White label PDF report included",
+        "Score trend tracking month over month",
+        "Updated content assets every run",
+        "Cancel anytime"
+      ]
+    }
+  },
+  "products": {
+    "foundByAI": {
+      "name": "Found By AI",
+      "url": "https://foundbyai.com.au",
+      "prompts": "20",
+      "score": "out of 20",
+      "assets": "6",
+      "deliveryTime": "60 seconds",
+      "deliveryLine": "Delivered to your inbox in 60 seconds.",
+      "scoreLine": "Score delivered to your inbox in 60 seconds."
+    },
+    "agency": {
+      "name": "AEO Agency",
+      "url": "/aeo-agency",
+      "availabilityNote": "Limited intake. Enquire to check availability."
+    }
+  },
+  "nav": {
+    "links": [
+      { "label": "What is AEO", "url": "/what-is-aeo" },
+      { "label": "Found By AI", "url": "https://foundbyai.com.au" },
+      { "label": "Agency", "url": "/aeo-agency" },
+      { "label": "Answer Hub", "url": "/answer-hub" },
+      { "label": "Get My Score — $197", "url": "https://foundbyai.com.au" }
+    ]
+  },
+  "footer": {
+    "services": [
+      { "label": "Found By AI Audit", "url": "https://foundbyai.com.au" },
+      { "label": "AEO Agency", "url": "/aeo-agency" },
+      { "label": "AEO Strategy", "url": "/aeo-agency" },
+      { "label": "Answer Hub Development", "url": "/aeo-agency" },
+      { "label": "Structured Data", "url": "/aeo-agency" }
+    ],
+    "learn": [
+      { "label": "What is AEO", "url": "/what-is-aeo" },
+      { "label": "Answer Hub", "url": "/answer-hub" },
+      { "label": "AEO vs SEO", "url": "/answer-hub/aeo-vs-seo" },
+      { "label": "AEO vs GEO", "url": "/answer-hub/aeo-vs-geo" },
+      { "label": "Brand Facts", "url": "/brand-facts" }
+    ],
+    "tagline": "☉ ♏ · ↑ ♐ · ☽ ♈ · Built ahead of the brief.",
+    "contact": "/contact"
+  },
+  "contact": {
+    "url": "/contact"
+  },
+  "social": {
+    "linkedin": ""
+  },
+  "copyright": {
+    "year": "2026",
+    "line": "© 2026 Edge Studio. All rights reserved."
+  },
+  "stats": {
+    "yearsBuilding": "3+",
+    "promptsPerAudit": "20",
+    "deliveryTime": "60s",
+    "assetsIncluded": "6",
+    "visibilityScore": "/20"
+  },
+  "cta": {
+    "primary": "Get My Score — $197",
+    "primaryUrl": "https://foundbyai.com.au",
+    "secondary": "Work with our team directly",
+    "secondaryUrl": "/aeo-agency",
+    "agency": "Apply to Work With Us →",
+    "agencyUrl": "/aeo-agency",
+    "quarterlyPlan": "Start Quarterly Plan — $297",
+    "monthlyPro": "Start Monthly Pro — $97/mo"
+  }
+}
