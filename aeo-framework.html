@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Edge Studio AEO Framework | Understood. Trusted. Preferred.</title>
+  <meta name="description" content="The Edge Studio AEO Framework: three conditions for AI recommendation eligibility — Understood, Trusted, and Preferred. The Eligibility Layer explained.">
+  <meta name="author" content="Marina Lyshova, Edge Studio">
+  <link rel="canonical" href="https://edgestudiohq.com/aeo-framework">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <meta property="og:title" content="The Edge Studio AEO Framework">
+  <meta property="og:description" content="Three conditions. One threshold. How brands get recommended by AI.">
+  <meta property="og:url" content="https://edgestudiohq.com/aeo-framework">
+  <meta property="og:type" content="article">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"The Edge Studio AEO Framework: Understood, Trusted, Preferred","description":"A three-condition methodology for AI recommendation eligibility — the practice of ensuring brands pass the Eligibility Layer that AI systems apply before deciding which brands to recommend. Created by Marina Lyshova, Edge Studio.","author":{"@type":"Person","name":"Marina Lyshova","url":"https://edgestudiohq.com","jobTitle":"Founder, Edge Studio"},"publisher":{"@type":"Organization","name":"Edge Studio","url":"https://edgestudiohq.com"},"mainEntityOfPage":"https://edgestudiohq.com/aeo-framework","keywords":["AEO","Answer Engine Optimisation","AI visibility","Eligibility Layer","AI recommendation","ChatGPT brand visibility","Perplexity optimisation","AI brand recommendations","Understood Trusted Preferred"],"speakable":{"@type":"SpeakableSpecification","cssSelector":[".tldr-summary",".faq-answer",".eligibility-core"]}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the Eligibility Layer?","acceptedAnswer":{"@type":"Answer","text":"The Eligibility Layer is the binary threshold AI systems apply before deciding which brands to recommend. Search engines rank everything and let humans choose. Agent systems decide first — which entities they trust enough to mention at all. That decision happens before any recommendation. Brands either pass the threshold or they don't. The Eligibility Layer is what determines which side of that line you're on."}},{"@type":"Question","name":"What does Understood, Trusted, Preferred mean in AEO?","acceptedAnswer":{"@type":"Answer","text":"These are the three conditions for passing the Eligibility Layer. Be Understood means AI can accurately describe your brand — what it is, what it does, who it serves. Be Trusted means AI has encountered your brand in enough credible contexts to include it in its candidate set for recommendation. Be Preferred means when two trusted brands compete for the same recommendation, AI reaches for yours first. Each condition has different signals, different tactics, and a different relationship to the final recommendation outcome."}},{"@type":"Question","name":"How is AEO different from SEO?","acceptedAnswer":{"@type":"Answer","text":"SEO targets page-one rankings in a list of ten blue links. AEO targets recommendation eligibility — the question of whether an AI system will mention your brand at all when someone asks for a recommendation. The mechanics are fundamentally different: SEO rewards backlinks and keyword density. AEO rewards entity clarity, factual consistency across the web, and Machine-Readable Reputation signals that AI systems use to evaluate trust."}},{"@type":"Question","name":"What is an AI Visibility Score?","acceptedAnswer":{"@type":"Answer","text":"An AI Visibility Score measures how many of a brand's highest purchase-intent queries result in an AI recommendation. Edge Studio's Found By AI tool runs 20 purchase-intent prompts across AI engines and scores brands out of 20. It reflects the commercial impact of AEO work directly."}},{"@type":"Question","name":"How long does AEO take to show results?","acceptedAnswer":{"@type":"Answer","text":"The Foundation work — building the Understood and Trusted layers — typically takes 4 weeks as a structured project. Most brands see measurable AI visibility improvement within 60 days. The Preferred layer is ongoing: it is a lead you build and compound over time, not a state you achieve once."}}]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --ink:#0d1208;--ink-deep:#111509;--ink-surface:#161d0f;--ink-raised:#1c2614;
+      --border:#283318;--border-soft:#344420;--faint:#3a4428;--muted:#6a7a4e;
+      --growth:#a3c43a;--growth-pale:#d4e890;--growth-dim:rgba(163,196,58,.12);--growth-glow:rgba(163,196,58,.22);
+      --cream:#ece7d4;--cream-soft:#b4af98;
+      --display:'Fraunces',serif;--body:'DM Sans',sans-serif;--mono:'IBM Plex Mono',monospace;
+      --ease:cubic-bezier(0.16,1,0.3,1)
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--ink);color:var(--cream);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:128px}
+    img{max-width:100%;display:block}a{text-decoration:none;color:inherit}ul{list-style:none}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;padding:0 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(13,18,8,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .nav-logo{display:flex;align-items:center;gap:11px}
+    .nav-mark{width:14px;height:32px;color:var(--growth);flex-shrink:0}
+    .nav-wordmark{font-family:var(--display);font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cream);line-height:1}
+    .nav-links{display:flex;gap:28px;align-items:center}
+    .nav-links a{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+    .nav-links a:hover{color:var(--cream)}.nav-links a.active{color:var(--growth)}
+    .nav-btn{background:var(--growth)!important;color:var(--ink)!important;font-weight:500!important;padding:9px 18px!important;transition:background .2s!important;letter-spacing:.08em!important}
+    .nav-btn:hover{background:var(--growth-pale)!important}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+    .nav-hamburger span{display:block;width:22px;height:2px;background:var(--cream);transition:all .3s;transform-origin:center}
+    .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-hamburger.open span:nth-child(2){opacity:0}
+    .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(13,18,8,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);z-index:99;max-height:0;overflow:hidden;transition:max-height .4s ease}
+    .mobile-menu.open{max-height:320px}
+    .mobile-menu ul li a{display:block;padding:14px 24px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);transition:color .2s,background .2s}
+    .mobile-menu ul li:last-child a{border-bottom:none}
+    .mobile-menu ul li a:hover{color:var(--growth);background:var(--growth-dim)}
+
+    /* HERO */
+    .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 48px 80px;overflow:hidden;padding-top:68px}
+    .hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(163,196,58,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(163,196,58,.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 60% at 50% 100%,transparent 40%,black 100%)}
+    .hero-glow{position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(ellipse,rgba(163,196,58,.05) 0%,transparent 70%);pointer-events:none}
+    .hero-tag{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--growth);margin-bottom:28px;opacity:0;animation:fadeUp .8s .2s ease forwards}
+    .hero h1{font-family:var(--display);font-size:clamp(52px,8vw,110px);line-height:.95;letter-spacing:-.03em;margin-bottom:40px;font-weight:300;opacity:0;animation:fadeUp .8s .4s ease forwards}
+    .hero h1 em{font-style:italic;color:var(--growth)}
+    .hero-meta{display:flex;align-items:center;gap:40px;opacity:0;animation:fadeUp .8s .6s ease forwards}
+    .hero-byline{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em}
+    .hero-byline strong{color:var(--cream);display:block;font-size:13px}
+    .hero-divider{width:1px;height:40px;background:var(--border)}
+    .hero-stat{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.08em}
+    .hero-stat strong{font-size:28px;color:var(--growth);display:block;font-family:var(--display);font-weight:300;line-height:1;margin-bottom:4px}
+
+    /* SECTIONS */
+    .section-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--growth);margin-bottom:24px}
+
+    /* ELIGIBILITY INTRO */
+    .eligibility-section{padding:100px 48px;max-width:1100px;margin:0 auto;position:relative}
+    .eligibility-core{font-family:var(--display);font-size:clamp(22px,3vw,38px);line-height:1.3;color:var(--cream);max-width:760px;font-weight:300;margin-bottom:48px}
+    .eligibility-core strong{color:var(--growth);font-weight:600}
+    .eligibility-core em{font-style:italic}
+    .eligibility-callout{background:var(--ink-raised);border:1px solid var(--border-soft);border-left:3px solid var(--growth);padding:32px 36px;max-width:760px;position:relative}
+    .eligibility-callout::before{content:'The Eligibility Layer';font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--growth);display:block;margin-bottom:14px}
+    .eligibility-callout p{font-size:16px;color:var(--cream-soft);line-height:1.8;font-weight:300;margin-bottom:12px}
+    .eligibility-callout p:last-child{margin-bottom:0}
+    .eligibility-callout p strong{color:var(--cream);font-weight:500}
+
+    /* THREE CONDITIONS — OVERVIEW */
+    .conditions-section{padding:80px 48px;max-width:1100px;margin:0 auto}
+    .conditions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);border:1px solid var(--border);margin-top:48px}
+    .condition-card{background:var(--ink-deep);padding:40px 32px;position:relative;overflow:hidden;transition:background .3s}
+    .condition-card:hover{background:var(--ink-surface)}
+    .condition-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;transition:opacity .3s}
+    .condition-card.understood::before{background:linear-gradient(90deg,rgba(163,196,58,.4),rgba(163,196,58,.1))}
+    .condition-card.trusted::before{background:linear-gradient(90deg,rgba(163,196,58,.7),rgba(163,196,58,.2))}
+    .condition-card.preferred::before{background:var(--growth)}
+    .condition-card:hover::before{opacity:1}
+    .condition-num{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.14em;margin-bottom:20px;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+    .condition-num::before{content:'';width:20px;height:1px;background:var(--growth);display:block}
+    .condition-card h3{font-family:var(--display);font-size:clamp(26px,2.5vw,34px);font-weight:300;margin-bottom:12px;color:var(--cream);font-style:italic;line-height:1}
+    .condition-nature{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--growth);opacity:.6;margin-bottom:16px}
+    .condition-card p{font-size:14px;color:var(--cream-soft);line-height:1.75;font-weight:300;margin-bottom:16px}
+    .condition-without{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.06em;line-height:1.6;border-top:1px solid var(--border);padding-top:16px}
+    .condition-without strong{color:var(--muted);font-weight:400}
+    .condition-card.preferred .condition-num::before{background:var(--growth)}
+    .condition-card.preferred h3{color:var(--growth)}
+
+    /* SEQUENCE NOTE */
+    .sequence-note{margin-top:24px;padding:20px 24px;background:var(--ink-raised);border:1px solid var(--border);display:flex;align-items:center;gap:16px;max-width:100%}
+    .sequence-note p{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.06em;line-height:1.65}
+    .sequence-note p strong{color:var(--cream-soft)}
+    .sequence-arrow{font-size:18px;color:var(--growth);flex-shrink:0;letter-spacing:6px}
+
+    /* FLYWHEEL */
+    .flywheel-section{padding:80px 48px;position:relative;overflow:hidden}
+    .flywheel-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 480px;gap:80px;align-items:center}
+    .flywheel-text h2{font-family:var(--display);font-size:clamp(36px,4vw,56px);line-height:1.05;margin-bottom:24px;font-weight:300;color:var(--cream)}
+    .flywheel-text h2 em{font-style:italic;color:var(--growth)}
+    .flywheel-text p{color:var(--cream-soft);font-size:16px;line-height:1.8;margin-bottom:20px;font-weight:300}
+    .flywheel-text p strong{color:var(--cream);font-weight:500}
+    .flywheel-svg-wrap{position:relative;display:flex;align-items:center;justify-content:center}
+    @keyframes spinCW{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+    @keyframes spinCCW{from{transform:rotate(0deg)}to{transform:rotate(-360deg)}}
+    .spin-cw{animation:spinCW 18s linear infinite;transform-origin:240px 240px}
+    .spin-ccw{animation:spinCCW 28s linear infinite;transform-origin:240px 240px}
+    .fw-ring{fill:none;stroke:var(--border);stroke-width:1}
+    .fw-label{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;fill:var(--ink)}
+    .fw-center-label{font-family:'Fraunces',serif;font-size:20px;font-weight:300;fill:var(--cream);text-anchor:middle}
+    .fw-center-sub{font-family:'IBM Plex Mono',monospace;font-size:9px;fill:var(--muted);text-anchor:middle;letter-spacing:.1em;text-transform:uppercase}
+
+    /* CONDITION BLOCKS — detailed sections */
+    .condition-block{padding:80px 48px;border-top:1px solid var(--border);position:relative}
+    .condition-block-inner{max-width:1100px;margin:0 auto}
+    .condition-block-header{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-bottom:56px;padding-bottom:40px;border-bottom:1px solid var(--border)}
+    .condition-block-label{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+    .condition-block-label .cond-num{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+    .condition-block-label .cond-type{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:3px 10px;border:1px solid var(--border-soft);color:var(--muted)}
+    .condition-block-label .cond-type.binary{border-color:rgba(163,196,58,.3);color:var(--growth)}
+    .condition-block-label .cond-type.gradient{border-color:rgba(163,196,58,.7);color:var(--growth)}
+    .condition-block h2{font-family:var(--display);font-size:clamp(40px,5vw,68px);font-weight:300;font-style:italic;color:var(--cream);line-height:.95;margin-bottom:0}
+    .condition-block h2.preferred-title{color:var(--growth)}
+    .condition-block-desc p{color:var(--cream-soft);font-size:16px;line-height:1.8;font-weight:300;margin-bottom:16px}
+    .condition-block-desc p strong{color:var(--cream);font-weight:500}
+    .condition-block-desc p:last-child{margin-bottom:0}
+
+    /* LAYERS inside condition blocks */
+    .layer-item{display:grid;grid-template-columns:100px 1fr auto;gap:0;border-bottom:1px solid var(--border);padding:36px 0;align-items:start;transition:background .2s;cursor:default;position:relative}
+    .layer-item::after{content:'';position:absolute;inset:0;background:var(--growth-dim);opacity:0;transition:opacity .3s;pointer-events:none}
+    .layer-item:hover::after{opacity:1}
+    .layer-num{font-family:var(--mono);font-size:12px;color:var(--growth);letter-spacing:.1em;padding-top:4px}
+    .layer-content h3{font-family:var(--display);font-size:20px;font-weight:600;margin-bottom:10px;line-height:1.2;color:var(--cream)}
+    .layer-content p{font-size:14px;color:var(--cream-soft);line-height:1.75;max-width:600px;font-weight:300}
+    .layer-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+    .layer-tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--border);color:var(--muted)}
+    .layer-tag.foundation{border-color:rgba(163,196,58,.35);color:var(--growth)}
+    .layer-link{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:8px;padding-top:4px;white-space:nowrap;margin-left:40px;transition:color .2s;flex-shrink:0}
+    .layer-link:hover{color:var(--growth)}
+    .layer-link::after{content:'→';font-size:14px}
+    .layer-link.coming-soon{opacity:.3;cursor:default;pointer-events:none}
+
+    /* PREFERRED — phase 2 callout */
+    .phase2-note{background:var(--ink-raised);border:1px solid var(--border-soft);border-left:3px solid var(--growth);padding:28px 32px;margin-top:40px;margin-bottom:0}
+    .phase2-note::before{content:'Phase 2 — Authority Programme';font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--growth);display:block;margin-bottom:10px}
+    .phase2-note p{font-size:14px;color:var(--cream-soft);line-height:1.8;font-weight:300}
+    .phase2-note p strong{color:var(--cream);font-weight:500}
+
+    /* PROBABILITY NOTE */
+    .probability-note{background:var(--ink-deep);border:1px solid var(--border);padding:20px 24px;margin-top:16px;display:flex;gap:14px;align-items:flex-start}
+    .probability-note-icon{color:var(--growth);font-family:var(--mono);font-size:14px;flex-shrink:0;margin-top:1px}
+    .probability-note p{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.05em;line-height:1.7}
+
+    /* TIMELINE */
+    .timeline-section{padding:100px 48px;background:var(--ink-deep);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .timeline-inner{max-width:1100px;margin:0 auto}
+    .timeline-inner h2{font-family:var(--display);font-size:clamp(36px,4vw,52px);margin-bottom:12px;font-weight:300;color:var(--cream)}
+    .timeline-inner h2 em{font-style:italic;color:var(--growth)}
+    .timeline-inner .section-label{margin-bottom:12px}
+    .timeline-inner > p{color:var(--cream-soft);font-size:16px;margin-bottom:56px;max-width:600px;font-weight:300}
+    .timeline-grid{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+    .timeline-grid::before{content:'';position:absolute;top:20px;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--growth) 0%,rgba(163,196,58,.1) 100%)}
+    .timeline-step{padding:0 24px 0 0;position:relative}
+    .timeline-dot{width:10px;height:10px;background:var(--growth);border-radius:50%;margin-bottom:24px;position:relative;z-index:1;box-shadow:0 0 0 3px var(--ink-deep),0 0 12px var(--growth-glow)}
+    .timeline-step:nth-child(2) .timeline-dot,.timeline-step:nth-child(3) .timeline-dot{background:var(--ink-deep);border:1px solid var(--growth);box-shadow:0 0 0 3px var(--ink-deep)}
+    .timeline-step:nth-child(4) .timeline-dot{background:var(--ink-deep);border:1px dashed rgba(163,196,58,.4);box-shadow:none}
+    .timeline-period{font-family:var(--mono);font-size:11px;color:var(--growth);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+    .timeline-step h3{font-family:var(--display);font-size:17px;font-weight:600;margin-bottom:10px;color:var(--cream)}
+    .timeline-step p{font-size:13px;color:var(--cream-soft);line-height:1.65;font-weight:300}
+    .timeline-step ul{margin-top:12px}
+    .timeline-step ul li{font-family:var(--mono);font-size:12px;color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border);display:flex;gap:8px}
+    .timeline-step ul li::before{content:'↳';color:var(--growth);flex-shrink:0}
+    .timeline-cond-tag{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border:1px solid rgba(163,196,58,.3);color:var(--growth);margin-bottom:10px}
+
+    /* FAQ */
+    .faq-section{padding:100px 48px;max-width:1100px;margin:0 auto}
+    .faq-header{margin-bottom:56px}
+    .faq-header h2{font-family:var(--display);font-size:clamp(36px,4vw,52px);font-weight:300;color:var(--cream)}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid var(--border)}
+    .faq-question{width:100%;background:none;border:none;text-align:left;padding:28px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .faq-question span:first-child{font-family:var(--body);font-size:17px;font-weight:500;color:var(--cream)}
+    .faq-icon{width:24px;height:24px;border:1px solid var(--border-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--growth);font-size:18px;line-height:1;transition:transform .3s}
+    .faq-item.open .faq-icon{transform:rotate(45deg)}
+    .faq-answer{overflow:hidden;max-height:0;transition:max-height .4s ease}
+    .faq-item.open .faq-answer{max-height:400px}
+    .faq-answer p{color:var(--cream-soft);font-size:15px;line-height:1.85;padding-bottom:28px;max-width:720px;font-weight:300}
+
+    /* EMAIL CAPTURE */
+    .capture-section{padding:100px 48px;background:var(--ink-deep);border-top:1px solid var(--border)}
+    .capture-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .capture-text .section-label{margin-bottom:20px}
+    .capture-text h2{font-family:var(--display);font-size:clamp(32px,3.5vw,48px);line-height:1.15;margin-bottom:20px;font-weight:300;color:var(--cream)}
+    .capture-text h2 em{font-style:italic;color:var(--growth)}
+    .capture-text p{color:var(--cream-soft);font-size:15px;line-height:1.8;font-weight:300}
+    .capture-what{margin-top:28px;display:flex;flex-direction:column;gap:12px}
+    .capture-what-item{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--cream-soft);font-weight:300}
+    .capture-what-item::before{content:'✓';color:var(--growth);font-weight:700;flex-shrink:0;margin-top:1px}
+    .capture-form-wrap{background:var(--ink-raised);border:1px solid var(--border);padding:44px;position:relative;overflow:hidden}
+    .capture-form-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--growth),rgba(163,196,58,.2))}
+    .capture-form-wrap h3{font-family:var(--display);font-size:26px;font-weight:600;margin-bottom:8px;color:var(--cream)}
+    .capture-form-wrap > p{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:28px;letter-spacing:.06em}
+    .form-group{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+    .form-group label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+    .form-group input{background:var(--ink);border:1px solid var(--border-soft);color:var(--cream);padding:14px 16px;font-family:var(--body);font-size:14px;outline:none;transition:border-color .2s;width:100%}
+    .form-group input:focus{border-color:var(--growth)}
+    .form-group input::placeholder{color:var(--muted)}
+    .btn-capture{width:100%;background:var(--growth);color:var(--ink);border:none;padding:16px 32px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:background .2s,transform .15s;margin-top:8px}
+    .btn-capture:hover{background:var(--growth-pale);transform:translateY(-1px)}
+    .form-note{font-family:var(--mono);font-size:10px;color:var(--muted);text-align:center;margin-top:14px;letter-spacing:.08em}
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--border);padding:64px 0 48px;background:var(--ink-deep)}
+    .footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:60px;margin-bottom:60px;max-width:1160px;margin-left:auto;margin-right:auto;padding:0 40px}
+    .footer-brand-lock{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+    .footer-mark{width:12px;height:27px;color:var(--growth);opacity:.7}
+    .footer-wordmark{font-family:var(--display);font-size:14px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cream)}
+    .footer-tag{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.8;letter-spacing:.06em}
+    .footer-col h4{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+    .footer-col ul{display:flex;flex-direction:column;gap:11px}
+    .footer-col a{font-size:14px;color:var(--cream-soft);transition:color .2s}
+    .footer-col a:hover{color:var(--growth)}
+    .footer-bottom{border-top:1px solid var(--border);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;max-width:1160px;margin:0 auto;padding-left:40px;padding-right:40px}
+    .footer-copy{font-family:var(--mono);font-size:10px;color:var(--faint);letter-spacing:.08em}
+    .footer-copy a{color:var(--faint);transition:color .2s}
+    .footer-copy a:hover{color:var(--growth)}
+    .footer-sig{font-family:var(--mono);font-size:10px;color:var(--faint);letter-spacing:.1em}
+
+    /* ANIMATIONS */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .nav{padding:0 24px}
+      .nav-links{display:none}
+      .nav-hamburger{display:flex}
+      .mobile-menu{display:block}
+      .hero{padding:120px 24px 56px;min-height:auto}
+      .eligibility-section,.conditions-section,.faq-section{padding:72px 24px}
+      .flywheel-section,.capture-section{padding:64px 24px}
+      .timeline-section{padding:72px 24px}
+      .condition-block{padding:64px 24px}
+      .footer-grid{padding:0 24px}
+      .footer-bottom{padding-left:24px;padding-right:24px}
+      .conditions-grid{grid-template-columns:1fr}
+      .flywheel-inner{grid-template-columns:1fr;gap:48px}
+      .flywheel-svg-wrap{order:-1;max-width:380px;margin:0 auto;width:100%}
+      .flywheel-svg-wrap svg{width:100%;height:auto}
+      .condition-block-header{grid-template-columns:1fr;gap:28px}
+      .layer-item{grid-template-columns:56px 1fr;padding:28px 0}
+      .layer-link{display:none}
+      .timeline-grid{grid-template-columns:1fr 1fr;gap:36px 24px}
+      .timeline-grid::before{display:none}
+      .capture-inner{grid-template-columns:1fr;gap:48px}
+      .capture-form-wrap{padding:32px 28px}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+      .footer-bottom{flex-direction:column;text-align:center}
+    }
+    @media(max-width:600px){
+      .nav{padding:0 16px}
+      .hero{padding:110px 16px 48px}
+      .eligibility-section,.conditions-section,.faq-section{padding:56px 16px}
+      .flywheel-section,.capture-section,.timeline-section{padding:56px 16px}
+      .condition-block{padding:56px 16px}
+      .hero-meta{flex-wrap:wrap;gap:16px 24px}
+      .hero-divider{display:none}
+      .flywheel-svg-wrap{max-width:300px}
+      .layer-item{grid-template-columns:1fr;gap:8px;padding:24px 0}
+      .timeline-grid{grid-template-columns:1fr;gap:32px}
+      .footer-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">
+    <svg class="nav-mark" viewBox="0 0 40 90" fill="none"><ellipse cx="20" cy="9" rx="7" ry="5.5" fill="currentColor"/><path d="M17.5,13.5 C16,26 13,44 15.5,60 C17,70 18,78 20,88 C22,78 23,70 24.5,60 C27,44 24,26 22.5,13.5 Z" fill="currentColor"/></svg>
+    <span class="nav-wordmark">Edge Studio</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/what-is-aeo">What is AEO</a></li>
+    <li><a href="https://foundbyai.com.au">Found By AI</a></li>
+    <li><a href="/aeo-agency">Agency</a></li>
+    <li><a href="/answer-hub">Answer Hub</a></li>
+    <li><a href="https://foundbyai.com.au" class="nav-btn">Get My Score $197</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="/what-is-aeo" onclick="toggleMenu()">What is AEO</a></li>
+    <li><a href="https://foundbyai.com.au" onclick="toggleMenu()">Found By AI</a></li>
+    <li><a href="/aeo-agency" onclick="toggleMenu()">Agency</a></li>
+    <li><a href="/answer-hub" onclick="toggleMenu()">Answer Hub</a></li>
+    <li><a href="/contact" onclick="toggleMenu()">Contact</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <p class="hero-tag">Edge Studio · AEO Framework v2.0</p>
+  <h1>Understood.<br><em>Trusted.</em><br>Preferred.</h1>
+  <div class="hero-meta">
+    <div class="hero-byline">
+      <strong>Marina Lyshova</strong>
+      Founder, Edge Studio
+    </div>
+    <div class="hero-divider"></div>
+    <div class="hero-stat"><strong>3</strong>Conditions</div>
+    <div class="hero-divider"></div>
+    <div class="hero-stat"><strong>1</strong>Threshold</div>
+    <div class="hero-divider"></div>
+    <div class="hero-stat"><strong>The</strong>Eligibility Layer</div>
+  </div>
+</section>
+
+<!-- THE ELIGIBILITY LAYER -->
+<section class="eligibility-section">
+  <p class="section-label reveal">The core insight</p>
+  <p class="eligibility-core reveal">
+    Search engines rank everything and let humans choose.
+    Agent systems do something different — they <strong>decide first</strong>,
+    before any recommendation, which brands they trust enough to mention at all.
+    <em>That decision is the Eligibility Layer.</em>
+  </p>
+  <div class="eligibility-callout reveal">
+    <p>Most brands assume AI knows who they are. It does, in the loosest sense. What it does not have is enough structured, consistent, credible information to confidently recommend them over competitors.</p>
+    <p><strong>That gap is the problem AEO solves.</strong> Not ranking. Not content volume. The binary question of whether your brand is inside the candidate set the model will consider at all — and then the gradient question of how strongly it reaches for you when it does.</p>
+    <p>You cannot rank inside a system that has already decided not to mention you.</p>
+  </div>
+</section>
+
+<!-- THREE CONDITIONS OVERVIEW -->
+<section class="conditions-section">
+  <p class="section-label reveal">The framework</p>
+  <h2 class="reveal" style="font-family:var(--display);font-size:clamp(36px,4vw,56px);line-height:1.05;font-weight:300;color:var(--cream);margin-bottom:0">Three conditions.<br><em style="color:var(--growth)">One threshold.</em></h2>
+
+  <div class="conditions-grid reveal">
+    <div class="condition-card understood">
+      <p class="condition-num">01 / First condition</p>
+      <h3>Understood</h3>
+      <p class="condition-nature">Binary · Fixable</p>
+      <p>The model can accurately describe your brand — what it is, what it does, who it serves — without ambiguity or contradiction. This is an entity problem. AI builds internal representations of brands. A brand that has not established a clear, consistent entity definition is, to the model, ambiguous. Ambiguous entities are not recommended.</p>
+      <p class="condition-without"><strong>Without it:</strong> AI ignores the brand entirely or generates inaccurate descriptions that reduce recommendation confidence.</p>
+    </div>
+    <div class="condition-card trusted">
+      <p class="condition-num">02 / Second condition</p>
+      <h3>Trusted</h3>
+      <p class="condition-nature">Threshold + gradient · Buildable</p>
+      <p>The model has encountered your brand in enough credible, relevant contexts to include it in the candidate set for recommendation. Trust is not sentiment — it is a structural property of how often and where the model has seen your brand mentioned. Citation frequency, factual consistency, co-occurrence with sources the model already weights as credible.</p>
+      <p class="condition-without"><strong>Without it:</strong> The brand is understood but not surfaced. It exists in the model's knowledge but not its recommendations.</p>
+    </div>
+    <div class="condition-card preferred">
+      <p class="condition-num">03 / Third condition</p>
+      <h3>Preferred</h3>
+      <p class="condition-nature">Gradient · Competitive · Ongoing</p>
+      <p>When two trusted brands compete for the same recommendation, the model reaches for yours first. This is where most AEO frameworks stop short — and where the majority of actual recommendation outcomes are determined. Preference is built by accumulating a lead: share of voice in category discussions, problem-solution co-occurrence, authority amplification at scale.</p>
+      <p class="condition-without"><strong>Without it:</strong> The brand is eligible but loses the selection to a competitor with stronger category authority signals.</p>
+    </div>
+  </div>
+
+  <div class="sequence-note reveal">
+    <span class="sequence-arrow">→</span>
+    <p>The three conditions are sequential. A brand that is not <strong>Understood</strong> cannot be <strong>Trusted</strong>. A brand that is not <strong>Trusted</strong> cannot be <strong>Preferred</strong>. But passing the first two does not guarantee the third. That is where most brands stall.</p>
+  </div>
+</section>
+
+<!-- FLYWHEEL -->
+<section class="flywheel-section">
+  <div class="flywheel-inner">
+    <div class="flywheel-text reveal">
+      <p class="section-label">The mental model</p>
+      <h2>A flywheel,<br><em>not a checklist</em></h2>
+      <p>There is a natural sequence: you cannot earn AI trust before you have given AI something clear to understand. You cannot build preference before you have built trust. The conditions are sequential and they matter in order.</p>
+      <p>But the accurate mental model is a flywheel. Each Answer Hub update sharpens entity clarity. Each new third-party citation raises the trust threshold. Each piece of category-defining content strengthens preference signals. The compounding starts when the foundation is in place and you keep turning the wheel.</p>
+      <p><strong>The brands that dominate AI recommendations are not the ones who built it once.</strong> They are the ones who kept compounding.</p>
+    </div>
+    <div class="flywheel-svg-wrap reveal">
+      <svg viewBox="0 0 480 480" width="480" height="480" xmlns="http://www.w3.org/2000/svg" aria-label="AEO Flywheel: Understand, Trust, Prefer, Monitor">
+        <circle class="fw-ring spin-ccw" cx="240" cy="240" r="220" stroke-dasharray="4 8"/>
+        <circle class="fw-ring" cx="240" cy="240" r="155"/>
+        <circle cx="240" cy="240" r="185" fill="#111509"/>
+        <g class="spin-cw">
+          <path d="M240,240 L240,55 A185,185 0 0,1 425,240 Z" fill="#a3c43a" opacity="0.92"/>
+          <path d="M240,240 L425,240 A185,185 0 0,1 240,425 Z" fill="#a3c43a" opacity="0.50"/>
+          <path d="M240,240 L240,425 A185,185 0 0,1 55,240 Z" fill="#a3c43a" opacity="0.24"/>
+          <path d="M240,240 L55,240 A185,185 0 0,1 240,55 Z" fill="#a3c43a" opacity="0.10"/>
+          <text x="316" y="175" class="fw-label" text-anchor="middle">AUDIT</text>
+          <text x="358" y="332" class="fw-label" text-anchor="middle">BUILD</text>
+          <text x="162" y="382" class="fw-label" text-anchor="middle">AMPLIFY</text>
+          <text x="120" y="228" class="fw-label" text-anchor="middle">MONITOR</text>
+        </g>
+        <circle cx="240" cy="240" r="110" fill="#0d1208"/>
+        <circle cx="240" cy="240" r="108" fill="none" stroke="rgba(163,196,58,0.2)" stroke-width="1"/>
+        <text x="240" y="228" class="fw-center-label">AEO</text>
+        <text x="240" y="244" class="fw-center-sub">Flywheel</text>
+        <circle cx="240" cy="55"  r="4" fill="#a3c43a"/>
+        <circle cx="425" cy="240" r="4" fill="rgba(163,196,58,0.4)"/>
+        <circle cx="240" cy="425" r="4" fill="rgba(163,196,58,0.2)"/>
+        <circle cx="55"  cy="240" r="4" fill="rgba(163,196,58,0.1)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- CONDITION 1: BE UNDERSTOOD -->
+<section class="condition-block" id="understood">
+  <div class="condition-block-inner">
+    <div class="condition-block-header reveal">
+      <div>
+        <div class="condition-block-label">
+          <span class="cond-num">Condition 01</span>
+          <span class="cond-type binary">Binary · Fixable</span>
+        </div>
+        <h2>Be<br>Understood</h2>
+      </div>
+      <div class="condition-block-desc">
+        <p>AI builds internal representations of entities — companies, products, categories. A brand that has not established a clear, consistent definition across the surfaces AI learns from is, to the model, ambiguous.</p>
+        <p>The test: ask ChatGPT, Perplexity, and Gemini to describe your brand without prompting. Every discrepancy between the response and your actual positioning is a signal failure — and a specific fixable problem.</p>
+        <p><strong>This layer is binary.</strong> Either the model has a clear picture or it does not. The Foundation work fixes it directly.</p>
+      </div>
+    </div>
+
+    <div class="layer-item reveal">
+      <div class="layer-num">Layer 0</div>
+      <div class="layer-content">
+        <h3>Entity Establishment</h3>
+        <p>AI models build mental models of entities. If your brand does not exist as a recognisable entity in the web's knowledge graph, AI has low confidence recommending you regardless of how good your content is. Fix this before you build anything else.</p>
+        <div class="layer-tags"><span class="layer-tag foundation">Foundation</span><span class="layer-tag">Wikidata</span><span class="layer-tag">Brand Consistency</span><span class="layer-tag">Google Business Profile</span></div>
+      </div>
+      <a href="/answer-hub/entity-establishment" class="layer-link coming-soon">Coming soon</a>
+    </div>
+
+    <div class="layer-item reveal">
+      <div class="layer-num">Layer 1</div>
+      <div class="layer-content">
+        <h3>Answer Intent Mapping</h3>
+        <p>Build a living Answer Intent Map across four AI models: ChatGPT, Perplexity, Gemini, and Claude. A brand can be dominant in Perplexity and invisible in ChatGPT. You need parity across all four, or at minimum, you need to know where the gaps are.</p>
+        <div class="layer-tags"><span class="layer-tag foundation">Foundation</span><span class="layer-tag">Query Research</span><span class="layer-tag">Multi-Model Audit</span></div>
+      </div>
+      <a href="/answer-hub/how-ai-engines-rank-brands" class="layer-link">Read guide</a>
+    </div>
+
+    <div class="layer-item reveal">
+      <div class="layer-num">Layer 2</div>
+      <div class="layer-content">
+        <h3>AI-First Content Architecture</h3>
+        <p>Every significant page on your site should be built to answer a specific question a human would ask an AI. URL structure, H1s, first-100-word TL;DRs, FAQ sections, and an llms.txt file telling AI crawlers what to prioritise.</p>
+        <div class="layer-tags"><span class="layer-tag">Site Structure</span><span class="layer-tag">llms.txt</span><span class="layer-tag">Content Architecture</span></div>
+      </div>
+      <a href="/answer-hub/aeo-vs-seo" class="layer-link">Read guide</a>
+    </div>
+
+    <div class="layer-item reveal">
+      <div class="layer-num">Layer 3</div>
+      <div class="layer-content">
+        <h3>Answer Hub</h3>
+        <p>The central content asset for AI citations. Include a "Last reviewed" date and update it regularly. AI models weight content freshness. A guide updated last week will outcompete a guide updated 18 months ago even with similar content.</p>
+        <div class="layer-tags"><span class="layer-tag">Content</span><span class="layer-tag">Freshness Signals</span><span class="layer-tag">Citation Surface</span></div>
+      </div>
+      <a href="/answer-hub" class="layer-link">Answer Hub</a>
+    </div>
+
+    <div class="layer-item reveal">
+      <div class="layer-num">Layer 4</div>
+      <div class="layer-content">
+        <h3>Brand-Facts Page + brand-facts.json</h3>
+        <p>A machine-readable source of truth for your brand. Every fact should be identical everywhere: your website, Amazon, Google Merchant Center, social bios. Cross-reference your Brand-Facts page with your Answer Hub to build the internal trust loop AI crawlers reward.</p>
+        <div class="layer-tags"><span class="layer-tag foundation">Foundation</span><span class="layer-tag">Structured Data</span><span class="layer-tag">JSON</span></div>
+      </div>
+      <a href="/brand-facts" class="layer-link">View ours</a>
+    </div>
+
+    <div class="layer-item reveal">
+      <div class="layer-num">Layer 5</div>
+      <div class="layer-content">
+        <h3>Schema Markup + SpeakableSchema</h3>
+        <p>Standard schema plus SpeakableSchema on TL;DR paragraphs and FAQ sections. SpeakableSchema explicitly signals to AI that this content is designed to be spoken or quoted, increasing the probability of direct citation.</p>
+        <div class="layer-tags"><span class="layer-tag">Technical SEO</span><span class="layer-tag">Schema.org</span><span class="layer-tag">SpeakableSchema</span></div>
+      </div>
+      <a href="/answer-hub/aeo-vs-seo" class="layer-link coming-soon">Coming soon</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONDITION 2: BE TRUSTED -->
+<section class="condition-block" id="trusted" style="background:var(--ink-deep)">
+  <div class="condition-block-inner">
+    <div class="condition-block-header reveal">
+      <div>
+        <div class="condition-block-label">
+          <span class="cond-num">Condition 02</span>
+          <span class="cond-type binary">Threshold + gradient</span>
+        </div>
+        <h2>Be<br>Trusted</h2>
+      </div>
+      <div class="condition-block-desc">
+        <p>Trust, in the context of AI recommendation systems, is not sentiment. It is a structural property of how often and in what contexts the model has encountered your brand, and whether those contexts were themselves credible.</p>
+        <p>A model learns trust signals the way a researcher evaluates sources: is this brand mentioned by people and publications I already trust? Is the information consistent across sources? This is Machine-Readable Reputation — and most brands have not started building it.</p>
+        <p><strong>A threshold must be crossed to enter the candidate set.</strong> More trust signals continue to help beyond that threshold, but there is a minimum below which the brand simply will not surface.</p>
+      </div>
+    </div>
+
+    <div class="layer-item reveal">
+      <div class="layer-num">Layer 6</div>
+      <div class="layer-content">
+        <h3>Third-Party Citation Building</h3>
+        <p>AI models, especially Perplexity and ChatGPT, weight content from sources they associate with credibility. Earned media in category roundups builds more trust signal than generic backlinks. Review language matters too: AI reads the text of reviews and learns what customers say your brand does. Coach customers at the post-purchase stage to describe specifically what improved.</p>
+        <div class="layer-tags"><span class="layer-tag">Earned Media</span><span class="layer-tag">Reddit Strategy</span><span class="layer-tag">Review Coaching</span><span class="layer-tag">Knowledge Surfaces</span></div>
+      </div>
+      <a href="/answer-hub/how-ai-engines-rank-brands" class="layer-link">Read guide</a>
+    </div>
+
+    <div class="layer-item reveal">
+      <div class="layer-num">Layer 7</div>
+      <div class="layer-content">
+        <h3>Cross-Platform Consistency Audit</h3>
+        <p>AI aggregates information from everywhere. If your product description on Amazon says one spec and your site says another, the model notices. Inconsistent facts actively reduce recommendation confidence — the model learned the inconsistency during training and suppresses your brand as a result. This is unglamorous work. It is also why one brand gets recommended and the identical brand next to it does not.</p>
+        <div class="layer-tags"><span class="layer-tag">Audit</span><span class="layer-tag">Amazon</span><span class="layer-tag">Merchant Center</span><span class="layer-tag">Consistency</span></div>
+      </div>
+      <a href="/answer-hub/aeo-vs-geo" class="layer-link">Read guide</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONDITION 3: BE PREFERRED -->
+<section class="condition-block" id="preferred">
+  <div class="condition-block-inner">
+    <div class="condition-block-header reveal">
+      <div>
+        <div class="condition-block-label">
+          <span class="cond-num">Condition 03</span>
+          <span class="cond-type gradient">Gradient · Ongoing</span>
+        </div>
+        <h2 class="preferred-title">Be<br>Preferred</h2>
+      </div>
+      <div class="condition-block-desc">
+        <p>This is the condition most AEO frameworks do not address. Being Preferred means that when the model constructs a recommendation, your brand is the one it reaches for first — not because you are the only trusted option, but because the weight of signals associates you more strongly with the problem being solved than any competitor.</p>
+        <p>Preferred is not a state you achieve and maintain. <strong>It is a lead you build and defend.</strong> Competitors are publishing, earning coverage, and accumulating citations continuously. The brands that stay recommended are the ones that keep compounding.</p>
+      </div>
+    </div>
+
+    <div class="layer-item reveal">
+      <div class="layer-num">Layer 8</div>
+      <div class="layer-content">
+        <h3>Purchase-Intent Optimisation</h3>
+        <p>Optimising specifically for AI shopping queries and purchase-intent prompts. This is where AI visibility converts to revenue. The brands recommended in "best X for Y" queries own the category in the moment that matters most — when a customer has decided to buy and is asking AI what to buy.</p>
+        <div class="layer-tags"><span class="layer-tag">Purchase Intent</span><span class="layer-tag">GPT Shopping</span><span class="layer-tag">Conversion</span></div>
+      </div>
+      <a href="https://foundbyai.com.au" class="layer-link">Run your audit</a>
+    </div>
+
+    <div class="layer-item reveal">
+      <div class="layer-num">Layer 9</div>
+      <div class="layer-content">
+        <h3>The AI Persona Audit</h3>
+        <p>The most overlooked layer. Ask ChatGPT, Perplexity, and Gemini: "What is [Brand]? Is [Brand] trustworthy? What do people say about [Brand]?" This reveals the narrative AI has constructed about you. You might be eligible for recommendations but AI is describing a version of you that is 18 months out of date. Fix the narrative before you amplify it.</p>
+        <div class="layer-tags"><span class="layer-tag">Brand Narrative</span><span class="layer-tag">Reputation</span><span class="layer-tag">Quarterly Audit</span></div>
+      </div>
+      <a href="https://foundbyai.com.au" class="layer-link">Run your audit</a>
+    </div>
+
+    <div class="phase2-note reveal">
+      <p>The Understood and Trusted layers are a structured project with a defined end state. The Preferred layer is an ongoing programme — sustained PR at scale, founder positioning as a named category expert, original research that earns citations, and authority amplification that compounds over time. <strong>This is the correct framing for an ongoing AEO partnership.</strong> Ask us about the Authority Programme.</p>
+    </div>
+
+    <div class="probability-note reveal">
+      <span class="probability-note-icon">◎</span>
+      <p>AEO work increases the probability of AI recommendation. AI systems are non-deterministic and continuously updated — no methodology guarantees a specific outcome. What we can guarantee is that brands with stronger Understood, Trusted, and Preferred signals are recommended more often, more accurately, and more durably than brands without them.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-section">
+  <div class="timeline-inner">
+    <p class="section-label reveal">The client journey</p>
+    <h2 class="reveal">From invisible to<br><em>in the answer</em></h2>
+    <p class="reveal">The Foundation work builds the structural layer. The Authority work builds the lead. Then the flywheel takes over.</p>
+    <div class="timeline-grid reveal">
+      <div class="timeline-step">
+        <div class="timeline-dot"></div>
+        <span class="timeline-cond-tag">Diagnostic</span>
+        <p class="timeline-period">Before you start</p>
+        <h3>Found By AI Audit</h3>
+        <p>20 purchase-intent prompts. Score out of 20. You see exactly where your brand stands across Understood, Trusted, and Preferred — and which condition is the binding constraint.</p>
+        <ul>
+          <li>AI visibility score</li>
+          <li>Gap identification</li>
+          <li>Prioritised action plan</li>
+          <li>Baseline to measure against</li>
+        </ul>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-dot"></div>
+        <span class="timeline-cond-tag">Understood + Trusted</span>
+        <p class="timeline-period">Weeks 1 to 4</p>
+        <h3>AI Visibility Foundation</h3>
+        <p>Layers 0 to 7. Entity clarity, structured content, schema, citations, consistency. The structural work that makes recommendation eligibility possible.</p>
+        <ul>
+          <li>Entity establishment</li>
+          <li>Answer Hub + Brand Facts</li>
+          <li>Schema + SpeakableSchema</li>
+          <li>Citation building + platform audit</li>
+        </ul>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-dot"></div>
+        <span class="timeline-cond-tag">Preferred</span>
+        <p class="timeline-period">Month 2 onward</p>
+        <h3>Authority Programme</h3>
+        <p>Layers 8 and 9 plus ongoing amplification. Category share of voice, founder positioning, PR at scale. This is where eligibility becomes preference.</p>
+        <ul>
+          <li>Purchase-intent optimisation</li>
+          <li>Earned media and PR</li>
+          <li>Category content strategy</li>
+          <li>AI persona monitoring</li>
+        </ul>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-dot"></div>
+        <span class="timeline-cond-tag">Compound</span>
+        <p class="timeline-period">Month 3 onward</p>
+        <h3>Compound</h3>
+        <p>Every citation, content update, and authority signal compounds. Monthly audit re-runs track score movement. This is where the ROI becomes unmistakable.</p>
+        <ul>
+          <li>Monthly Found By AI audits</li>
+          <li>Score tracking and reporting</li>
+          <li>Ongoing Answer Hub updates</li>
+          <li>Flywheel keeps turning</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-header reveal">
+    <p class="section-label">Common questions</p>
+    <h2>AEO explained</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>What is the Eligibility Layer?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>The Eligibility Layer is the binary threshold AI systems apply before deciding which brands to recommend. Search engines rank everything and let humans choose. Agent systems decide first — which entities they trust enough to mention at all. That decision happens before any recommendation. Brands either pass the threshold or they don't. AEO is how you make sure you pass it.</p></div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>What does Understood, Trusted, Preferred mean in practice?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>These are the three conditions for passing the Eligibility Layer. Be Understood means AI can accurately describe your brand. Be Trusted means AI has encountered your brand in enough credible contexts to include it in the recommendation candidate set. Be Preferred means when two trusted brands compete for the same recommendation, AI reaches for yours. Each condition has different signals, different tactics, and a different relationship to the final outcome.</p></div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>How is AEO different from SEO?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>SEO targets page-one rankings in a list of ten blue links. AEO targets recommendation eligibility — the question of whether an AI system will mention your brand at all when someone asks for a recommendation in your category. The mechanics are fundamentally different: SEO rewards backlinks and keyword density. AEO rewards entity clarity, factual consistency, and Machine-Readable Reputation — the algorithmic credibility signals AI systems use to evaluate trust before deciding who to recommend.</p></div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>What is an AI Visibility Score?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>An AI Visibility Score measures how many of a brand's highest purchase-intent queries result in an AI recommendation. Edge Studio's Found By AI tool runs 20 purchase-intent prompts across AI engines and scores brands out of 20. It is the core metric we track because it directly reflects the commercial impact of AEO work — and it is the baseline every engagement starts from.</p></div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>How long does AEO take to show results?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>The Foundation work — building the Understood and Trusted layers — is a 4-week structured project. Most brands see measurable AI visibility improvement within 60 days. The Preferred layer is ongoing: it is a lead you build and compound over time, not a state you achieve once. The compounding effect typically becomes significant from month three onward.</p></div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>Does AEO replace SEO?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>No. The two disciplines reinforce each other. Strong domain authority from SEO creates a foundation AI trusts. Strong AEO signals — entity clarity, structured data, consistent facts — improve how both search engines and AI systems understand your brand. The brands building both in parallel are the ones that will own their category in search and AI simultaneously.</p></div></div>
+  </div>
+</section>
+
+<!-- EMAIL CAPTURE -->
+<section class="capture-section">
+  <div class="capture-inner">
+    <div class="capture-text reveal">
+      <p class="section-label">Coming soon</p>
+      <h2>The AEO Starter Kit.<br><em>On its way.</em></h2>
+      <p>We are building out the full implementation kit — templates, checklists, and everything you need to run the framework yourself. Join the waitlist and you will be first to know when it is ready.</p>
+      <div class="capture-what">
+        <div class="capture-what-item">The complete Understood / Trusted / Preferred framework as a printable PDF</div>
+        <div class="capture-what-item">The Answer Intent Map template (ready to fill in)</div>
+        <div class="capture-what-item">The brand-facts.json template with full instructions</div>
+        <div class="capture-what-item">The llms.txt template for your domain</div>
+        <div class="capture-what-item">The 90-day implementation checklist</div>
+      </div>
+    </div>
+    <div class="capture-form-wrap reveal">
+      <h3>Join the waitlist</h3>
+      <p>Be first to get the full kit when it drops. One email. No sequences.</p>
+      <div class="form-group"><label for="name">Your name</label><input type="text" id="name" placeholder="First name"></div>
+      <div class="form-group"><label for="email">Email address</label><input type="email" id="email" placeholder="you@yourbrand.com"></div>
+      <div class="form-group"><label for="brand">Your brand or website</label><input type="text" id="brand" placeholder="yourbrand.com"></div>
+      <button class="btn-capture" onclick="handleCapture()">Join the waitlist</button>
+      <p class="form-note">No spam. Unsubscribe any time.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-lock">
+        <svg class="footer-mark" viewBox="0 0 40 90" fill="none"><ellipse cx="20" cy="9" rx="7" ry="5.5" fill="currentColor"/><path d="M17.5,13.5 C16,26 13,44 15.5,60 C17,70 18,78 20,88 C22,78 23,70 24.5,60 C27,44 24,26 22.5,13.5 Z" fill="currentColor"/></svg>
+        <span class="footer-wordmark">Edge Studio</span>
+      </div>
+      <p class="footer-tag">AEO Agency and AI Visibility Tools</p>
+      <p class="footer-tag">Marina Lyshova · Australia</p>
+      <p class="footer-tag">edgestudiohq.com</p>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="https://foundbyai.com.au">Found By AI Audit</a></li><li><a href="/aeo-agency">AEO Agency</a></li><li><a href="/aeo-agency">Answer Hub Development</a></li></ul></div>
+    <div class="footer-col"><h4>Learn</h4><ul><li><a href="/what-is-aeo">What is AEO</a></li><li><a href="/aeo-framework">AEO Framework</a></li><li><a href="/answer-hub">Answer Hub</a></li><li><a href="/brand-facts">Brand Facts</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 Edge Studio. All rights reserved. <a href="/contact">Contact</a></p>
+    <p class="footer-sig">&#9737; &#9795; &middot; &#8593; &#9808; &middot; &#9789; &#9800; &middot; Built ahead of the brief.</p>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu(){const btn=document.getElementById('hamburger');const menu=document.getElementById('mobileMenu');btn.classList.toggle('open');menu.classList.toggle('open')}
+  function toggleFaq(btn){const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open')}
+  function handleCapture(){const email=document.getElementById('email').value.trim();if(!email){alert('Please enter your email address.');return}const btn=document.querySelector('.btn-capture');btn.textContent='Sending...';btn.disabled=true;setTimeout(()=>{btn.textContent="You're on the list!";btn.style.background='rgba(163,196,58,0.5)'},1200)}
+  const revealEls=document.querySelectorAll('.reveal');const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){setTimeout(()=>{entry.target.classList.add('visible')},80);observer.unobserve(entry.target)}})},{threshold:0.12});revealEls.forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
