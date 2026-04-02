@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edge Studio — Proposal for Uplevel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:    #09090f;
+  --deep:   #0d0d18;
+  --panel:  #111122;
+  --border: #1c1c30;
+  --soft-border: #232338;
+  --green:  #a3c43a;
+  --green-dim: rgba(163,196,58,0.08);
+  --brass:  #c8a428;
+  --brass-dim: rgba(200,164,40,0.08);
+  --cream:  #ece7d4;
+  --muted:  #6b6878;
+  --soft:   #a8a4b8;
+  --text:   #dddacc;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--ink);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 48px 32px;
+}
+
+.page {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* ── TOP RULE ── */
+.top-rule {
+  height: 2px;
+  background: linear-gradient(90deg, var(--brass) 0%, var(--green) 50%, transparent 100%);
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeIn 0.6s 0.1s ease forwards;
+}
+
+/* ── HEADER ── */
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+  opacity: 0;
+  animation: fadeIn 0.6s 0.2s ease forwards;
+}
+
+.brand {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+
+.brand span { color: var(--green); font-style: italic; }
+
+.tagline {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.header-meta {
+  text-align: right;
+}
+
+.meta-for {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.meta-client {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--cream);
+}
+
+.meta-date {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+/* ── INTRO ── */
+.intro {
+  margin-bottom: 36px;
+  opacity: 0;
+  animation: fadeIn 0.6s 0.3s ease forwards;
+}
+
+.intro p {
+  font-size: 15px;
+  color: var(--soft);
+  line-height: 1.8;
+  max-width: 640px;
+}
+
+.intro p + p { margin-top: 10px; }
+
+/* ── FINDINGS ── */
+.findings {
+  margin-bottom: 36px;
+  opacity: 0;
+  animation: fadeIn 0.6s 0.35s ease forwards;
+}
+
+.section-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.findings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.finding {
+  background: var(--panel);
+  padding: 20px 20px 22px;
+  position: relative;
+}
+
+.finding::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--brass);
+  opacity: 0.5;
+}
+
+.finding-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: var(--brass);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.finding-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.finding-body {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* ── SCOPE ── */
+.scope {
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: fadeIn 0.6s 0.4s ease forwards;
+}
+
+.phase {
+  border: 1px solid var(--border);
+  margin-bottom: 1px;
+  overflow: hidden;
+}
+
+.phase-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 16px 20px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  gap: 16px;
+}
+
+.phase-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 3px;
+}
+
+.phase-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--cream);
+}
+
+.phase-price {
+  text-align: right;
+}
+
+.price-amt {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.price-note {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.phase-body {
+  padding: 16px 20px;
+  background: var(--deep);
+}
+
+.deliverables-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 24px;
+}
+
+.deliverables-list li {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--soft);
+  line-height: 1.5;
+}
+
+.deliverables-list li::before {
+  content: '→';
+  color: var(--green);
+  flex-shrink: 0;
+  font-size: 11px;
+  margin-top: 1px;
+}
+
+.retainer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.retainer-list li {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--soft);
+  line-height: 1.5;
+}
+
+.retainer-list li::before {
+  content: '→';
+  color: var(--brass);
+  flex-shrink: 0;
+  font-size: 11px;
+  margin-top: 1px;
+}
+
+/* ── TOTAL ── */
+.total-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 18px 20px;
+  background: var(--green-dim);
+  border: 1px solid rgba(163,196,58,0.15);
+  border-top: 2px solid var(--green);
+  margin-bottom: 28px;
+  gap: 16px;
+  opacity: 0;
+  animation: fadeIn 0.6s 0.45s ease forwards;
+}
+
+.total-label {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 16px;
+  color: var(--cream);
+}
+
+.total-sub {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 3px;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.03em;
+}
+
+.total-amt {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--green);
+  text-align: right;
+}
+
+.total-currency {
+  font-size: 13px;
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  text-align: right;
+  margin-top: 2px;
+}
+
+/* ── FOOTER ── */
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  opacity: 0;
+  animation: fadeIn 0.6s 0.5s ease forwards;
+}
+
+.footer-cell {
+  background: var(--panel);
+  padding: 16px 20px;
+}
+
+.footer-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+
+.footer-val {
+  font-size: 13px;
+  color: var(--soft);
+  line-height: 1.6;
+}
+
+.footer-val a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.footer-val strong {
+  color: var(--cream);
+  font-weight: 400;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── PRINT ── */
+@media print {
+  body { background: white; color: #111; padding: 24px; }
+  :root {
+    --ink: white; --deep: #f8f8f5; --panel: #f2f2ef;
+    --border: #ddd; --soft-border: #e5e5e0;
+    --text: #222; --soft: #555; --muted: #888;
+    --cream: #111; --green: #5a7a10; --brass: #8a6a00;
+  }
+  .top-rule { background: #5a7a10; }
+  * { animation: none !important; opacity: 1 !important; transform: none !important; }
+}
+
+@media (max-width: 600px) {
+  body { padding: 24px 16px; }
+  .header { grid-template-columns: 1fr; }
+  .header-meta { text-align: left; }
+  .findings-grid { grid-template-columns: 1fr; }
+  .deliverables-list { grid-template-columns: 1fr; }
+  .footer { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="top-rule"></div>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <div class="brand">Edge <span>Studio</span></div>
+      <div class="tagline">AEO Strategy &nbsp;·&nbsp; AI Visibility</div>
+    </div>
+    <div class="header-meta">
+      <div class="meta-for">Prepared for</div>
+      <div class="meta-client">Uplevel</div>
+      <div class="meta-date">April 2026</div>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro">
+    <p>You're about to publish a new site repositioning Uplevel as an engineering transformation platform. The launch is the right moment to build AI recommendation signals into the foundation — it's significantly harder to correct once the positioning signals are set.</p>
+    <p>The audit we ran ahead of our conversation identified three specific gaps to address in the new site build. These are what Phase 1 resolves.</p>
+  </div>
+
+  <!-- FINDINGS -->
+  <div class="findings">
+    <div class="section-label">What the audit found</div>
+    <div class="findings-grid">
+      <div class="finding">
+        <div class="finding-num">Finding 01</div>
+        <div class="finding-title">Name disambiguation</div>
+        <div class="finding-body">Two other companies share the Uplevel name and "uplevel" is widely used as a verb. AI models encounter all three before evaluating your product, which lowers recommendation confidence before your capabilities are even considered.</div>
+      </div>
+      <div class="finding">
+        <div class="finding-num">Finding 02</div>
+        <div class="finding-title">Category language conflict</div>
+        <div class="finding-body">Your site leads with "transformation OS." Gartner, analyst firms, and every major buyer guide use "engineering intelligence platform." AI models see the conflict and default to competitors with consistent language across all surfaces.</div>
+      </div>
+      <div class="finding">
+        <div class="finding-num">Finding 03</div>
+        <div class="finding-title">WAVE framework not connected to SPACE</div>
+        <div class="finding-body">WAVE maps directly to SPACE, the research model engineering leaders cite to justify multi-dimensional measurement. DX and Swarmia currently receive the credit on SPACE queries. One page of structured content closes this gap entirely.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCOPE -->
+  <div class="scope">
+    <div class="section-label">Engagement scope</div>
+
+    <!-- Phase 1 -->
+    <div class="phase">
+      <div class="phase-header">
+        <div>
+          <div class="phase-label">Phase 1 &nbsp;·&nbsp; Fixed fee &nbsp;·&nbsp; 2–3 weeks</div>
+          <div class="phase-title">AI Visibility Foundation</div>
+        </div>
+        <div class="phase-price">
+          <div class="price-amt">$4,500</div>
+          <div class="price-note">USD · one-time</div>
+        </div>
+      </div>
+      <div class="phase-body">
+        <ul class="deliverables-list">
+          <li><span><strong style="color:var(--cream);font-weight:400">Entity Definition Package</strong> — structured copy establishing Uplevel Inc. clearly, with Schema.org markup spec and aligned descriptions for all external listings including Crunchbase, LinkedIn, and G2.</span></li>
+          <li><span><strong style="color:var(--cream);font-weight:400">Category Positioning Alignment Brief</strong> — full audit of every surface where category language is inconsistent, with exact replacement copy written to carry both the transformation narrative and the AI-readable category label.</span></li>
+          <li><span><strong style="color:var(--cream);font-weight:400">WAVE Framework Entity Page Brief</strong> — structural and copy brief for a standalone WAVE page including explicit WAVE-to-SPACE mapping, closing the gap where DX is currently receiving credit Uplevel has earned.</span></li>
+          <li><span><strong style="color:var(--cream);font-weight:400">External Authority Strategy</strong> — target publication list with pitch angles, a contributed article brief ready to send, advisor activation playbook built around your DORA co-author connection, and three proprietary data story angles for trade press.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Phase 2 -->
+    <div class="phase">
+      <div class="phase-header">
+        <div>
+          <div class="phase-label">Phase 2 &nbsp;·&nbsp; Monthly &nbsp;·&nbsp; 3-month minimum recommended</div>
+          <div class="phase-title">Monthly AEO Retainer</div>
+        </div>
+        <div class="phase-price">
+          <div class="price-amt" style="color:var(--brass)">$2,500</div>
+          <div class="price-note">USD · per month</div>
+        </div>
+      </div>
+      <div class="phase-body">
+        <ul class="retainer-list">
+          <li>Full 20-prompt AI visibility audit each month with scored comparison against baseline — same prompts, same methodology, visible movement over time</li>
+          <li>One external placement action per month: contributing article pitching, publication follow-up, or advisor content coordination</li>
+          <li>Monthly visibility report with specific next-step recommendations based on what the audit reveals</li>
+          <li>Category roundup monitoring to ensure Uplevel is included as buyer guides and platform comparisons are updated</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOTAL -->
+  <div class="total-row">
+    <div>
+      <div class="total-label">Three-month commitment</div>
+      <div class="total-sub">Phase 1 + three months retainer</div>
+    </div>
+    <div>
+      <div class="total-amt">$12,000</div>
+      <div class="total-currency">USD</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-cell">
+      <div class="footer-label">Next step</div>
+      <div class="footer-val">Reply to confirm or request a call to discuss scope. This proposal is held open until <strong>Friday 11 April</strong>.</div>
+    </div>
+    <div class="footer-cell">
+      <div class="footer-label">Edge Studio</div>
+      <div class="footer-val"><a href="https://edgestudiohq.com">edgestudiohq.com</a> &nbsp;·&nbsp; <a href="mailto:hello@theedgestudio.app">hello@theedgestudio.app</a><br>AEO Strategy &nbsp;·&nbsp; AI Visibility &nbsp;·&nbsp; Found By AI</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
