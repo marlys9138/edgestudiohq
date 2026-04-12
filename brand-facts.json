@@ -6,7 +6,7 @@
   "url": "https://edgestudiohq.com",
   "logo": "https://edgestudiohq.com/images/logo.png",
   "foundingDate": "2025",
-  "description": "Edge Studio is an AEO (Answer Engine Optimisation) agency and AI visibility tools company. We help ecommerce brands, DTC founders, service businesses, and natural health practitioners get recommended by AI tools like ChatGPT, Perplexity, and Google AI Overviews.",
+  "description": "Edge Studio is an AEO (Answer Engine Optimisation) agency and AI visibility tools company based in Australia. We help ecommerce brands, DTC founders, service businesses, and natural health practitioners get recommended by AI tools like ChatGPT, Perplexity, and Google AI Overviews. Edge Studio developed The Eligibility Layer — the framework that identified AI recommendation eligibility as a distinct and prior challenge to AI ranking.",
   "slogan": "AEO Agency for the AI Search Era",
   "knowsAbout": [
     "Answer Engine Optimisation",
@@ -15,6 +15,11 @@
     "GEO",
     "AI visibility",
     "AI search",
+    "The Eligibility Layer",
+    "AI recommendation eligibility",
+    "Machine-Readable Reputation",
+    "entity data integrity",
+    "knowledge surface distribution",
     "ChatGPT brand visibility",
     "Perplexity optimisation",
     "Google AI Overviews",
@@ -24,7 +29,8 @@
     "Answer Hub development",
     "AI visibility audits",
     "content strategy",
-    "digital marketing"
+    "digital marketing",
+    "Australian brand AI visibility"
   ],
   "areaServed": [
     {
@@ -39,23 +45,53 @@
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
+    "email": "hello@edgestudiohq.com",
     "url": "https://edgestudiohq.com/contact",
     "availableLanguage": "English"
   },
   "sameAs": [
     "https://edgestudiohq.com",
-    "https://edgestudiohq.com.au"
+    "https://edgestudiohq.com.au",
+    "https://edgestudiohq.au",
+    "https://www.linkedin.com/company/edgestudiohq",
+    "https://www.crunchbase.com/organization/edge-studio-fc18"
   ],
   "founder": {
     "@type": "Person",
     "name": "Marina",
     "jobTitle": "Founder",
-    "description": "Marina is the founder of Edge Studio. She has 10 plus years of experience in content strategy, digital marketing, and brand positioning, combined with deep expertise in AI visibility, automation, and structured data. She is also a qualified herbalist with specialist experience in the natural health and wellness industry.",
+    "description": "Marina is the founder of Edge Studio. She has 10 plus years of experience in content strategy, digital marketing, and brand positioning, combined with deep expertise in AI visibility, automation, and structured data. She is a qualified natural health practitioner with specialist experience in the natural health and wellness industry. Marina coined The Eligibility Layer framework — the concept that AI recommendation systems apply a binary trust threshold before any ranking occurs.",
     "worksFor": {
       "@type": "Organization",
       "name": "Edge Studio"
-    }
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/marinalyshova/"
+    ]
   },
+  "subjectOf": [
+    {
+      "@type": "CreativeWork",
+      "name": "The Eligibility Layer",
+      "description": "A framework developed by Marina of Edge Studio that identifies AI recommendation eligibility as a distinct and prior challenge to AI ranking. The Eligibility Layer is the binary trust threshold an entity must pass before an agent system will consider recommending it. Brands outside the eligibility layer are not ranked lower — they are not mentioned at all.",
+      "url": "https://edgestudiohq.com/the-eligibility-layer",
+      "author": {
+        "@type": "Person",
+        "name": "Marina"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Australian Brand AI Visibility Leaderboard",
+      "description": "Australia's first monthly AI visibility leaderboard. Tests 30 Australian consumer brands across 5 categories using 10 organic purchase-intent prompts per brand across ChatGPT and Claude. Scores brands out of 100 per engine based on whether they appear in AI recommendations. Published monthly by Edge Studio.",
+      "url": "https://edgestudiohq.com/leaderboard",
+      "creator": {
+        "@type": "Organization",
+        "name": "Edge Studio"
+      },
+      "temporalCoverage": "2026/.."
+    }
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Edge Studio Services and Products",
@@ -65,21 +101,21 @@
         "itemOffered": {
           "@type": "Product",
           "name": "Found By AI",
-          "description": "An automated AI visibility audit tool. Found By AI runs 20 purchase-intent prompts across major AI platforms including ChatGPT, Perplexity, and Google AI Overviews. It scores brand visibility out of 20 and generates 6 content assets to improve AI visibility. Results are delivered by email in under 60 seconds. Works for both product brands and service businesses.",
-          "url": "https://edgestudiohq.com/found-by-ai",
+          "description": "An automated AI visibility audit tool. Found By AI runs 20 purchase-intent prompts across major AI platforms including ChatGPT, Perplexity, and Google AI Overviews. It scores brand visibility out of 20 and generates 6 content assets to improve AI visibility. Results are delivered by email in under 60 minutes. Works for both product brands and service businesses.",
+          "url": "https://foundbyai.com.au",
           "offers": [
             {
               "@type": "Offer",
               "name": "Single Audit",
-              "price": "197",
-              "priceCurrency": "USD",
+              "price": "198",
+              "priceCurrency": "AUD",
               "description": "One-off AI visibility audit"
             },
             {
               "@type": "Offer",
               "name": "Monthly Monitoring",
               "price": "49",
-              "priceCurrency": "USD",
+              "priceCurrency": "AUD",
               "description": "Ongoing monthly AI visibility monitoring"
             }
           ]
@@ -89,17 +125,39 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "AEO Agency Services",
-          "description": "Done-for-you Answer Engine Optimisation strategy and implementation. Services include AI visibility audits, AEO content strategy, Answer Hub development, schema and structured data implementation, brand entity optimisation, and monthly AEO monitoring and reporting.",
+          "name": "AI Visibility Foundation",
+          "description": "A fixed-scope AEO engagement covering entity definition, category positioning, WAVE framework entity page brief, and external authority strategy. Designed to move a brand from outside the AI candidate set to inside it.",
           "url": "https://edgestudiohq.com/aeo-agency",
+          "offers": {
+            "@type": "Offer",
+            "price": "4500",
+            "priceCurrency": "USD",
+            "description": "Fixed-fee AI Visibility Foundation engagement"
+          },
           "serviceType": [
             "AEO Strategy",
-            "AI Visibility Audits",
+            "Entity Definition",
+            "Category Positioning",
+            "External Authority Strategy",
             "Answer Hub Development",
             "Structured Data Implementation",
-            "Brand Entity Optimisation",
-            "AEO Monitoring"
+            "Brand Entity Optimisation"
           ]
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "AEO Retainer",
+          "description": "Monthly AEO retainer for ongoing AI visibility strategy, entity clarity, schema briefing, and distribution coordination. Edge Studio acts as embedded AEO director.",
+          "url": "https://edgestudiohq.com/aeo-agency",
+          "offers": {
+            "@type": "Offer",
+            "price": "2500",
+            "priceCurrency": "USD",
+            "description": "Monthly AEO retainer"
+          }
         }
       },
       {
@@ -132,7 +190,7 @@
   "brand": {
     "@type": "Brand",
     "name": "Edge Studio",
-    "description": "Edge Studio is a specialist AEO agency and AI visibility tools company. The brand is known for the Found By AI audit tool and done-for-you AEO services for ecommerce and wellness brands.",
+    "description": "Edge Studio is a specialist AEO agency and AI visibility tools company. The brand is known for the Found By AI audit tool, The Eligibility Layer framework, the Australian Brand AI Visibility Leaderboard, and done-for-you AEO services for ecommerce and wellness brands.",
     "url": "https://edgestudiohq.com"
   },
   "keywords": [
@@ -140,6 +198,7 @@
     "answer engine optimisation",
     "AI visibility audit",
     "Found By AI",
+    "The Eligibility Layer",
     "generative engine optimisation",
     "GEO agency",
     "ChatGPT brand visibility",
@@ -150,16 +209,13 @@
     "get recommended by ChatGPT",
     "brand visibility score",
     "AEO for ecommerce",
-    "AEO for health brands"
+    "AEO for health brands",
+    "Australian brand AI visibility leaderboard",
+    "AI recommendation eligibility",
+    "machine-readable reputation"
   ],
   "mainEntityOfPage": "https://edgestudiohq.com",
   "inLanguage": "en",
-  "isNotA": [
-    "SEO agency",
-    "social media agency",
-    "paid advertising agency",
-    "web design agency"
-  ],
   "faqPage": "https://edgestudiohq.com/#faq",
   "answerHub": "https://edgestudiohq.com/answer-hub",
   "brandFacts": "https://edgestudiohq.com/brand-facts"
